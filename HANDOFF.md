@@ -241,7 +241,9 @@ For the resume, a separate session:
 ## 11. État au 8 octobre 2026 (soir)
 
 Travail fait sur la machine de Simon, branche `feat/vague-1-contenu-et-cv`, une vingtaine de commits depuis l'import du zip.
-Rien n'a été poussé : le dépôt GitHub `SkYNENET/Portfolio` n'a pas bougé.
+Poussé par Simon sur le nouveau dépôt `SkYNENET/Portfo` (branche par défaut `feat/vague-1-contenu-et-cv`,
+déployé en production par Vercel sur portfo-five-eosin.vercel.app). L'ancien dépôt `SkYNENET/Portfolio`
+n'a pas bougé et garde son vieux `main` avec le numéro de téléphone : à archiver ou supprimer.
 
 Fait : contenu réel (8 jeux, groupes et rôles, 3 chiffres clés live), nouveau site en 8 composants
 (sidebar, hero, bannière, library avec tri et recherche, experience, contact, rail, footer), états
