@@ -240,7 +240,7 @@ For the resume, a separate session:
 
 ## 11. État au 8 octobre 2026 (soir)
 
-Travail fait sur la machine de Simon, branche `feat/vague-1-contenu-et-cv`, 21 commits depuis l'import du zip.
+Travail fait sur la machine de Simon, branche `feat/vague-1-contenu-et-cv`, 20 commits en comptant l'import du zip.
 Rien n'a été poussé : le dépôt GitHub `SkYNENET/Portfolio` n'a pas bougé.
 
 Fait : contenu réel (8 jeux, groupes et rôles, 3 chiffres clés live), nouveau site en 8 composants
