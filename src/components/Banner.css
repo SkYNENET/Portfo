@@ -1,7 +1,8 @@
-/* Banniere featured : carte blanche scindee 46 / 54. Classes : voir Banner.tsx. */
+/* Banniere featured : carte blanche scindee 46 / 54, texte a gauche, image fondue a droite.
+   Classes : voir le CONTRAT dans Banner.tsx. Tokens : index.css (gele). */
 
 .banner {
-  position: relative;
+  position: relative; /* conteneur du ::after du bouton Play, qui etend le lien a toute la carte */
   display: grid;
   grid-template-columns: minmax(0, 46%) minmax(0, 54%);
   min-height: 300px;
@@ -12,6 +13,7 @@
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--dur) var(--ease);
 }
+/* Toute la carte est cliquable : elle reagit comme un seul bouton au survol et au focus. */
 .banner:hover, .banner:focus-within { box-shadow: var(--shadow-md); }
 
 .banner-text {
@@ -21,7 +23,11 @@
   justify-items: start;
   padding: 32px;
 }
-.banner-media { position: relative; min-height: 220px; }
+
+/* Media decoratif. pointer-events none : positionne apres le bouton dans le DOM, il se peindrait
+   au-dessus du ::after du Play et volerait les clics sur la moitie droite de la carte. */
+.banner-media { position: relative; min-height: 220px; pointer-events: none; }
+/* Image et degrade partagent le meme fondu : contraste du texte independant de l'image. */
 .banner-media img, .banner-ph {
   position: absolute;
   inset: 0;
@@ -69,12 +75,15 @@
 }
 .banner-stats span { display: inline-flex; align-items: center; gap: 6px; }
 
-/* Le bouton Play est le seul lien : son ::after couvre toute la carte. */
+/* Le bouton Play est le seul lien : position static pour que son ::after se cale sur .banner
+   (position relative) et couvre toute la carte. */
 .play { margin-top: 8px; position: static; }
 .play::after { content: ''; position: absolute; inset: 0; }
+/* Au clavier, l'anneau de focus entoure la carte entiere plutot que le seul bouton. */
 .play:focus-visible { outline: none; }
 .banner:has(.play:focus-visible) { outline: 3px solid var(--accent); outline-offset: 2px; }
 
+/* Mobile : image 16:9 au-dessus, texte dessous, Play pleine largeur (cible tactile). */
 @media (max-width: 760px) {
   .banner { grid-template-columns: 1fr; min-height: 0; }
   .banner-media { order: -1; aspect-ratio: 16 / 9; min-height: 0; }
