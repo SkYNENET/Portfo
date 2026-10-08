@@ -7,11 +7,14 @@
 // Regles : une periode ou une org inconnue est masquee via known() (colonne vide, jamais TO CONFIRM) ;
 // rend null si la liste est vide.
 
-import { experience } from '../content'
+import { experience, type Experience as Step } from '../content'
 import { Ext, known } from '../ui'
 import './Experience.css'
 
-const KIND_WORD = { work: 'Work', education: 'Education', community: 'Community' } as const
+const KIND_WORD: Record<Step['kind'], string> = { work: 'Work', education: 'Education', community: 'Community' }
+
+// Le libelle du lien suit la cible : GitHub pour les depots, Roblox pour les profils et groupes.
+const linkText = (href: string): string => (href.includes('github.com') ? 'View on GitHub' : 'Open on Roblox')
 
 export default function Experience() {
   if (experience.length === 0) return null
@@ -20,11 +23,14 @@ export default function Experience() {
       <h2 id="experience-title" className="section-title">Experience</h2>
       <ol className="timeline">
         {experience.map((x) => {
+          // known() est le dernier verrou : '' ou « TO CONFIRM » dans content.ts ne s'affiche jamais.
+          const period = known(x.period)
           const org = known(x.org)
           const summary = known(x.summary)
           return (
             <li key={x.id} className={`step ${x.kind}`}>
-              <span className="step-period num">{known(x.period) ?? ''}</span>
+              {/* Span vide quand la periode est inconnue : la colonne reste alignee sur desktop. */}
+              <span className="step-period num">{period ?? ''}</span>
               <div className="step-body">
                 <div className="step-head">
                   <strong>{x.role}</strong>
@@ -40,8 +46,9 @@ export default function Experience() {
                   </ul>
                 )}
                 {x.link && (
-                  <Ext className="step-link" href={x.link}>
-                    {x.link.includes('github.com') ? 'View on GitHub' : 'Open on Roblox'}
+                  // Mention lecteur d'ecran : quatre liens « Open on Roblox » restent distinguables.
+                  <Ext className="step-link" href={x.link} label={`${org ?? x.role} (opens in new tab)`}>
+                    {linkText(x.link)}
                   </Ext>
                 )}
               </div>
