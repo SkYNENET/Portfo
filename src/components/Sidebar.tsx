@@ -16,6 +16,7 @@ export interface SidebarProps {
   onFilter: (f: Filter) => void
 }
 
+// Calcules une fois au chargement du module : entries est une constante de content.ts.
 const NAV = navItems(entries)
 const count = (id: Filter) => (id === 'all' ? entries.length : entries.filter((e) => e.kind === id).length)
 
@@ -43,24 +44,29 @@ export default function Sidebar({ filter, onFilter }: SidebarProps) {
       </div>
       <p className="me-since num">{SINCE}</p>
 
+      {/* Toujours visible, mobile compris : c'est le message principal pour un recruteur. */}
       <p className="pill ok status">
         <span className="dot" aria-hidden="true" /> {profile.status}
       </p>
 
       <div role="group" aria-label="Filter the library" className="filters">
-        {NAV.map((id) => (
-          <button
-            key={id}
-            type="button"
-            className="nav-item"
-            aria-pressed={filter === id}
-            onClick={() => onFilter(id)}
-          >
-            {NAV_LABEL[id]}
-            <span className="count num" aria-hidden="true">{count(id)}</span>
-            <span className="sr-only">, {count(id)} items</span>
-          </button>
-        ))}
+        {NAV.map((id) => {
+          const n = count(id)
+          return (
+            <button
+              key={id}
+              type="button"
+              className="nav-item"
+              aria-pressed={filter === id}
+              onClick={() => onFilter(id)}
+            >
+              {NAV_LABEL[id]}
+              <span className="count num" aria-hidden="true">{n}</span>
+              {/* Le compteur visuel est masque aux lecteurs d'ecran, qui recoivent une phrase complete. */}
+              <span className="sr-only">, {n} {n === 1 ? 'item' : 'items'}</span>
+            </button>
+          )
+        })}
       </div>
 
       <nav aria-label="Site" className="site-nav">
@@ -69,6 +75,7 @@ export default function Sidebar({ filter, onFilter }: SidebarProps) {
         <a className="nav-item" href="#contact">Contact</a>
       </nav>
 
+      {/* Aucun lien tant que public/cv.pdf n'existe pas (cv: '' dans content.ts). */}
       {cv && (
         <Ext className="btn primary resume" href={cv} type="application/pdf">
           Resume (PDF)

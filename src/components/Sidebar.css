@@ -4,6 +4,7 @@
   position: sticky;
   top: 20px;
   align-self: start;
+  /* Scroll interne si la colonne depasse l'ecran (petites hauteurs) : le bouton Resume reste atteignable. */
   max-height: calc(100vh - 40px);
   max-height: calc(100dvh - 40px);
   overflow-y: auto;
@@ -19,7 +20,8 @@
 .me { display: flex; align-items: center; gap: 12px; padding: 0 6px; }
 .me-text { display: grid; min-width: 0; }
 .me-name { font-size: var(--fs-body); line-height: 1.2; }
-.me-handle { font-size: var(--fs-small); color: var(--accent); text-decoration: none; }
+/* justify-self : sans lui le lien (item de grille) s'etire sur toute la colonne et devient cliquable dans le vide. */
+.me-handle { justify-self: start; font-size: var(--fs-small); color: var(--accent); text-decoration: none; }
 .me-handle:hover { text-decoration: underline; }
 .me-role { font-size: var(--fs-micro); color: var(--muted); }
 .me-since { margin: -8px 6px 0; font-size: var(--fs-micro); color: var(--muted); }
@@ -53,6 +55,7 @@
 
 .resume { margin-top: auto; }
 
+/* Mobile : la sidebar devient une bande en tete de page (avatar, nom, pill, filtres, ancres). */
 @media (max-width: 760px) {
   .sidebar {
     position: static;
