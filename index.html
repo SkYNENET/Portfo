@@ -3,13 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <!-- Nom de famille TO CONFIRM (a demander a Hector) : le titre reste au prenom tant qu'il n'est pas connu. -->
+    <title>Hector · Roblox &amp; Full Stack Developer</title>
+    <!-- Chiffres alignes sur `facts` de src/content.ts (instantane du 2026-10-08) : a mettre a jour ensemble. -->
+    <meta
+      name="description"
+      content="Roblox developer since 2025: 8 public games with 56K+ visits, owner of Hyper | Games. Builds for the web in TypeScript. Student, open to an internship in 2027."
+    />
     <meta name="theme-color" content="#f5f5f7" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Partage : %SITE_URL% et %OG_IMAGE% sont remplaces au build par vite.config.ts (plugin seoHtml)
+         par des URL absolues, les unfurlers (Discord, LinkedIn, X) refusant une og:image relative. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hector · Roblox &amp; Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Roblox developer since 2025: 8 public games with 56K+ visits, owner of Hyper | Games. Builds for the web in TypeScript. Student, open to an internship in 2027."
+    />
+    <meta property="og:image" content="%OG_IMAGE%" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="%SITE_URL%" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hector · Roblox &amp; Full Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Roblox developer since 2025: 8 public games with 56K+ visits, owner of Hyper | Games. Builds for the web in TypeScript. Student, open to an internship in 2027."
+    />
+    <meta name="twitter:image" content="%OG_IMAGE%" />
   </head>
   <body>
-    <div id="root"></div>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <div id="root">
+      <noscript><p>Hector · Roblox &amp; Full Stack Developer · Roblox @Vbrut0x · github.com/SkYNENET</p></noscript>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
