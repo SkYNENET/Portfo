@@ -162,7 +162,7 @@ export const entries: Entry[] = [
     tagline: 'Published under Hyper | Games.',
     link: 'https://www.roblox.com/games/113866436980344',
     tone: NEUTRAL,
-    meta: '10.2K visits · 25 favorites', // 10 164 visites, 25 favoris
+    meta: '10.2K visits · 65% liked · 25 favorites', // 10 164 visites, 25 favoris
     tech: ['Luau', 'Roblox Studio'],
     year: '2026',
     team: 'Hyper | Games',
@@ -174,7 +174,7 @@ export const entries: Entry[] = [
     tagline: 'A chill beach game about digging through a giant pile of sand to find a buried egg: sell your sand, upgrade your tools and get a crab helper.',
     link: 'https://www.roblox.com/games/93487925421293',
     tone: NEUTRAL,
-    meta: '9.3K visits · 169 favorites', // 9 275 visites, 169 favoris
+    meta: '9.3K visits · 75% liked · 169 favorites', // 9 275 visites, 169 favoris
     tech: ['Luau', 'Roblox Studio'],
     year: '2026',
     team: 'Chill Games fr',
@@ -191,7 +191,7 @@ export const entries: Entry[] = [
     tagline: 'Spin for cash rewards, then eat slimes 1v1 at the table: one of them is poisoned by your enemy, build win streaks.',
     link: 'https://www.roblox.com/games/125815079895321',
     tone: NEUTRAL,
-    meta: '7K visits · 18 favorites', // 7 004 visites, 18 favoris
+    meta: '7K visits · 81% liked · 18 favorites', // 7 004 visites, 18 favoris
     tech: ['Luau', 'Roblox Studio'],
     year: '2026',
     team: 'AVortexGame',
@@ -218,7 +218,7 @@ export const entries: Entry[] = [
     tagline: 'Open doors to discover rooms of various rarities, then sell them or display them at the spawn from your inventory.',
     link: 'https://www.roblox.com/games/82734020430701',
     tone: NEUTRAL,
-    meta: '4.2K visits · 17 favorites', // 4 151 visites, 17 favoris
+    meta: '4.2K visits · 86% liked · 17 favorites', // 4 151 visites, 17 favoris
     tech: ['Luau', 'Roblox Studio'],
     year: '2025',
     team: 'Hyper | Games',
@@ -231,7 +231,7 @@ export const entries: Entry[] = [
     tagline: "Run fast, get stronger, don't fall: collect dinosaurs to earn money and buy more speed while the ground disappears behind you.",
     link: 'https://www.roblox.com/games/75594318823554',
     tone: NEUTRAL,
-    meta: '2.6K visits · 7 favorites', // 2 621 visites, 7 favoris
+    meta: '2.6K visits · 91% liked · 7 favorites', // 2 621 visites, 7 favoris
     tech: ['Luau', 'Roblox Studio'],
     year: '2026',
     team: 'Hyper | Games',
@@ -244,7 +244,7 @@ export const entries: Entry[] = [
     tagline: 'Your factory prints Lucky Blocks and the money never stops flowing: turn it into a production empire.',
     link: 'https://www.roblox.com/games/88367844931035',
     tone: NEUTRAL,
-    meta: '1.7K visits · 7 favorites', // 1 664 visites, 7 favoris
+    meta: '1.7K visits · 83% liked · 7 favorites', // 1 664 visites, 7 favoris
     tech: ['Luau', 'Roblox Studio'],
     year: '2026',
     team: 'Lucky Block Factory Group',

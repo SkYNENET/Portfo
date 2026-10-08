@@ -69,6 +69,8 @@
   margin: 0;
   min-height: calc(2.6em + 6px);
   min-height: calc(2lh + 6px);
+  /* la ligne unique reste en haut de la zone reservee, sinon flex l etire et le texte remonte d une demi-ligne quand « N playing now » arrive */
+  align-content: flex-start;
   display: flex;
   flex-wrap: wrap;
   gap: 6px 14px;

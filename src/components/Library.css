@@ -159,3 +159,8 @@
 @media (prefers-reduced-motion: reduce) {
   .tile:hover .cover, .tile:focus-visible .cover { transform: none; }
 }
+
+/* sous 360 px la ligne live passe sur trois lignes dans des colonnes de 138 px */
+@media (max-width: 360px) {
+  .stats { min-height: 3.75em; min-height: 3lh; }
+}
