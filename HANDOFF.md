@@ -260,10 +260,14 @@ Avant de publier : le `main` actuel de `SkYNENET/Portfolio` contient un vieux pr
 de téléphone, et l'historique le garde. Le plus simple est un dépôt neuf, ou un `main` réécrit depuis
 ce bundle (voir `REPRISE.md` livré avec le zip).
 
-## 12. Piège Vercel : imports avec extension dans `api/`
+## 12. Piège Vercel : `api/` ne doit rien importer de `src/`
 
-Le runtime Node de Vercel exécute `api/roblox.ts` en TypeScript natif (strip-types), sans bundler : un
-`import … from '../src/content'` sans extension lève `ERR_MODULE_NOT_FOUND` en production
-(`FUNCTION_INVOCATION_FAILED`), alors que Vite en dev le résout sans broncher. Règle : dans `api/`, toujours
-`'../src/content.ts'` avec l'extension (`allowImportingTsExtensions` est activé dans les tsconfig).
-Reproduction locale : `node --experimental-strip-types` sur un script qui importe `api/roblox.ts`.
+`api/roblox.ts` est exécuté par le runtime Node de Vercel, dont le mode de compilation n'est pas garanti
+(TypeScript natif par strip-types, esbuild, ou transpilation fichier par fichier). Un
+`import … from '../src/content'` tombait en `FUNCTION_INVOCATION_FAILED` au chargement du module (500 sur
+`/api/roblox`, le site retombait sur les chiffres statiques) ; avec l'extension `.ts` ce n'était pas réglé.
+Règle : la fonction est autonome. Ses IDs (`UNIVERSE_BY_PLACE`, `GROUPS`) sont déclarés dans le fichier et
+doivent rester alignés avec `src/content.ts` : ajouter un jeu = un `placeId` dans `content.ts` ET une
+ligne `place -> universe` dans `api/roblox.ts` (l'universe se lit dans `docs/data/roblox.json` après
+`python3 docs/data/fetch_roblox.py`). Test local du runtime : `node --experimental-strip-types` sur un
+script qui importe `api/roblox.ts`.

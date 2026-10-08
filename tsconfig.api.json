@@ -14,5 +14,5 @@
     "noUnusedParameters": true,
     "allowImportingTsExtensions": true
   },
-  "include": ["api", "src/content.ts"]
+  "include": ["api"]
 }

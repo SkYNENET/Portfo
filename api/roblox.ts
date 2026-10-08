@@ -12,11 +12,20 @@
 // - Toujours 200 : une panne totale renvoie des blocs vides, jamais un 500 a la page.
 // - Cache CDN : 5 min quand tout a repondu, 1 min si partiel, rien si Roblox n'a rien rendu.
 
-import { communities, entries } from '../src/content.ts'
-
-// Un seul jeu d'IDs, derive du contenu : ajouter un placeId dans content.ts suffit.
-const PLACES = entries.flatMap((e) => (e.placeId ? [String(e.placeId)] : []))
-const GROUPS = communities.flatMap((c) => (c.groupId ? [String(c.groupId)] : []))
+// Aucune dependance au front : la fonction est executee par Vercel dans un runtime dont le mode de
+// compilation (natif strip-types, esbuild, transpile par fichier) n'est pas garanti, et un import de
+// ../src/content.ts depuis api/ tombait en FUNCTION_INVOCATION_FAILED au chargement du module (8 oct.
+// 2026). Les IDs sont donc declares ici ; src/content.ts reste la source du front et DOIT rester
+// aligne (HANDOFF.md section 12). Ajouter un jeu = une ligne dans UNIVERSE_BY_PLACE ci-dessous.
+const GROUPS = [
+  '35726151', // Hyper | Games
+  '292694018', // AVortexGame
+  '272607461', // Lucky Block Factory Group
+  '1095885752', // Chill Games fr
+  '35631030', // OG Game 2017
+  '35476292', // Vorld
+  '923178524', // PDK • Community
+]
 
 // place (le nombre dans l'URL du jeu) -> universe (ce que les API de stats attendent).
 // Verifie dans docs/data/roblox.json : evite un appel apis.roblox.com par jeu et par requete.
@@ -34,6 +43,8 @@ const UNIVERSE_BY_PLACE: Record<string, string> = {
 
 // Budget temps : 6 s pour toute la fonction, 4 s par appel Roblox (Node 22 local et Vercel).
 // Un appel lent devient un bloc manquant (partial), pas une page sans aucune stat.
+const PLACES = Object.keys(UNIVERSE_BY_PLACE)
+
 const TOTAL_TIMEOUT_MS = 6000
 const CALL_TIMEOUT_MS = 4000
 
