@@ -259,3 +259,11 @@ email, rôle exact sur chaque jeu, Discord des communautés), puis `profile.emai
 Avant de publier : le `main` actuel de `SkYNENET/Portfolio` contient un vieux projet avec un numéro
 de téléphone, et l'historique le garde. Le plus simple est un dépôt neuf, ou un `main` réécrit depuis
 ce bundle (voir `REPRISE.md` livré avec le zip).
+
+## 12. Piège Vercel : imports avec extension dans `api/`
+
+Le runtime Node de Vercel exécute `api/roblox.ts` en TypeScript natif (strip-types), sans bundler : un
+`import … from '../src/content'` sans extension lève `ERR_MODULE_NOT_FOUND` en production
+(`FUNCTION_INVOCATION_FAILED`), alors que Vite en dev le résout sans broncher. Règle : dans `api/`, toujours
+`'../src/content.ts'` avec l'extension (`allowImportingTsExtensions` est activé dans les tsconfig).
+Reproduction locale : `node --experimental-strip-types` sur un script qui importe `api/roblox.ts`.

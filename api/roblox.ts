@@ -12,7 +12,7 @@
 // - Toujours 200 : une panne totale renvoie des blocs vides, jamais un 500 a la page.
 // - Cache CDN : 5 min quand tout a repondu, 1 min si partiel, rien si Roblox n'a rien rendu.
 
-import { communities, entries } from '../src/content'
+import { communities, entries } from '../src/content.ts'
 
 // Un seul jeu d'IDs, derive du contenu : ajouter un placeId dans content.ts suffit.
 const PLACES = entries.flatMap((e) => (e.placeId ? [String(e.placeId)] : []))
