@@ -54,6 +54,9 @@ const EMPTY: RobloxData = { games: {}, groups: {} }
 const isAbort = (e: unknown): boolean =>
   typeof e === 'object' && e !== null && (e as { name?: unknown }).name === 'AbortError'
 
+/* ids demandes a l'API, sous forme de liste : vide si la chaine est vide */
+const wanted = (ids: string) => (ids ? ids.split(',') : [])
+
 export function useRoblox(placeIds: number[], groupIds: number[]): RobloxState {
   // La cle serialisee evite de relancer le fetch quand les tableaux sont recrees a chaque rendu.
   const key = `${placeIds.join(',')}|${groupIds.join(',')}`
@@ -86,7 +89,6 @@ export function useRoblox(placeIds: number[], groupIds: number[]): RobloxState {
         const groups = typeof json.groups === 'object' && json.groups !== null ? json.groups : {}
         // partial aussi derive cote client : un id demande sans entree (429 Roblox sur un groupe,
         // bloc en echec) => « some figures missing » et les composants gardent le statique pour lui.
-        const wanted = (ids: string) => (ids ? ids.split(',') : [])
         const missing =
           wanted(placeList).some((id) => games[id] === undefined) ||
           wanted(groupList).some((id) => groups[id] === undefined)
