@@ -9,6 +9,7 @@
   gap: 12px;
   scroll-margin-top: 16px;
 }
+.contact h2 { margin: 0; font-size: var(--fs-h2); letter-spacing: -0.02em; }
 .contact-lead { margin: 0; color: var(--text-2); }
 
 .email {
@@ -21,8 +22,16 @@
   font-size: var(--fs-small);
   max-width: 420px;
 }
-.email code { font-family: inherit; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* min-width 0 : sans lui un flex item en nowrap ne retrecit pas et l'ellipse ne se declenche jamais. */
+.email code {
+  min-width: 0;
+  font-family: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .copy {
+  flex: none;
   margin-left: auto;
   padding: 4px 10px;
   min-height: 28px;
@@ -34,6 +43,10 @@
   font-size: var(--fs-micro);
   font-weight: 600;
   cursor: pointer;
+  transition: background var(--dur);
+}
+@media (hover: hover) {
+  .copy:hover { background: var(--hover); }
 }
 .email-soon { margin: 0; font-size: var(--fs-small); color: var(--muted); }
 
@@ -43,4 +56,7 @@
 
 @media (max-width: 760px) {
   .contact { padding: 18px; }
+  .email { max-width: none; }
+  /* Cible tactile plus haute, sans changer la ligne. */
+  .copy { min-height: 36px; padding: 6px 12px; }
 }

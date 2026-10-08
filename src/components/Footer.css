@@ -13,3 +13,8 @@
 }
 .foot a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .foot a:hover { color: var(--text); }
+
+/* Mobile : les trois segments s'empilent dans l'ordre du DOM, la phrase de methode en dernier. */
+@media (max-width: 760px) {
+  .foot { flex-direction: column; gap: 6px; padding: 20px 2px 8px; }
+}
