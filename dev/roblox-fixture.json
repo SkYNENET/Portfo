@@ -1,0 +1,115 @@
+{
+  "_note": "fixture dev, playing modifié pour tester la pastille live",
+  "games": {
+    "136890726201326": {
+      "name": "Monster Mayhem",
+      "playing": 3,
+      "visits": 16721,
+      "favorites": 267,
+      "likes": 219,
+      "dislikes": 8,
+      "icon": "https://tr.rbxcdn.com/180DAY-ee01afbf18e48d99302f899d55c098b2/512/512/Image/Png/noFilter",
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-ee01afbf18e48d99302f899d55c098b2/512/512/Image/Png/noFilter"
+    },
+    "113866436980344": {
+      "name": "Escape Knockout for Speed",
+      "playing": 0,
+      "visits": 10164,
+      "favorites": 25,
+      "likes": 33,
+      "dislikes": 18,
+      "icon": "https://tr.rbxcdn.com/180DAY-121f91e972607ab618dedfcd81c7e572/512/512/Image/Png/noFilter",
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-121f91e972607ab618dedfcd81c7e572/512/512/Image/Png/noFilter"
+    },
+    "93487925421293": {
+      "name": "Search For The Egg",
+      "playing": 1,
+      "visits": 9275,
+      "favorites": 169,
+      "likes": 49,
+      "dislikes": 16,
+      "icon": "https://tr.rbxcdn.com/180DAY-056f3cd712037125459f3d687d605359/512/512/Image/Png/noFilter",
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-056f3cd712037125459f3d687d605359/512/512/Image/Png/noFilter"
+    },
+    "125815079895321": {
+      "name": "Don't Eat Poisoned Slime",
+      "playing": 0,
+      "visits": 7004,
+      "favorites": 18,
+      "likes": 13,
+      "dislikes": 3,
+      "icon": "https://tr.rbxcdn.com/180DAY-29cff2c2f4f87e375171763fb2f01b5d/512/512/Image/Png/noFilter",
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-29cff2c2f4f87e375171763fb2f01b5d/512/512/Image/Png/noFilter"
+    },
+    "123100983531502": {
+      "name": "Salle Ancienne Rush",
+      "playing": 0,
+      "visits": 4468,
+      "favorites": 20,
+      "likes": 46,
+      "dislikes": 4,
+      "icon": "https://tr.rbxcdn.com/180DAY-e34b7e56e4ac53211f1003ea505de816/512/512/Image/Png/noFilter",
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-e34b7e56e4ac53211f1003ea505de816/512/512/Image/Png/noFilter"
+    },
+    "82734020430701": {
+      "name": "Room Rush",
+      "playing": 0,
+      "visits": 4151,
+      "favorites": 17,
+      "likes": 25,
+      "dislikes": 4,
+      "icon": "https://tr.rbxcdn.com/180DAY-0d28a733cbfee8230d4cc3055981b7ce/512/512/Image/Png/noFilter",
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-0d28a733cbfee8230d4cc3055981b7ce/512/512/Image/Png/noFilter"
+    },
+    "75594318823554": {
+      "name": "Run For Dinosaurs",
+      "playing": 0,
+      "visits": 2621,
+      "favorites": 7,
+      "likes": 10,
+      "dislikes": 1,
+      "icon": "https://tr.rbxcdn.com/180DAY-25ec573b7f1259416e20a1d877edbb8e/512/512/Image/Png/noFilter",
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-25ec573b7f1259416e20a1d877edbb8e/512/512/Image/Png/noFilter"
+    },
+    "88367844931035": {
+      "name": "[UPD] Lucky Block Factory",
+      "playing": 0,
+      "visits": 1664,
+      "favorites": 7,
+      "likes": 15,
+      "dislikes": 3,
+      "icon": "https://tr.rbxcdn.com/180DAY-edbd3ebeab18d12a0197dc9914e2f9fd/512/512/Image/Png/noFilter",
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-edbd3ebeab18d12a0197dc9914e2f9fd/512/512/Image/Png/noFilter"
+    }
+  },
+  "groups": {
+    "35726151": {
+      "members": 511,
+      "icon": "https://tr.rbxcdn.com/180DAY-24ce70e0617c76cf01bd815b7f1899e7/150/150/Image/Png/noFilter"
+    },
+    "292694018": {
+      "members": 331,
+      "icon": "https://tr.rbxcdn.com/180DAY-9bfed2334c43ec489d251b01350a43a8/150/150/Image/Png/noFilter"
+    },
+    "272607461": {
+      "members": 164,
+      "icon": "https://tr.rbxcdn.com/180DAY-a7cc9673dca9fc1f1ba5a5ca415d8626/150/150/Image/Png/noFilter"
+    },
+    "1095885752": {
+      "members": 140,
+      "icon": "https://tr.rbxcdn.com/180DAY-64deeb01d44f11de496de1a35d323fa7/150/150/Image/Png/noFilter"
+    },
+    "35631030": {
+      "members": 80,
+      "icon": "https://tr.rbxcdn.com/180DAY-c89b6e99af85d4c74c5f55588428e64d/150/150/Image/Png/noFilter"
+    },
+    "35476292": {
+      "members": 4306
+    },
+    "923178524": {
+      "members": 11151,
+      "icon": "https://tr.rbxcdn.com/180DAY-71da5d2b04d0f1e20c36ae109a3ec44f/150/150/Image/Png/noFilter"
+    }
+  },
+  "partial": false
+}
