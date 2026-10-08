@@ -1,0 +1,3174 @@
+{
+ "userId": 7893763634,
+ "user": {
+  "description": "hold when quickly breath rope",
+  "created": "2025-01-20T08:12:25.877Z",
+  "isBanned": false,
+  "externalAppDisplayName": null,
+  "hasVerifiedBadge": false,
+  "id": 7893763634,
+  "name": "Vbrut0x",
+  "displayName": "Vbrut0x"
+ },
+ "counts": {
+  "friends": {
+   "count": 46
+  },
+  "followers": {
+   "count": 1035
+  },
+  "following": {
+   "count": 4
+  }
+ },
+ "avatar": {
+  "data": [
+   {
+    "targetId": 7893763634,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-E4BF841D0B2BFD193DDE0AB7B8CBCF2E-Png/420/420/AvatarHeadshot/Png/noFilter",
+    "version": "TN3"
+   }
+  ]
+ },
+ "robloxBadges": [
+  {
+   "id": 6,
+   "name": "Homestead",
+   "description": "This badge was earned by having your personal place visited 100 times. People who achieved this have demonstrated their ability to build cool things that other Robloxians were interested enough in to check out. This badge could be earned from 2007 to 2026. It has been retired and is no longer attainable.",
+   "imageUrl": "https://images.rbxcdn.com/b66bc601e2256546c5dd6188fce7a8d1.png"
+  },
+  {
+   "id": 7,
+   "name": "Bricksmith",
+   "description": "This badge was earned by having a popular personal place. Once your place had been visited 1000 times, you received this award. Robloxians with Bricksmith badges are accomplished builders who were able to create a place that people wanted to explore a thousand times. They no doubt know a thing or two about putting bricks together. This badge could be earned from 2007 to 2026. It has been retired and is no longer attainable.",
+   "imageUrl": "https://images.rbxcdn.com/49f3d30f5c16a1c25ea0f97ea8ef150e.png"
+  },
+  {
+   "id": 2,
+   "name": "Friendship",
+   "description": "This badge was given to members who embraced the Roblox community and made at least 20 friends. People who have this badge are good people to know and can probably help you out if you are having trouble. This badge could be earned from 2007 to 2026. It has been retired and is no longer attainable.",
+   "imageUrl": "https://images.rbxcdn.com/5eb20917cf530583e2641c0e1f7ba95e.png"
+  }
+ ],
+ "userGames": [
+  {
+   "id": 10172054493,
+   "name": "Expérience sans titre",
+   "description": null,
+   "creator": {
+    "id": 7893763634,
+    "type": "User"
+   },
+   "rootPlace": {
+    "id": 101802658930847,
+    "type": "Place"
+   },
+   "created": "2026-05-15T16:23:20.13Z",
+   "updated": "2026-05-17T12:25:51.853Z",
+   "placeVisits": 7
+  },
+  {
+   "id": 10129295510,
+   "name": "testpoop",
+   "description": null,
+   "creator": {
+    "id": 7893763634,
+    "type": "User"
+   },
+   "rootPlace": {
+    "id": 77038727456153,
+    "type": "Place"
+   },
+   "created": "2026-05-06T07:28:58.793Z",
+   "updated": "2026-05-06T07:29:53.493Z",
+   "placeVisits": 8
+  },
+  {
+   "id": 9955044437,
+   "name": "40% ",
+   "description": null,
+   "creator": {
+    "id": 7893763634,
+    "type": "User"
+   },
+   "rootPlace": {
+    "id": 109040932155494,
+    "type": "Place"
+   },
+   "created": "2026-03-28T21:19:58.16Z",
+   "updated": "2026-03-28T21:22:36.633Z",
+   "placeVisits": 4
+  },
+  {
+   "id": 9938869587,
+   "name": "Tie india Simulator",
+   "description": null,
+   "creator": {
+    "id": 7893763634,
+    "type": "User"
+   },
+   "rootPlace": {
+    "id": 129164101985449,
+    "type": "Place"
+   },
+   "created": "2026-03-25T14:35:25.827Z",
+   "updated": "2026-03-25T15:56:51.96Z",
+   "placeVisits": 3
+  },
+  {
+   "id": 9786076529,
+   "name": "LFI ou RN",
+   "description": null,
+   "creator": {
+    "id": 7893763634,
+    "type": "User"
+   },
+   "rootPlace": {
+    "id": 98880972835046,
+    "type": "Place"
+   },
+   "created": "2026-02-23T18:44:01.463Z",
+   "updated": "2026-02-24T20:19:51.813Z",
+   "placeVisits": 11
+  },
+  {
+   "id": 9722761583,
+   "name": "Dungeons of Regret",
+   "description": null,
+   "creator": {
+    "id": 7893763634,
+    "type": "User"
+   },
+   "rootPlace": {
+    "id": 97663603364006,
+    "type": "Place"
+   },
+   "created": "2026-02-14T09:46:47.7Z",
+   "updated": "2026-02-16T09:02:46.447Z",
+   "placeVisits": 9
+  },
+  {
+   "id": 9691294591,
+   "name": "Shot first",
+   "description": null,
+   "creator": {
+    "id": 7893763634,
+    "type": "User"
+   },
+   "rootPlace": {
+    "id": 127387283119125,
+    "type": "Place"
+   },
+   "created": "2026-02-07T21:11:28.083Z",
+   "updated": "2026-02-08T22:48:41.41Z",
+   "placeVisits": 45
+  },
+  {
+   "id": 9587795529,
+   "name": "ANGEL or DEMON",
+   "description": "😇 Angel or Demon Quiz? 😈\nAre you a pure soul or a mischievous rebel? It’s time to find out in the ultimate Angel vs Demon Quiz! Answer 20 unique questions about your personality, your choices, and your secrets to reveal your true nature. Will you fly with the angels or rule with the demons? ⚖️\n\n✨ HOW TO PLAY\n📝 Take the Quiz: Answer honest questions about how you treat others and how you see the world.\n\n📊 Get your Result: Discover if you are an Angel, a Demon, or perfectly Balanced.\n\n🎭 Transform: Your character automatically receives exclusive wings and items based on your result!\n\n📖 Learn More: Read your full personality analysis to understand your strengths and weaknesses.\n\n💎 FEATURES\n😇 Angel Side: Unlock beautiful glowing wings and peaceful tools.\n\n😈 Demon Side: Unlock dark wings, horns, and mischievous items.\n\n⚖️ Balanced: For those who master both light and shadow!\n\n📈 Global Stats: See how many players are Angels vs Demons in real-time on the global leaderboard!",
+   "creator": {
+    "id": 7893763634,
+    "type": "User"
+   },
+   "rootPlace": {
+    "id": 87737871055953,
+    "type": "Place"
+   },
+   "created": "2026-01-19T07:56:29.4Z",
+   "updated": "2026-01-19T11:05:33.877Z",
+   "placeVisits": 458
+  },
+  {
+   "id": 9248077734,
+   "name": "Steal Stats",
+   "description": "Bienvenue dans Last Letter ! Jouez à des jeux de mots avec des personnes où chaque dernière lettre compte, restez 2 pas en avance ou vous serez éliminé 💥\n\n- PAS de P2W, tous les styles sont viables et dépendent de la façon dont vous l'utilisez 🧠\n- Faites pivoter les styles et utilisez sa capacité à améliorer le gameplay 🔥\nObtenez des tours avec des codes, en vous inscrivant quotidiennement ou en complétant des tâches 💰\n- Achetez des articles dans la boutique pour flex sur les gens lol\n\nLe jeu est en version bêta, attendez-vous à des bugs et à des changements majeurs\n\nRejoignez le groupe pour utiliser les codes 🎁\nsi vous aimez et souhaitez soutenir le jeu, Like 👍 et Favorite ⭐ pour plus de mises à jour\n",
+   "creator": {
+    "id": 7893763634,
+    "type": "User"
+   },
+   "rootPlace": {
+    "id": 71617939655265,
+    "type": "Place"
+   },
+   "created": "2025-11-26T13:40:06.977Z",
+   "updated": "2025-12-12T18:48:53.21Z",
+   "placeVisits": 105
+  },
+  {
+   "id": 7127856984,
+   "name": "Salle Ancienne Rush",
+   "description": "Entrez dans un monde de mystère et de hasard! Dans RNG Door Adventure, chaque porte que vous ouvrez mène à une pièce unique de rareté variable. Testez votre chance en découvrant des pièces rares, en suivant vos progrès sur le tableau de bord et en rivalisant avec des amis pour découvrir les trésors les plus rares. Chaque joueur apparaît dans sa propre salle de départ pour une aventure personnalisée!\n\nCaractéristiques:\n\nChambres générées aléatoirement avec différentes raretés.\nUn tableau de bord pour suivre votre progression et afficher la pièce la plus rare que vous ayez trouvée.\nOptions de passe de jeu pour améliorer votre expérience, y compris le double de vitesse et une augmentation de la chance.\nGénère un départ unique pour chaque joueur pour garantir une expérience fraîche.\nTrouverez-vous la pièce la plus rare? Commencez votre aventure maintenant et laissez la chance guider votre voyage!\n\n\nCrédits:\n\nGraphiques : j_judes",
+   "creator": {
+    "id": 7893763634,
+    "type": "User"
+   },
+   "rootPlace": {
+    "id": 123100983531502,
+    "type": "Place"
+   },
+   "created": "2025-01-22T21:08:10.117Z",
+   "updated": "2026-02-17T20:45:50.623Z",
+   "placeVisits": 4468
+  }
+ ],
+ "groupRoles": {
+  "data": [
+   {
+    "group": {
+     "id": 441486339,
+     "name": "Coins House",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 2848652655,
+      "username": "BlueShotss",
+      "displayName": "BlueShots"
+     },
+     "shout": null,
+     "memberCount": 2,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 838776002,
+     "name": "Holder",
+     "rank": 255,
+     "color": 4
+    }
+   },
+   {
+    "group": {
+     "id": 646476147,
+     "name": "No Flop Games",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 7893763634,
+      "username": "Vbrut0x",
+      "displayName": "Vbrut0x"
+     },
+     "shout": null,
+     "memberCount": 13,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 878259014,
+     "name": "Owner",
+     "rank": 1,
+     "color": 3
+    }
+   },
+   {
+    "group": {
+     "id": 677833718,
+     "name": "YardGame Studio",
+     "description": "We bring you Yards!",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 10583028698,
+      "username": "Deniza05X5",
+      "displayName": "RStudioHolder"
+     },
+     "shout": null,
+     "memberCount": 2400,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 12884901889,
+     "name": "Member",
+     "rank": 1,
+     "isBase": true,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 592702044,
+     "name": "LyCa Games",
+     "description": "Lyca games liyu + Luca\nPlease check out our game Roll A Cube, we hope you like it! 😋",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 123721150,
+      "username": "lieeyui",
+      "displayName": "liyu"
+     },
+     "shout": null,
+     "memberCount": 553,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 12884901889,
+     "name": "Member Cubs",
+     "rank": 1,
+     "isBase": true,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 1095885752,
+     "name": "Chill Games fr",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 7893763634,
+      "username": "Vbrut0x",
+      "displayName": "Vbrut0x"
+     },
+     "shout": null,
+     "memberCount": 140,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 860266022,
+     "name": "Owner",
+     "rank": 255,
+     "color": 15
+    }
+   },
+   {
+    "group": {
+     "id": 376551072,
+     "name": "KNIFE DUELS Team",
+     "description": "Hi lol",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 1224621607,
+      "username": "leonw_ok",
+      "displayName": "Leon"
+     },
+     "shout": null,
+     "memberCount": 1479188,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 624615141,
+     "name": "Member",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 43252617,
+     "name": "Breakfast",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 3095250,
+      "username": "rip_indra",
+      "displayName": "rip_indra"
+     },
+     "shout": null,
+     "memberCount": 1372982,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 418464087,
+     "name": "Member",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 32943081,
+     "name": "supercat games",
+     "description": "SUPERCAT | SUPERCAT | SUPERCAT | SUPERCAT | SUPERCAT",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 4269345,
+      "username": "Plutonem",
+      "displayName": "emile"
+     },
+     "shout": null,
+     "memberCount": 559650,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 100672875,
+     "name": "superfan",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 1002185259,
+     "name": "Shadowrise Devs",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 516173765,
+      "username": "Alex1234usus1",
+      "displayName": "Zhuo"
+     },
+     "shout": null,
+     "memberCount": 5138753,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 589990125,
+     "name": "Member",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 450917589,
+     "name": "LarpHouse Entertainment",
+     "description": "est 7/6/26",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 10981819448,
+      "username": "shewrotemurdr",
+      "displayName": "zaii"
+     },
+     "shout": null,
+     "memberCount": 96606,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 12884901889,
+     "name": "Member",
+     "rank": 1,
+     "isBase": true,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 416091513,
+     "name": "(学乱) Gakuran",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 9912178341,
+      "username": "GakuranDev",
+      "displayName": "GakuranDev"
+     },
+     "shout": null,
+     "memberCount": 7573142,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 583144041,
+     "name": "Students",
+     "rank": 2,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 35328876,
+     "name": "Kaboom Creations",
+     "description": "Monke go boom 🙉💥",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 10854954659,
+      "username": "IndigoMT",
+      "displayName": "IndigoMT"
+     },
+     "shout": null,
+     "memberCount": 3040585,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 251682015,
+     "name": "Member",
+     "rank": 1,
+     "color": 1
+    }
+   },
+   {
+    "group": {
+     "id": 743828204,
+     "name": "Century-Inc",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 2848652655,
+      "username": "BlueShotss",
+      "displayName": "BlueShots"
+     },
+     "shout": null,
+     "memberCount": 4,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 779851092,
+     "name": "♣ | Boss",
+     "rank": 255,
+     "color": 8
+    }
+   },
+   {
+    "group": {
+     "id": 462643008,
+     "name": "FlopGames",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 6029383716,
+      "username": "BriceBBlox",
+      "displayName": "BriceBBlox"
+     },
+     "shout": null,
+     "memberCount": 11,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 12884901889,
+     "name": "Membre",
+     "rank": 1,
+     "isBase": true,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 1074557114,
+     "name": "SecretVerse Studio",
+     "description": "Welcome to SecretVerse Studio, a community where we build worlds, experiences, and games that stand out ✨\n\n🎮 Explore our universes, try our games, and follow their evolution.\n🌍 Shape the multiverse by sharing your feedback and influencing future ideas.\n🚀 Join an active community of curious and passionate creators.\n\nStep into the SecretVerse.",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 3845375404,
+      "username": "Secret_Lokii",
+      "displayName": "Secret_Lokii"
+     },
+     "shout": null,
+     "memberCount": 138160830,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 574302045,
+     "name": "Membre",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 35489258,
+     "name": "The Forge Community",
+     "description": "⚔️ Welcome to The Forge!\nIt’s an RPG and simulation game about Mining, Forging, and Fighting. Each ore combination you forge has a unique design and distinct traits. Create your own build and play in your own style. Have fun!",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 128618486,
+      "username": "FireAtacck",
+      "displayName": "FireAtacck"
+     },
+     "shout": null,
+     "memberCount": 2082243,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 251480737,
+     "name": "⚒️Forger",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 509055872,
+     "name": "Muggle Academy",
+     "description": "Make potions, learn magic, defeat enemies.\r\nWill you become the strongest wizard… or just blow up the cauldron first?",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 3643973799,
+      "username": "BlueBirdBarrySecond",
+      "displayName": "Mockbyrd"
+     },
+     "shout": null,
+     "memberCount": 166633,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 12884901889,
+     "name": "Member",
+     "rank": 1,
+     "isBase": true,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 129325464,
+     "name": "No Quarter Games",
+     "description": "Sea dogs",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 35808986,
+      "username": "jimifury",
+      "displayName": "jimifury"
+     },
+     "shout": null,
+     "memberCount": 323697,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 618209261,
+     "name": "Member",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 35916263,
+     "name": "Dropping a Banger",
+     "description": "🦁 Welcome to ZOO or OOF!\nI’m the Creator behind this wild animal game.\nDrop a comment with your thoughts and suggestions 🐾\n\nThanks for stopping by! 🐼💚",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 2712721623,
+      "username": "Komichoo",
+      "displayName": "Komi"
+     },
+     "shout": null,
+     "memberCount": 2220311,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 12884901889,
+     "name": "Member",
+     "rank": 1,
+     "isBase": true,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 272607461,
+     "name": "Lucky Block Factory Group",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 7893763634,
+      "username": "Vbrut0x",
+      "displayName": "Vbrut0x"
+     },
+     "shout": null,
+     "memberCount": 164,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 692315084,
+     "name": "Owner",
+     "rank": 255,
+     "color": 1
+    }
+   },
+   {
+    "group": {
+     "id": 3758531,
+     "name": "Summon Heroes | Twin Atlas",
+     "description": "Welcome to Summon Heroes! Join our communities for the latest info on the game's development!",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 548860564,
+      "username": "RedMantaStudio",
+      "displayName": "RedMantaStudio"
+     },
+     "shout": null,
+     "memberCount": 768231,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 25684731,
+     "name": "Fan",
+     "rank": 2,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 48305143,
+     "name": "FLOPPA MADE ANOTHER ONE",
+     "description": "The Official Roblox Group of Floppa Studios.",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 5420068,
+      "username": "HiddoDev",
+      "displayName": "HiddoDev"
+     },
+     "shout": null,
+     "memberCount": 133004,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 593860006,
+     "name": "Member",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 34258454,
+     "name": "Anime Final Quest",
+     "description": "Official Roblox group of Anime Final Quest\n- Cell Games",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 1811410101,
+      "username": "Lodwnzera",
+      "displayName": "Lodwnzera"
+     },
+     "shout": null,
+     "memberCount": 3233987,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 107828844,
+     "name": "Member",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 243793973,
+     "name": "Bombshell Experiences",
+     "description": "💣🔥",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 9341949905,
+      "username": "CreatorExc",
+      "displayName": "David"
+     },
+     "shout": null,
+     "memberCount": 9225131,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 612166271,
+     "name": "Member",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 729957000,
+     "name": "Studios ezworks",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 4080147393,
+      "username": "HolderGroupStudiosDX",
+      "displayName": "him"
+     },
+     "shout": null,
+     "memberCount": 1098682,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 621653106,
+     "name": "Member",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 292694018,
+     "name": "AVortexGame",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 2848652655,
+      "username": "BlueShotss",
+      "displayName": "BlueShots"
+     },
+     "shout": null,
+     "memberCount": 331,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 651437130,
+     "name": "Owners",
+     "rank": 254,
+     "color": 12
+    }
+   },
+   {
+    "group": {
+     "id": 14260846,
+     "name": "CPJ STUDIO",
+     "description": "Welcome To Chunky's!The restaurant of Chunky's is a roleplay game still under developpement and we are willing to build the best roblox community and a great hangout game to talk to others and make some new friend ",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 781390016,
+      "username": "ThomasBel99",
+      "displayName": "Okcbon66"
+     },
+     "shout": null,
+     "memberCount": 849,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 479720004,
+     "name": "Customer",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 460048752,
+     "name": "Dawn Digital",
+     "description": "Life is roblox.",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 310181583,
+      "username": "Kinebrach",
+      "displayName": "Kinebrach"
+     },
+     "shout": null,
+     "memberCount": 4313034,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 596148048,
+     "name": "Member",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 132979512,
+     "name": "Hyper | UGC",
+     "description": "Hey guys, just tryna be big :)",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 7893763634,
+      "username": "Vbrut0x",
+      "displayName": "Vbrut0x"
+     },
+     "shout": null,
+     "memberCount": 7,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 634003041,
+     "name": "Propriétaire",
+     "rank": 255,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 129858379,
+     "name": "GamePot",
+     "description": "Random games, made for fun. Play, explore, repeat.",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 7897764587,
+      "username": "LetTheBenjaminsBurn",
+      "displayName": "IceMan"
+     },
+     "shout": null,
+     "memberCount": 1527909,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 537588116,
+     "name": "Member",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 63246470,
+     "name": "Our Poopy Games",
+     "description": "PoopY games",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 7893763634,
+      "username": "Vbrut0x",
+      "displayName": "Vbrut0x"
+     },
+     "shout": null,
+     "memberCount": 8,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 625487086,
+     "name": "Propriétaire",
+     "rank": 255,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 111496051,
+     "name": "Flouz Industries",
+     "description": "Flouz & Co. Management Society\r\n\r\n📜 ABOUT We are a structure specialized in \"involuntary wealth redistribution\" and chaos optimization. Here, we don't play, we manage (virtual) business.\r\n\r\n🏗️ CURRENT PROJECT: FLOUZBANK Advanced simulation of unauthorized fund transfer.\r\n\r\n💼 THE MANAGEMENT Studio managed under strict co-ownership (50/50 Protocol). Any attempt to bribe the developers will be accepted if the amount is sufficient.\r\n\r\nMotto: \"Money can't buy happiness, but robbing it can.\"",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 10428194659,
+      "username": "spiritazer1",
+      "displayName": "spiritazer1"
+     },
+     "shout": null,
+     "memberCount": 3,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 625533051,
+     "name": "copropriétaire",
+     "rank": 254,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 4676369,
+     "name": "HD Admin",
+     "description": "Monetize, moderate and grow your game with over 200 commands",
+     "owner": {
+      "hasVerifiedBadge": true,
+      "userId": 82347291,
+      "username": "ForeverHD",
+      "displayName": "Ben"
+     },
+     "shout": null,
+     "memberCount": 3586473,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": true,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 31351378,
+     "name": "Epic User",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 887682040,
+     "name": "Vortex | Minigames",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 4020442069,
+      "username": "wastingsh",
+      "displayName": "vilhelm"
+     },
+     "shout": null,
+     "memberCount": 5,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 591968025,
+     "name": "Admin",
+     "rank": 254,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 947991622,
+     "name": "Game france",
+     "description": "jeux FR",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 7893763634,
+      "username": "Vbrut0x",
+      "displayName": "Vbrut0x"
+     },
+     "shout": null,
+     "memberCount": 3,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 538756080,
+     "name": "Propriétaire",
+     "rank": 255,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 35476292,
+     "name": "Vorld",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 6063176761,
+      "username": "PoppTwin",
+      "displayName": "Inspect"
+     },
+     "shout": null,
+     "memberCount": 4306,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 676937140,
+     "name": "Head Developer",
+     "rank": 120,
+     "color": 1
+    }
+   },
+   {
+    "group": {
+     "id": 34090000,
+     "name": "Try Community",
+     "description": "Greetings from the Try |  Community!\nAn area where ardent gamers and obby enthusiasts can come together, compete, and develop. This is the place for anything Obby, whether your goal is to overcome challenges or make friends with other Kurds. 🏆 Take part in the journey, exchange stories, and advance together! 🔥\n\nسڵاو لە Try | کۆمەڵگەی \nناوچەیەک کە یاریکەرانی سەرسەخت و ئارەزوومەندانی ئۆبی دەتوانن پێکەوە کۆببنەوە، پێشبڕکێ بکەن و گەشە بکەن. ئەمە شوێنی هەموو شتێکە ئۆبی، جا ئامانجت زاڵبوون بەسەر ئاستەنگەکان بێت یان هاوڕێیەتی لەگەڵ کوردەکانی تر. 🏆 بەشداری لە گەشتەکەدا بکەن، چیرۆک ئاڵوگۆڕ بکەن، و بەیەکەوە بەرەوپێش ببەن! 🔥",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 9775497635,
+      "username": "Agomemnos",
+      "displayName": "Agomemnos"
+     },
+     "shout": null,
+     "memberCount": 35067,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 106889009,
+     "name": "• Member •",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 407952546,
+     "name": "Infinity Studῖos",
+     "description": "Hey, I'm Eren, the founder of Infinity Studios. I created this studio with one goal in mind — to make every kind of game possible. Whether it's intense battlegrounds, chill hangouts, story adventures, or anything in between, I’m all about building fun, unique experiences for all types of players. At Infinity Studios, we don’t stick to one style  we create them all.",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 3783627957,
+      "username": "Eren101383",
+      "displayName": "Eren"
+     },
+     "shout": null,
+     "memberCount": 1926,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 454444003,
+     "name": "[💎]  Top supporter!",
+     "rank": 250,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 923178524,
+     "name": "PDK • Community",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 10895528958,
+      "username": "Hexiiiy",
+      "displayName": "Hexiiiy"
+     },
+     "shout": null,
+     "memberCount": 11151,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 516496007,
+     "name": "Admin",
+     "rank": 254,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 35726151,
+     "name": "Hyper | Games",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 7893763634,
+      "username": "Vbrut0x",
+      "displayName": "Vbrut0x"
+     },
+     "shout": null,
+     "memberCount": 511,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 313634140,
+     "name": "Propriétaire",
+     "rank": 255,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 34685663,
+     "name": "Vortex | Games",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 4020442069,
+      "username": "wastingsh",
+      "displayName": "vilhelm"
+     },
+     "shout": null,
+     "memberCount": 17,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 111896475,
+     "name": "Member",
+     "rank": 1,
+     "color": 0
+    }
+   },
+   {
+    "group": {
+     "id": 35631030,
+     "name": "OG Game 2017",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 7893763634,
+      "username": "Vbrut0x",
+      "displayName": "Vbrut0x"
+     },
+     "shout": null,
+     "memberCount": 80,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 284536095,
+     "name": "Propriétaire",
+     "rank": 255,
+     "color": 0
+    },
+    "isPrimaryGroup": true
+   },
+   {
+    "group": {
+     "id": 17151743,
+     "name": "let me control",
+     "description": "",
+     "owner": {
+      "hasVerifiedBadge": false,
+      "userId": 2210013488,
+      "username": "Hecouil",
+      "displayName": "Love"
+     },
+     "shout": null,
+     "memberCount": 32,
+     "isBuildersClubOnly": false,
+     "publicEntryAllowed": true,
+     "hasVerifiedBadge": false,
+     "hasSocialModules": true
+    },
+    "role": {
+     "id": 95497466,
+     "name": "Worker",
+     "rank": 1,
+     "color": 0
+    }
+   }
+  ]
+ },
+ "groupsHighRank": [
+  {
+   "id": 441486339,
+   "name": "Coins House",
+   "members": 2,
+   "role": "Holder",
+   "rank": 255
+  },
+  {
+   "id": 1095885752,
+   "name": "Chill Games fr",
+   "members": 140,
+   "role": "Owner",
+   "rank": 255
+  },
+  {
+   "id": 743828204,
+   "name": "Century-Inc",
+   "members": 4,
+   "role": "♣ | Boss",
+   "rank": 255
+  },
+  {
+   "id": 272607461,
+   "name": "Lucky Block Factory Group",
+   "members": 164,
+   "role": "Owner",
+   "rank": 255
+  },
+  {
+   "id": 292694018,
+   "name": "AVortexGame",
+   "members": 331,
+   "role": "Owners",
+   "rank": 254
+  },
+  {
+   "id": 132979512,
+   "name": "Hyper | UGC",
+   "members": 7,
+   "role": "Propriétaire",
+   "rank": 255
+  },
+  {
+   "id": 63246470,
+   "name": "Our Poopy Games",
+   "members": 8,
+   "role": "Propriétaire",
+   "rank": 255
+  },
+  {
+   "id": 111496051,
+   "name": "Flouz Industries",
+   "members": 3,
+   "role": "copropriétaire",
+   "rank": 254
+  },
+  {
+   "id": 887682040,
+   "name": "Vortex | Minigames",
+   "members": 5,
+   "role": "Admin",
+   "rank": 254
+  },
+  {
+   "id": 947991622,
+   "name": "Game france",
+   "members": 3,
+   "role": "Propriétaire",
+   "rank": 255
+  },
+  {
+   "id": 407952546,
+   "name": "Infinity Studῖos",
+   "members": 1926,
+   "role": "[💎]  Top supporter!",
+   "rank": 250
+  },
+  {
+   "id": 923178524,
+   "name": "PDK • Community",
+   "members": 11151,
+   "role": "Admin",
+   "rank": 254
+  },
+  {
+   "id": 35726151,
+   "name": "Hyper | Games",
+   "members": 511,
+   "role": "Propriétaire",
+   "rank": 255
+  },
+  {
+   "id": 35631030,
+   "name": "OG Game 2017",
+   "members": 80,
+   "role": "Propriétaire",
+   "rank": 255
+  }
+ ],
+ "groupGames": {
+  "441486339": [],
+  "1095885752": [
+   {
+    "id": 10767332654,
+    "name": "Search For The Egg",
+    "description": "a chill beach game about digging for an Egg buried in a giant pile of Sand...\n\nFind the Egg hidden in the Sand!\n\n- Dig with your hands, a shovel, a bucket and more\n- Sell your sand and upgrade your tools\n- Get a crab helper to dig with you\n- Play solo or with your friends\n- Try Hard mode: a much bigger pile!\n- Roll a class: can you get The Chosen One?\n- Beat your best time and climb the leaderboard\n\nCan you dig it up?\n\nTags: Find The Egg, Egg, Egg Hunt, Needle in a Haystack, Search, Adventure, Dig, Digging, Sand, Beach, Island, Treasure, Treasure Hunt, Chill, Cozy, Relaxing, Co-op, Friends, Shovel, Crab, Speedrun, Hard Mode",
+    "creator": {
+     "id": 1095885752,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 93487925421293,
+     "type": "Place"
+    },
+    "created": "2026-09-20T22:38:05.783Z",
+    "updated": "2026-09-28T17:18:41.42Z",
+    "placeVisits": 9275
+   }
+  ],
+  "743828204": [],
+  "272607461": [
+   {
+    "id": 10016151371,
+    "name": "[UPD] Lucky Block Factory",
+    "description": "🏭 Welcome to Lucky Block Factory! 🍀\nStep into a world where your factory prints Lucky Blocks and money never stops flowing! 💰✨\n\nYou own your very own factory… and it’s up to you to turn it into a powerful production empire 👑\n\n🍀 Produce Lucky Blocks automatically and watch your cash grow\n💸 Sell your blocks to earn tons of money\n⚙️ Upgrade your factory to make it faster and stronger\n👷 Buy special Lucky Blocks to place workers and boost your production\n🚀 Build your strategy and become the richest factory owner!\n\nWill you create the ultimate Lucky Block empire… or fall behind? 👀",
+    "creator": {
+     "id": 272607461,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 88367844931035,
+     "type": "Place"
+    },
+    "created": "2026-04-10T16:55:10.597Z",
+    "updated": "2026-04-18T15:14:38.263Z",
+    "placeVisits": 1664
+   }
+  ],
+  "292694018": [
+   {
+    "id": 9856582217,
+    "name": "Don't Eat Poisoned Slime",
+    "description": "🟢💥 Don't Eat Poisoned Slime 💥🟢\n\n🎰 SPIN to win BIG cash rewards! 💰\n🍴 EAT the slimes... but WATCH OUT! 🦠\n🎯 ONE is poisoned by your enemy — eat it and YOU LOSE! ☠️\n\n⚔️ Face off 1v1 at the table 🪑\n🔥 Build crazy WIN STREAKS to flex on everyone 🔥\n👑 Earn UNIQUE chairs to show off your style 👑\n\n✨ FEATURES ✨\n🪑 Collect EPIC chairs (Demon, Ice, VIP & MORE) \n💸 Steal cash from other players 😈\n☢️ NUKE the whole server 💣\n🍀 Boost your luck for HUGE prizes\n👀 Reveal your enemy's poisoned slime\n🎁 + 10% bonus per FRIEND in the server (up to +50%!)\n👬 Invite friends → MORE rewards\n\n🎮 Easy to play, hard to master!\n👥 Bring your squad for the BEST experience! \n\n⚠️ Trust no one. Eat carefully. Win BIG. ⚠️",
+    "creator": {
+     "id": 292694018,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 125815079895321,
+     "type": "Place"
+    },
+    "created": "2026-03-08T22:54:24.05Z",
+    "updated": "2026-05-01T20:34:22.377Z",
+    "placeVisits": 7004
+   }
+  ],
+  "132979512": [],
+  "63246470": [
+   {
+    "id": 9660147022,
+    "name": "Poop Fighting",
+    "description": "💩 BATTLE ROYALE BUT WITH POOP! 💩\n\nLast one standing wins... or should we say, last one NOT covered in poop?\n\n🚽 Press E to... you know\n👊 Click to yeet your creation\n💰 Earn Flouzs, buy legendary poops\n🏆 Survive the shrinking zone of DOOM\n\nWarning: This game is CRAPPY... literally! \nJoin our group for 150 FREE Flouzs! 💎",
+    "creator": {
+     "id": 63246470,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 75130809384815,
+     "type": "Place"
+    },
+    "created": "2026-02-01T14:05:23.583Z",
+    "updated": "2026-02-01T18:03:00.773Z",
+    "placeVisits": 107
+   }
+  ],
+  "111496051": [
+   {
+    "id": 9646860198,
+    "name": "TestCashGrab",
+    "description": null,
+    "creator": {
+     "id": 111496051,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 106550386652809,
+     "type": "Place"
+    },
+    "created": "2026-01-30T13:48:02.507Z",
+    "updated": "2026-01-31T20:30:22.6Z",
+    "placeVisits": 0
+   }
+  ],
+  "887682040": [],
+  "947991622": [
+   {
+    "id": 8825199351,
+    "name": "Game FR",
+    "description": null,
+    "creator": {
+     "id": 947991622,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 114866791185881,
+     "type": "Place"
+    },
+    "created": "2025-09-28T16:12:24.497Z",
+    "updated": "2025-10-03T11:53:48.587Z",
+    "placeVisits": 8
+   }
+  ],
+  "407952546": [
+   {
+    "id": 8062827807,
+    "name": "Untitled Game",
+    "description": null,
+    "creator": {
+     "id": 407952546,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 71530168361392,
+     "type": "Place"
+    },
+    "created": "2025-07-03T19:15:59.817Z",
+    "updated": "2025-12-09T16:55:41.623Z",
+    "placeVisits": 1
+   },
+   {
+    "id": 8106324361,
+    "name": "Sad days 💔",
+    "description": "Sad days is a replase game that you can relax with your friends and chill in the calm environment \n⚠️ Highest graphics setting is recommended for the best experience — the visuals are worth it!\ntags: hangout replase chill relax social friends casual aesthetic cozy Fun talk vibes chat modern urban   lounge club plaza rooftop park music emotes fashion avatar showcase dance interactive customoutfits  community",
+    "creator": {
+     "id": 407952546,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 118789205456947,
+     "type": "Place"
+    },
+    "created": "2025-07-08T15:13:08.69Z",
+    "updated": "2025-07-17T16:00:20.077Z",
+    "placeVisits": 3944
+   },
+   {
+    "id": 8572498402,
+    "name": "[REPLASE] Forgotten Shores",
+    "description": null,
+    "creator": {
+     "id": 407952546,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 113121806916294,
+     "type": "Place"
+    },
+    "created": "2025-08-28T19:37:20.413Z",
+    "updated": "2025-12-09T16:46:51.037Z",
+    "placeVisits": 5
+   }
+  ],
+  "923178524": [
+   {
+    "id": 7198485416,
+    "name": "Kurdish Obbyy☀️1",
+    "description": "☀️ Welcome to Kurdish Obbyy!\n\n🌈 400 bright, fun & colorful stages\n\n🧒 Safe & kid-friendly — follows all Roblox rules\n\n💬 Important: The bubble chat is only to help you finish the obby, not for normal chatting. Roblox filters are fully active to keep it safe\n\n🎮 Easy & fun gameplay for everyone\n\n💾 Your progress auto-saves — play anytime\n\n👍 Don’t forget to Like & Favorite the game to support us!\n\n👥 Join our group for special perks & VIP rewards:\n👉 www.roblox.com/groups/34090000\n\nTags:\nKurd, Kurdish, Kurdistan, KurdishObby, KidsFriendly, FamilySafe, Obby, Rainbow, EasyObby, FunObby, CoolObby,\n",
+    "creator": {
+     "id": 923178524,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 111718750517955,
+     "type": "Place"
+    },
+    "created": "2025-02-05T10:00:38.203Z",
+    "updated": "2026-03-24T03:19:33.123Z",
+    "placeVisits": 6862
+   }
+  ],
+  "35726151": [
+   {
+    "id": 7487992065,
+    "name": "Room Rush",
+    "description": "Room Rush is a game where you have to open doors to discover rooms of various rarities. You can sell them or simply display them in the spawn after equipping them in your inventory.\n\n⚠️ Donations are made through the sale of clothing and game passes, which can take up to one week to process. The Robux shown in the game reflect the price at the time of sale. The Robux you receive may be lower due to Roblox fees.\nView your pending Robux here: https://www.roblox.com/transactions\n\nGame Development: @HyperDev7 (Roblox)  \nScripter: @mykinglisa (Roblox)  \nVFX Artist: @BlueShotss (Roblox)",
+    "creator": {
+     "id": 35726151,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 82734020430701,
+     "type": "Place"
+    },
+    "created": "2025-04-04T21:44:10.27Z",
+    "updated": "2025-04-24T18:07:59.907Z",
+    "placeVisits": 4151
+   },
+   {
+    "id": 9670382970,
+    "name": "Escape Knockout for Speed",
+    "description": null,
+    "creator": {
+     "id": 35726151,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 113866436980344,
+     "type": "Place"
+    },
+    "created": "2026-02-03T14:55:39.497Z",
+    "updated": "2026-02-05T18:25:15.187Z",
+    "placeVisits": 10164
+   },
+   {
+    "id": 9697946596,
+    "name": "Shoot First",
+    "description": null,
+    "creator": {
+     "id": 35726151,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 111938399466511,
+     "type": "Place"
+    },
+    "created": "2026-02-08T22:41:55.04Z",
+    "updated": "2026-02-08T23:47:38.753Z",
+    "placeVisits": 23
+   },
+   {
+    "id": 9742292759,
+    "name": "Idle Second [NEW]",
+    "description": null,
+    "creator": {
+     "id": 35726151,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 86437535015893,
+     "type": "Place"
+    },
+    "created": "2026-02-16T22:17:21.767Z",
+    "updated": "2026-02-17T00:55:02.417Z",
+    "placeVisits": 52
+   },
+   {
+    "id": 9834328401,
+    "name": "Run For Dinosaurs",
+    "description": "Welcome to Run For Dinosaurs! 🏃\n\nRun fast. Get stronger. Don’t fall.\n\nCollect Dinosaurs to earn money 💨\nUse money to buy more speed 🏃‍♂️\nThe ground disappears — keep running or fall! 🧱\nDodge the blocks and reach new areas 🌎\nUpgrade Dinosaurs to increase income 💸\nUpgrade your base to unlock more slots 🏗️\n\nYour Dinosaurs earn money offline! 💤\n\nLike the game and join the group for a FREE EPIC DINOSAUR! 👍",
+    "creator": {
+     "id": 35726151,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 75594318823554,
+     "type": "Place"
+    },
+    "created": "2026-03-04T17:52:13.12Z",
+    "updated": "2026-03-04T23:54:52.377Z",
+    "placeVisits": 2621
+   }
+  ],
+  "35631030": [
+   {
+    "id": 9671942172,
+    "name": "Monster Mayhem",
+    "description": "BETA TEST\n\nIn this game you are a Monster and your point is to destroy and kill everythings,\n\nThis is a Unofficial remake Of the Old Godzilla Simulator Game \n\nOriginal game made By : Matsushima",
+    "creator": {
+     "id": 35631030,
+     "type": "Group"
+    },
+    "rootPlace": {
+     "id": 136890726201326,
+     "type": "Place"
+    },
+    "created": "2026-02-03T22:18:19.923Z",
+    "updated": "2026-07-17T16:29:47.837Z",
+    "placeVisits": 16721
+   }
+  ]
+ },
+ "universeIds": [
+  10172054493,
+  10129295510,
+  9955044437,
+  9938869587,
+  9786076529,
+  9722761583,
+  9691294591,
+  9587795529,
+  9248077734,
+  7127856984,
+  10767332654,
+  10016151371,
+  9856582217,
+  9660147022,
+  9646860198,
+  8825199351,
+  8062827807,
+  8106324361,
+  8572498402,
+  7198485416,
+  7487992065,
+  9670382970,
+  9697946596,
+  9742292759,
+  9834328401,
+  9671942172
+ ],
+ "gameStats": [
+  {
+   "id": 10172054493,
+   "rootPlaceId": 101802658930847,
+   "name": "Expérience sans titre",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 7893763634,
+    "name": "Vbrut0x",
+    "type": "User",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 7,
+   "maxPlayers": 50,
+   "created": "2026-05-15T16:23:19.895Z",
+   "updated": "2026-09-30T12:35:56.324Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR6",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/101802658930847/Exp-rience-sans-titre",
+   "isContentRestricted": false
+  },
+  {
+   "id": 10129295510,
+   "rootPlaceId": 77038727456153,
+   "name": "testpoop",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 7893763634,
+    "name": "Vbrut0x",
+    "type": "User",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 8,
+   "maxPlayers": 50,
+   "created": "2026-05-06T07:28:58.521Z",
+   "updated": "2026-05-06T07:37:18.738Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/77038727456153/testpoop",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9955044437,
+   "rootPlaceId": 109040932155494,
+   "name": "40% ",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 7893763634,
+    "name": "Vbrut0x",
+    "type": "User",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 4,
+   "maxPlayers": 50,
+   "created": "2026-03-28T21:19:57.992Z",
+   "updated": "2026-03-28T21:21:15.744Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/109040932155494/40",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9938869587,
+   "rootPlaceId": 129164101985449,
+   "name": "Tie india Simulator",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 7893763634,
+    "name": "Vbrut0x",
+    "type": "User",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 3,
+   "maxPlayers": 50,
+   "created": "2026-03-25T14:35:25.644Z",
+   "updated": "2026-04-05T21:31:58.755Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/129164101985449/Tie-india-Simulator",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9786076529,
+   "rootPlaceId": 98880972835046,
+   "name": "LFI ou RN",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 7893763634,
+    "name": "Vbrut0x",
+    "type": "User",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 11,
+   "maxPlayers": 50,
+   "created": "2026-02-23T18:44:01.223Z",
+   "updated": "2026-02-28T14:22:13.644Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "Social",
+   "genre_l2": "",
+   "untranslated_genre_l1": "social",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/98880972835046/LFI-ou-RN",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9722761583,
+   "rootPlaceId": 97663603364006,
+   "name": "Dungeons of Regret",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 7893763634,
+    "name": "Vbrut0x",
+    "type": "User",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 9,
+   "maxPlayers": 50,
+   "created": "2026-02-14T09:46:47.423Z",
+   "updated": "2026-04-21T13:25:23.122Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR6",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/97663603364006/Dungeons-of-Regret",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9691294591,
+   "rootPlaceId": 127387283119125,
+   "name": "Shot first",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 7893763634,
+    "name": "Vbrut0x",
+    "type": "User",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 45,
+   "maxPlayers": 16,
+   "created": "2026-02-07T21:11:27.847Z",
+   "updated": "2026-02-08T22:42:12.858Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR6",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/127387283119125/Shot-first",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9587795529,
+   "rootPlaceId": 87737871055953,
+   "name": "ANGEL or DEMON",
+   "description": "😇 Angel or Demon Quiz? 😈\nAre you a pure soul or a mischievous rebel? It’s time to find out in the ultimate Angel vs Demon Quiz! Answer 20 unique questions about your personality, your choices, and your secrets to reveal your true nature. Will you fly with the angels or rule with the demons? ⚖️\n\n✨ HOW TO PLAY\n📝 Take the Quiz: Answer honest questions about how you treat others and how you see the world.\n\n📊 Get your Result: Discover if you are an Angel, a Demon, or perfectly Balanced.\n\n🎭 Transform: Your character automatically receives exclusive wings and items based on your result!\n\n📖 Learn More: Read your full personality analysis to understand your strengths and weaknesses.\n\n💎 FEATURES\n😇 Angel Side: Unlock beautiful glowing wings and peaceful tools.\n\n😈 Demon Side: Unlock dark wings, horns, and mischievous items.\n\n⚖️ Balanced: For those who master both light and shadow!\n\n📈 Global Stats: See how many players are Angels vs Demons in real-time on the global leaderboard!",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 7893763634,
+    "name": "Vbrut0x",
+    "type": "User",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 458,
+   "maxPlayers": 50,
+   "created": "2026-01-19T07:56:29.177Z",
+   "updated": "2026-01-20T08:08:12.413Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/87737871055953/ANGEL-or-DEMON",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9248077734,
+   "rootPlaceId": 71617939655265,
+   "name": "Steal Stats",
+   "description": "Bienvenue dans Last Letter ! Jouez à des jeux de mots avec des personnes où chaque dernière lettre compte, restez 2 pas en avance ou vous serez éliminé 💥\n\n- PAS de P2W, tous les styles sont viables et dépendent de la façon dont vous l'utilisez 🧠\n- Faites pivoter les styles et utilisez sa capacité à améliorer le gameplay 🔥\nObtenez des tours avec des codes, en vous inscrivant quotidiennement ou en complétant des tâches 💰\n- Achetez des articles dans la boutique pour flex sur les gens lol\n\nLe jeu est en version bêta, attendez-vous à des bugs et à des changements majeurs\n\nRejoignez le groupe pour utiliser les codes 🎁\nsi vous aimez et souhaitez soutenir le jeu, Like 👍 et Favorite ⭐ pour plus de mises à jour\n",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 7893763634,
+    "name": "Vbrut0x",
+    "type": "User",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 105,
+   "maxPlayers": 26,
+   "created": "2025-11-26T13:40:06.847Z",
+   "updated": "2025-12-16T10:45:33.797Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR6",
+   "genre": "All",
+   "genre_l1": "Action",
+   "genre_l2": "Battlegrounds & Fighting",
+   "untranslated_genre_l1": "action",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/71617939655265/Steal-Stats",
+   "isContentRestricted": false
+  },
+  {
+   "id": 7127856984,
+   "rootPlaceId": 123100983531502,
+   "name": "Salle Ancienne Rush",
+   "description": "Entrez dans un monde de mystère et de hasard! Dans RNG Door Adventure, chaque porte que vous ouvrez mène à une pièce unique de rareté variable. Testez votre chance en découvrant des pièces rares, en suivant vos progrès sur le tableau de bord et en rivalisant avec des amis pour découvrir les trésors les plus rares. Chaque joueur apparaît dans sa propre salle de départ pour une aventure personnalisée!\n\nCaractéristiques:\n\nChambres générées aléatoirement avec différentes raretés.\nUn tableau de bord pour suivre votre progression et afficher la pièce la plus rare que vous ayez trouvée.\nOptions de passe de jeu pour améliorer votre expérience, y compris le double de vitesse et une augmentation de la chance.\nGénère un départ unique pour chaque joueur pour garantir une expérience fraîche.\nTrouverez-vous la pièce la plus rare? Commencez votre aventure maintenant et laissez la chance guider votre voyage!\n\n\nCrédits:\n\nGraphiques : j_judes",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 7893763634,
+    "name": "Vbrut0x",
+    "type": "User",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 4468,
+   "maxPlayers": 9,
+   "created": "2025-01-22T21:08:10.03Z",
+   "updated": "2026-02-17T20:16:00.217Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR6",
+   "genre": "All",
+   "genre_l1": "Adventure",
+   "genre_l2": "",
+   "untranslated_genre_l1": "adventure",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 20,
+   "canonicalUrlPath": "/games/123100983531502/Salle-Ancienne-Rush",
+   "isContentRestricted": false
+  },
+  {
+   "id": 10767332654,
+   "rootPlaceId": 93487925421293,
+   "name": "Search For The Egg",
+   "description": "a chill beach game about digging for an Egg buried in a giant pile of Sand...\n\nFind the Egg hidden in the Sand!\n\n- Dig with your hands, a shovel, a bucket and more\n- Sell your sand and upgrade your tools\n- Get a crab helper to dig with you\n- Play solo or with your friends\n- Try Hard mode: a much bigger pile!\n- Roll a class: can you get The Chosen One?\n- Beat your best time and climb the leaderboard\n\nCan you dig it up?\n\nTags: Find The Egg, Egg, Egg Hunt, Needle in a Haystack, Search, Adventure, Dig, Digging, Sand, Beach, Island, Treasure, Treasure Hunt, Chill, Cozy, Relaxing, Co-op, Friends, Shovel, Crab, Speedrun, Hard Mode",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 1095885752,
+    "name": "Chill Games fr",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": true,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 9275,
+   "maxPlayers": 10,
+   "created": "2026-09-20T22:38:05.544Z",
+   "updated": "2026-10-05T07:35:30.312Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "Simulation",
+   "genre_l2": "Incremental Simulator",
+   "untranslated_genre_l1": "simulation",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 169,
+   "canonicalUrlPath": "/games/93487925421293/Search-For-The-Egg",
+   "isContentRestricted": false
+  },
+  {
+   "id": 10016151371,
+   "rootPlaceId": 88367844931035,
+   "name": "[UPD] Lucky Block Factory",
+   "description": "🏭 Welcome to Lucky Block Factory! 🍀\nStep into a world where your factory prints Lucky Blocks and money never stops flowing! 💰✨\n\nYou own your very own factory… and it’s up to you to turn it into a powerful production empire 👑\n\n🍀 Produce Lucky Blocks automatically and watch your cash grow\n💸 Sell your blocks to earn tons of money\n⚙️ Upgrade your factory to make it faster and stronger\n👷 Buy special Lucky Blocks to place workers and boost your production\n🚀 Build your strategy and become the richest factory owner!\n\nWill you create the ultimate Lucky Block empire… or fall behind? 👀",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 272607461,
+    "name": "Lucky Block Factory Group",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 1664,
+   "maxPlayers": 6,
+   "created": "2026-04-10T16:55:10.354Z",
+   "updated": "2026-04-26T08:00:12.579Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "Simulation",
+   "genre_l2": "Tycoon",
+   "untranslated_genre_l1": "simulation",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 7,
+   "canonicalUrlPath": "/games/88367844931035/Lucky-Block-Factory",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9856582217,
+   "rootPlaceId": 125815079895321,
+   "name": "Don't Eat Poisoned Slime",
+   "description": "🟢💥 Don't Eat Poisoned Slime 💥🟢\n\n🎰 SPIN to win BIG cash rewards! 💰\n🍴 EAT the slimes... but WATCH OUT! 🦠\n🎯 ONE is poisoned by your enemy — eat it and YOU LOSE! ☠️\n\n⚔️ Face off 1v1 at the table 🪑\n🔥 Build crazy WIN STREAKS to flex on everyone 🔥\n👑 Earn UNIQUE chairs to show off your style 👑\n\n✨ FEATURES ✨\n🪑 Collect EPIC chairs (Demon, Ice, VIP & MORE) \n💸 Steal cash from other players 😈\n☢️ NUKE the whole server 💣\n🍀 Boost your luck for HUGE prizes\n👀 Reveal your enemy's poisoned slime\n🎁 + 10% bonus per FRIEND in the server (up to +50%!)\n👬 Invite friends → MORE rewards\n\n🎮 Easy to play, hard to master!\n👥 Bring your squad for the BEST experience! \n\n⚠️ Trust no one. Eat carefully. Win BIG. ⚠️",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 292694018,
+    "name": "AVortexGame",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 7004,
+   "maxPlayers": 32,
+   "created": "2026-03-08T22:54:23.81Z",
+   "updated": "2026-09-20T22:16:04.322Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "Party & Casual",
+   "genre_l2": "Minigame",
+   "untranslated_genre_l1": "party_and_casual",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 18,
+   "canonicalUrlPath": "/games/125815079895321/Dont-Eat-Poisoned-Slime",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9660147022,
+   "rootPlaceId": 75130809384815,
+   "name": "Poop Fighting",
+   "description": "💩 BATTLE ROYALE BUT WITH POOP! 💩\n\nLast one standing wins... or should we say, last one NOT covered in poop?\n\n🚽 Press E to... you know\n👊 Click to yeet your creation\n💰 Earn Flouzs, buy legendary poops\n🏆 Survive the shrinking zone of DOOM\n\nWarning: This game is CRAPPY... literally! \nJoin our group for 150 FREE Flouzs! 💎",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 63246470,
+    "name": "Our Poopy Games",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 107,
+   "maxPlayers": 10,
+   "created": "2026-02-01T14:05:23.29Z",
+   "updated": "2026-02-09T00:04:29.41Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/75130809384815/Poop-Fighting",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9646860198,
+   "rootPlaceId": 106550386652809,
+   "name": "TestCashGrab",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 111496051,
+    "name": "Flouz Industries",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 0,
+   "maxPlayers": 50,
+   "created": "2026-01-30T13:48:02.257Z",
+   "updated": "2026-02-02T14:51:35.668Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/106550386652809/TestCashGrab",
+   "isContentRestricted": false
+  },
+  {
+   "id": 8825199351,
+   "rootPlaceId": 114866791185881,
+   "name": "Game FR",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 947991622,
+    "name": "Game france",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 8,
+   "maxPlayers": 50,
+   "created": "2025-09-28T16:12:24.36Z",
+   "updated": "2025-10-03T11:56:15.583Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/114866791185881/Game-FR",
+   "isContentRestricted": false
+  },
+  {
+   "id": 8062827807,
+   "rootPlaceId": 71530168361392,
+   "name": "Untitled Game",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 407952546,
+    "name": "Infinity Studῖos",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 1,
+   "maxPlayers": 50,
+   "created": "2025-07-03T19:15:59.717Z",
+   "updated": "2025-12-09T16:59:04.823Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/71530168361392/Untitled-Game",
+   "isContentRestricted": false
+  },
+  {
+   "id": 0,
+   "rootPlaceId": 0,
+   "name": "[TITLE UNAVAILABLE]",
+   "description": "[DESCRIPTION UNAVAILABLE]",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 0,
+    "name": "[UNKNOWN]",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 0,
+   "maxPlayers": 0,
+   "created": "0001-01-01T05:51:00Z",
+   "updated": "0001-01-01T05:51:00Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": null,
+   "genre": null,
+   "isAllGenre": false,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "isContentRestricted": true
+  },
+  {
+   "id": 8572498402,
+   "rootPlaceId": 113121806916294,
+   "name": "[REPLASE] Forgotten Shores",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 407952546,
+    "name": "Infinity Studῖos",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 5,
+   "maxPlayers": 50,
+   "created": "2025-08-28T19:37:20.333Z",
+   "updated": "2026-06-08T17:49:35.695Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/113121806916294/Forgotten-Shores",
+   "isContentRestricted": false
+  },
+  {
+   "id": 0,
+   "rootPlaceId": 0,
+   "name": "[TITLE UNAVAILABLE]",
+   "description": "[DESCRIPTION UNAVAILABLE]",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 0,
+    "name": "[UNKNOWN]",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 0,
+   "maxPlayers": 0,
+   "created": "0001-01-01T05:51:00Z",
+   "updated": "0001-01-01T05:51:00Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": null,
+   "genre": null,
+   "isAllGenre": false,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "isContentRestricted": true
+  },
+  {
+   "id": 7487992065,
+   "rootPlaceId": 82734020430701,
+   "name": "Room Rush",
+   "description": "Room Rush is a game where you have to open doors to discover rooms of various rarities. You can sell them or simply display them in the spawn after equipping them in your inventory.\n\n⚠️ Donations are made through the sale of clothing and game passes, which can take up to one week to process. The Robux shown in the game reflect the price at the time of sale. The Robux you receive may be lower due to Roblox fees.\nView your pending Robux here: https://www.roblox.com/transactions\n\nGame Development: @HyperDev7 (Roblox)  \nScripter: @mykinglisa (Roblox)  \nVFX Artist: @BlueShotss (Roblox)",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 35726151,
+    "name": "Hyper | Games",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 4151,
+   "maxPlayers": 14,
+   "created": "2025-04-04T21:44:10.17Z",
+   "updated": "2026-04-24T11:34:57.902Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "Social",
+   "genre_l2": "",
+   "untranslated_genre_l1": "social",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 17,
+   "canonicalUrlPath": "/games/82734020430701/Room-Rush",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9670382970,
+   "rootPlaceId": 113866436980344,
+   "name": "Escape Knockout for Speed",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 35726151,
+    "name": "Hyper | Games",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 10164,
+   "maxPlayers": 10,
+   "created": "2026-02-03T14:55:39.267Z",
+   "updated": "2026-02-24T16:25:15.147Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 25,
+   "canonicalUrlPath": "/games/113866436980344/Escape-Knockout-for-Speed",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9697946596,
+   "rootPlaceId": 111938399466511,
+   "name": "Shoot First",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 35726151,
+    "name": "Hyper | Games",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 23,
+   "maxPlayers": 16,
+   "created": "2026-02-08T22:41:54.8Z",
+   "updated": "2026-02-17T00:23:34.856Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR6",
+   "genre": "All",
+   "genre_l1": "",
+   "genre_l2": "",
+   "untranslated_genre_l1": "na",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/111938399466511/Shoot-First",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9742292759,
+   "rootPlaceId": 86437535015893,
+   "name": "Idle Second [NEW]",
+   "description": null,
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 35726151,
+    "name": "Hyper | Games",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 52,
+   "maxPlayers": 50,
+   "created": "2026-02-16T22:17:21.47Z",
+   "updated": "2026-02-24T23:11:00.427Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR6",
+   "genre": "All",
+   "genre_l1": "Simulation",
+   "genre_l2": "Idle",
+   "untranslated_genre_l1": "simulation",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 0,
+   "canonicalUrlPath": "/games/86437535015893/Idle-Second",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9834328401,
+   "rootPlaceId": 75594318823554,
+   "name": "Run For Dinosaurs",
+   "description": "Welcome to Run For Dinosaurs! 🏃\n\nRun fast. Get stronger. Don’t fall.\n\nCollect Dinosaurs to earn money 💨\nUse money to buy more speed 🏃‍♂️\nThe ground disappears — keep running or fall! 🧱\nDodge the blocks and reach new areas 🌎\nUpgrade Dinosaurs to increase income 💸\nUpgrade your base to unlock more slots 🏗️\n\nYour Dinosaurs earn money offline! 💤\n\nLike the game and join the group for a FREE EPIC DINOSAUR! 👍",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 35726151,
+    "name": "Hyper | Games",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 0,
+   "visits": 2621,
+   "maxPlayers": 5,
+   "created": "2026-03-04T17:52:12.897Z",
+   "updated": "2026-03-15T16:21:03.423Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "Simulation",
+   "genre_l2": "Tycoon",
+   "untranslated_genre_l1": "simulation",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 7,
+   "canonicalUrlPath": "/games/75594318823554/Run-For-Dinosaurs",
+   "isContentRestricted": false
+  },
+  {
+   "id": 9671942172,
+   "rootPlaceId": 136890726201326,
+   "name": "Monster Mayhem",
+   "description": "BETA TEST\n\nIn this game you are a Monster and your point is to destroy and kill everythings,\n\nThis is a Unofficial remake Of the Old Godzilla Simulator Game \n\nOriginal game made By : Matsushima",
+   "sourceName": null,
+   "sourceDescription": null,
+   "creator": {
+    "id": 35631030,
+    "name": "OG Game 2017",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
+   },
+   "price": null,
+   "allowedGearGenres": [
+    "All"
+   ],
+   "allowedGearCategories": [],
+   "isGenreEnforced": false,
+   "copyingAllowed": false,
+   "playing": 2,
+   "visits": 16721,
+   "maxPlayers": 30,
+   "created": "2026-02-03T22:18:19.637Z",
+   "updated": "2026-09-04T10:10:55.761Z",
+   "studioAccessToApisAllowed": false,
+   "createVipServersAllowed": false,
+   "universeAvatarType": "MorphToR15",
+   "genre": "All",
+   "genre_l1": "Action",
+   "genre_l2": "Battlegrounds & Fighting",
+   "untranslated_genre_l1": "action",
+   "isAllGenre": true,
+   "isFavoritedByUser": false,
+   "favoritedCount": 267,
+   "canonicalUrlPath": "/games/136890726201326/Monster-Mayhem",
+   "isContentRestricted": false
+  }
+ ],
+ "gameVotes": [
+  {
+   "id": 10172054493,
+   "upVotes": 0,
+   "downVotes": 1
+  },
+  {
+   "id": 10129295510,
+   "upVotes": 0,
+   "downVotes": 0
+  },
+  {
+   "id": 9955044437,
+   "upVotes": 0,
+   "downVotes": 0
+  },
+  {
+   "id": 9938869587,
+   "upVotes": 0,
+   "downVotes": 0
+  },
+  {
+   "id": 9786076529,
+   "upVotes": 0,
+   "downVotes": 0
+  },
+  {
+   "id": 9722761583,
+   "upVotes": 0,
+   "downVotes": 0
+  },
+  {
+   "id": 9691294591,
+   "upVotes": 3,
+   "downVotes": 0
+  },
+  {
+   "id": 9587795529,
+   "upVotes": 3,
+   "downVotes": 3
+  },
+  {
+   "id": 9248077734,
+   "upVotes": 3,
+   "downVotes": 1
+  },
+  {
+   "id": 7127856984,
+   "upVotes": 46,
+   "downVotes": 4
+  },
+  {
+   "id": 10767332654,
+   "upVotes": 49,
+   "downVotes": 16
+  },
+  {
+   "id": 10016151371,
+   "upVotes": 15,
+   "downVotes": 3
+  },
+  {
+   "id": 9856582217,
+   "upVotes": 13,
+   "downVotes": 3
+  },
+  {
+   "id": 9660147022,
+   "upVotes": 3,
+   "downVotes": 0
+  },
+  {
+   "id": 9646860198,
+   "upVotes": 0,
+   "downVotes": 0
+  },
+  {
+   "id": 8825199351,
+   "upVotes": 1,
+   "downVotes": 0
+  },
+  {
+   "id": 8062827807,
+   "upVotes": 0,
+   "downVotes": 0
+  },
+  {
+   "id": 8106324361,
+   "upVotes": 33,
+   "downVotes": 3
+  },
+  {
+   "id": 8572498402,
+   "upVotes": 1,
+   "downVotes": 1
+  },
+  {
+   "id": 7198485416,
+   "upVotes": 14,
+   "downVotes": 3
+  },
+  {
+   "id": 7487992065,
+   "upVotes": 25,
+   "downVotes": 4
+  },
+  {
+   "id": 9670382970,
+   "upVotes": 33,
+   "downVotes": 18
+  },
+  {
+   "id": 9697946596,
+   "upVotes": 2,
+   "downVotes": 0
+  },
+  {
+   "id": 9742292759,
+   "upVotes": 3,
+   "downVotes": 1
+  },
+  {
+   "id": 9834328401,
+   "upVotes": 10,
+   "downVotes": 1
+  },
+  {
+   "id": 9671942172,
+   "upVotes": 219,
+   "downVotes": 8
+  }
+ ],
+ "gameIcons": [
+  {
+   "targetId": 9660147022,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-e6d2af10204f33897781ad3dd14e2615/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9671942172,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-ee01afbf18e48d99302f899d55c098b2/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 8106324361,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-9571ed62c2e245a7acaf5395ae5609ae/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 7198485416,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-5f9155bd0309df21ac381e9ff62385c1/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9248077734,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-b57eabb15217a097a830f822152234d0/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9697946596,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-b9806d6e895a7d1d115b1c7b5c18000b/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9834328401,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-25ec573b7f1259416e20a1d877edbb8e/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 7487992065,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-0d28a733cbfee8230d4cc3055981b7ce/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 10016151371,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-edbd3ebeab18d12a0197dc9914e2f9fd/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9587795529,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-70e66d0d26fb7234980780f409724b2c/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9742292759,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-32b950f8fb8acc72be718fd98b52cf59/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9856582217,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-29cff2c2f4f87e375171763fb2f01b5d/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 7127856984,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-e34b7e56e4ac53211f1003ea505de816/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 8572498402,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-23e87215467b22b626e96bdf5a425bcb/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 10767332654,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-056f3cd712037125459f3d687d605359/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9670382970,
+   "state": "Completed",
+   "imageUrl": "https://tr.rbxcdn.com/180DAY-121f91e972607ab618dedfcd81c7e572/512/512/Image/Png/noFilter",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9691294591,
+   "state": "Completed",
+   "imageUrl": "https://t7.rbxcdn.com/180DAY-d6fd59ad64bb4b7652be71f25f0212d0",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9646860198,
+   "state": "Completed",
+   "imageUrl": "https://t0.rbxcdn.com/180DAY-6b0a0f92f70c7748c90fb3d90dc56234",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9786076529,
+   "state": "Completed",
+   "imageUrl": "https://t1.rbxcdn.com/180DAY-371b5546509ab0eb0fe7f05d37bf34be",
+   "version": "TN3"
+  },
+  {
+   "targetId": 10129295510,
+   "state": "Completed",
+   "imageUrl": "https://t7.rbxcdn.com/180DAY-9d246ed156134a44ce9101414b84ac30",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9938869587,
+   "state": "Completed",
+   "imageUrl": "https://t0.rbxcdn.com/180DAY-8c353be34538e596bc21c155a27da5bf",
+   "version": "TN3"
+  },
+  {
+   "targetId": 8062827807,
+   "state": "Completed",
+   "imageUrl": "https://t0.rbxcdn.com/180DAY-8c353be34538e596bc21c155a27da5bf",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9722761583,
+   "state": "Completed",
+   "imageUrl": "https://t0.rbxcdn.com/180DAY-a158cfee0e6267d0893be0073df80635",
+   "version": "TN3"
+  },
+  {
+   "targetId": 9955044437,
+   "state": "Completed",
+   "imageUrl": "https://t1.rbxcdn.com/180DAY-371b5546509ab0eb0fe7f05d37bf34be",
+   "version": "TN3"
+  },
+  {
+   "targetId": 10172054493,
+   "state": "Completed",
+   "imageUrl": "https://t5.rbxcdn.com/180DAY-6fa7d4cadacb6c84957b9707e1808c0d",
+   "version": "TN3"
+  },
+  {
+   "targetId": 8825199351,
+   "state": "Completed",
+   "imageUrl": "https://t0.rbxcdn.com/180DAY-8c353be34538e596bc21c155a27da5bf",
+   "version": "TN3"
+  }
+ ],
+ "gameFavorites": {
+  "10172054493": {
+   "favoritesCount": 0
+  },
+  "10129295510": {
+   "favoritesCount": 0
+  },
+  "9955044437": {
+   "favoritesCount": 0
+  },
+  "9938869587": {
+   "favoritesCount": 0
+  },
+  "9786076529": {
+   "favoritesCount": 0
+  },
+  "9722761583": {
+   "favoritesCount": 0
+  },
+  "9691294591": {
+   "favoritesCount": 0
+  },
+  "9587795529": {
+   "favoritesCount": 0
+  },
+  "9248077734": {
+   "favoritesCount": 0
+  },
+  "7127856984": {
+   "favoritesCount": 20
+  },
+  "10767332654": {
+   "favoritesCount": 169
+  },
+  "10016151371": {
+   "favoritesCount": 7
+  },
+  "9856582217": {
+   "favoritesCount": 18
+  },
+  "9660147022": {
+   "favoritesCount": 0
+  },
+  "9646860198": {
+   "favoritesCount": 0
+  },
+  "8825199351": {
+   "favoritesCount": 0
+  },
+  "8062827807": {
+   "favoritesCount": 0
+  },
+  "8106324361": {
+   "favoritesCount": 18
+  },
+  "8572498402": {
+   "favoritesCount": 0
+  },
+  "7198485416": {
+   "favoritesCount": 20
+  },
+  "7487992065": {
+   "favoritesCount": 17
+  },
+  "9670382970": {
+   "favoritesCount": 25
+  },
+  "9697946596": {
+   "favoritesCount": 0
+  },
+  "9742292759": {
+   "favoritesCount": 0
+  },
+  "9834328401": {
+   "favoritesCount": 7
+  },
+  "9671942172": {
+   "favoritesCount": 267
+  }
+ },
+ "groupIcons": {
+  "data": [
+   {
+    "targetId": 441486339,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-3ad686331999b0009e9dd7ff418bc921/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 1095885752,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-64deeb01d44f11de496de1a35d323fa7/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 743828204,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-3de3e1696ef8be6c2a8cee50f3bac29e/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 272607461,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-a7cc9673dca9fc1f1ba5a5ca415d8626/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 292694018,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-9bfed2334c43ec489d251b01350a43a8/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 132979512,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-892eae03b42ef4d0b415f51de9908cfb/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 63246470,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-301f4e63d2492ed0459411a651230810/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 111496051,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-d1fbed40e6b969e94fbe658ae36608b4/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 887682040,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-0ecbdaa3387cbf79330feec9ef55acc5/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 947991622,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-bf32b19eb917ad6c389fe1422050c997/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 407952546,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-15835dfc521277fd9db6f52dfb681f33/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 923178524,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-71da5d2b04d0f1e20c36ae109a3ec44f/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 35726151,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-24ce70e0617c76cf01bd815b7f1899e7/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   },
+   {
+    "targetId": 35631030,
+    "state": "Completed",
+    "imageUrl": "https://tr.rbxcdn.com/180DAY-c89b6e99af85d4c74c5f55588428e64d/150/150/Image/Png/noFilter",
+    "version": "TN3"
+   }
+  ]
+ }
+}

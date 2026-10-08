@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{identity.first_name}} {{identity.last_name}} - {{identity.title}}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* CV une page, A4, une colonne, sans tableau ni icone (ATS). Style banque/conseil. */
+  @page { size: A4; margin: 11mm 13mm 11mm 13mm; }
+  :root {
+    --navy: #1f3864;
+    --ink: #111111;
+    --muted: #555555;
+    --rule: #1f3864;
+    --todo: #c00000;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ffffff; }
+  body {
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.4pt;
+    line-height: 1.3;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* Apercu ecran : feuille A4 centree. A l'impression, la page fait la feuille. */
+  .sheet { width: 210mm; min-height: 297mm; margin: 0 auto; padding: 11mm 13mm 11mm 13mm; }
+  @media print { .sheet { width: auto; min-height: 0; margin: 0; padding: 0; } }
+  @media screen { body { background: #e9e9ee; } .sheet { background: #fff; box-shadow: 0 2px 14px rgba(0,0,0,.12); margin: 16px auto; } }
+
+  a { color: inherit; text-decoration: none; }
+  p, ul { margin: 0; }
+  ul { padding-left: 11pt; }
+  li { margin: 0 0 1pt 0; }
+
+  header { margin-bottom: 5pt; }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 21pt;
+    line-height: 1.1;
+    letter-spacing: .2pt;
+    color: var(--ink);
+    margin: 0 0 2pt 0;
+  }
+  .headline { font-size: 10pt; font-weight: 600; color: var(--navy); margin-bottom: 2pt; }
+  .contact { color: var(--ink); font-size: 8.4pt; }
+  .contact .sep { color: var(--muted); }
+  .contact .c:last-child .sep { display: none; }
+  .seeking { margin-top: 4pt; font-size: 8.6pt; }
+  .seeking strong { color: var(--navy); font-weight: 600; }
+
+  section { margin-top: 5.5pt; }
+  h2 {
+    font-size: 9.2pt;
+    font-weight: 700;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    color: var(--navy);
+    border-bottom: 0.6pt solid var(--rule);
+    padding-bottom: 1.5pt;
+    margin: 0 0 3pt 0;
+  }
+
+  /* lignes d'en-tete d'entree : titre a gauche, periode a droite, sans tableau */
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 8pt; }
+  .row .left { flex: 1 1 auto; }
+  .row .right { flex: 0 0 auto; color: var(--muted); font-size: 8.2pt; white-space: nowrap; }
+  .entry { margin-bottom: 3pt; break-inside: avoid; }
+  .entry:last-child { margin-bottom: 0; }
+  .title { font-weight: 700; color: var(--navy); }
+  .org { font-weight: 400; color: var(--ink); }
+  .org:not(:empty)::before { content: ", "; }
+  .note { color: var(--muted); }
+  .tech { color: var(--muted); font-size: 8.1pt; margin-top: .5pt; }
+  .tech b { font-weight: 600; color: var(--ink); }
+
+  .skills p { margin-bottom: 1.2pt; }
+  .skills b { color: var(--navy); font-weight: 600; display: inline-block; min-width: 42pt; }
+
+  .stats { color: var(--ink); font-size: 8.2pt; }
+  .stats b { font-weight: 600; }
+
+  /* champs a confirmer : rouges en brouillon ; build.py --final les retire */
+  .todo { color: var(--todo); font-weight: 600; }
+  .draftnote { margin-top: 7pt; font-size: 7.2pt; color: var(--todo); border-top: 0.4pt dashed var(--todo); padding-top: 2pt; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<header>
+  <h1>{{identity.first_name}} {{identity.last_name}}</h1>
+  <p class="headline">{{identity.title}}</p>
+  <p class="contact">{{#identity.contact}}<span class="c">{{#url}}<a href="{{url}}">{{label}}</a>{{/url}}{{^url}}{{label}}{{/url}}<span class="sep"> &middot; </span></span>{{/identity.contact}}</p>
+  <p class="seeking"><strong>{{target.line}}</strong>{{#target.dates}} &middot; {{target.dates}}{{/target.dates}}{{#target.location}} &middot; {{target.location}}{{/target.location}} &middot; {{target.fields|joinc}}</p>
+</header>
+
+<section>
+  <h2>Profile</h2>
+  {{#profile.lines}}<p>{{.}}</p>{{/profile.lines}}
+</section>
+
+<section class="skills">
+  <h2>Technical skills</h2>
+  {{#skills}}<p><b>{{label}}</b> {{items|joinc}}</p>{{/skills}}
+</section>
+
+<section>
+  <h2>Experience</h2>
+  {{#experience}}
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title">{{role}}</span><span class="org">{{#link}}<a href="{{link}}">{{org}}</a>{{/link}}{{^link}}{{org}}{{/link}}</span>{{#org_note}} <span class="note">({{org_note}})</span>{{/org_note}}</div>
+      <div class="right">{{period}}</div>
+    </div>
+    {{#bullets.length}}<ul>{{#bullets}}<li>{{.}}</li>{{/bullets}}</ul>{{/bullets.length}}
+    {{#tech.length}}<p class="tech"><b>Tech:</b> {{tech|joinc}}</p>{{/tech.length}}
+  </div>
+  {{/experience}}
+</section>
+
+<section>
+  <h2>Projects</h2>
+  {{#projects}}
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title"><a href="{{link}}">{{name}}</a></span><span class="org">{{kind}}{{#org}}, {{org}}{{/org}}</span>{{#visits}} <span class="stats">&middot; <b>{{visits|num}}</b> visits, <b>{{favorites|num}}</b> favorites{{#show_liked}}, <b>{{liked_pct}}%</b> liked{{/show_liked}}</span>{{/visits}}</div>
+      <div class="right">{{period}}</div>
+    </div>
+    {{#pitch}}<p>{{pitch}}{{#role}} <span class="note">Role: {{role}}.</span>{{/role}}</p>{{/pitch}}{{^pitch}}{{#role}}<p><span class="note">Role: {{role}}.</span></p>{{/role}}{{/pitch}}
+    {{#tech.length}}<p class="tech"><b>Tech:</b> {{tech|joinc}}</p>{{/tech.length}}
+  </div>
+  {{/projects}}
+</section>
+
+<section>
+  <h2>Education</h2>
+  {{#education}}
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title">{{program}}</span><span class="org">{{school}}</span></div>
+      <div class="right">{{period}}</div>
+    </div>
+    {{#details.length}}<ul>{{#details}}<li>{{.}}</li>{{/details}}</ul>{{/details.length}}
+  </div>
+  {{/education}}
+</section>
+
+<section class="skills">
+  <h2>Languages &amp; interests</h2>
+  {{#other.languages.length}}<p><b>Languages</b> {{other.languages|joinc}}</p>{{/other.languages.length}}
+  {{#other.interests.length}}<p><b>Interests</b> {{other.interests|joinc}}</p>{{/other.interests.length}}
+  {{#other.awards.length}}<p><b>Awards</b> {{other.awards|joinc}}</p>{{/other.awards.length}}
+</section>
+
+{{#draft}}
+<p class="draftnote">DRAFT {{generated}}. Red = TO CONFIRM with Hector (see docs/resume/QUESTIONS.md). Build with --final to remove this note and every unconfirmed field.</p>
+{{/draft}}
+
+</div>
+</body>
+</html>

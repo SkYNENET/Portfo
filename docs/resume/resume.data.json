@@ -1,0 +1,380 @@
+{
+  "_meta": {
+    "purpose": "Single source of truth for Hector's resume. build.py injects this file into template.html.",
+    "rule": "Never invent a fact. Anything not verified stays exactly 'TO CONFIRM' (the string is detected by build.py: red in draft, removed with --final).",
+    "sources": {
+      "roblox": "docs/data/roblox.json, public Roblox APIs, collected 2026-10-08 (script docs/data/fetch_roblox.py)",
+      "github": "github.com/SkYNENET, public repositories, read 2026-10-08",
+      "owner": "first name 'Hector' given by his friend; everything else about identity is TO CONFIRM"
+    },
+    "verified_numbers": {
+      "roblox_user_id": 7893763634,
+      "roblox_account_created": "2025-01-20",
+      "roblox_followers": 1035,
+      "roblox_friends": 46,
+      "public_experiences": 26,
+      "total_visits": 56914,
+      "total_favorites": 530,
+      "hyper_games_public_games": 5,
+      "hyper_games_visits": 17011,
+      "groups_owned_or_coowned_members_combined": 1226,
+      "github_public_repos": 11,
+      "python_bootcamp_days": 10
+    },
+    "questions": "docs/resume/QUESTIONS.md"
+  },
+  "identity": {
+    "first_name": "Hector",
+    "last_name": "TO CONFIRM",
+    "title": "Roblox & Full Stack Developer",
+    "city": "TO CONFIRM",
+    "country": "TO CONFIRM",
+    "email": "TO CONFIRM",
+    "phone": "",
+    "linkedin": "TO CONFIRM",
+    "portfolio_url": "TO CONFIRM",
+    "github_handle": "SkYNENET",
+    "github_url": "https://github.com/SkYNENET",
+    "roblox_handle": "Vbrut0x",
+    "roblox_url": "https://www.roblox.com/users/7893763634/profile",
+    "contact": [
+      {
+        "label": "TO CONFIRM (city, country)"
+      },
+      {
+        "label": "TO CONFIRM (email)"
+      },
+      {
+        "label": "github.com/SkYNENET",
+        "url": "https://github.com/SkYNENET"
+      },
+      {
+        "label": "roblox.com/users/7893763634",
+        "url": "https://www.roblox.com/users/7893763634/profile"
+      }
+    ]
+  },
+  "target": {
+    "line": "Seeking an internship in 2027",
+    "dates": "TO CONFIRM (dates)",
+    "location": "TO CONFIRM (location)",
+    "fields": [
+      "Roblox / game development",
+      "Full stack web development"
+    ],
+    "companies": "TO CONFIRM"
+  },
+  "profile": {
+    "lines": [
+      "Roblox developer since January 2025: 26 public experiences, 56,900+ combined visits and 530 favorites, published under 5 Roblox groups owned or co-owned (1,226 members combined), plus Head Developer and Admin roles in two external communities (4,306 and 11,151 members).",
+      "Also builds for the web: TypeScript, Node.js and HTML5 Canvas (alike.io, a diep.io-style survival game), Python (10-day bootcamp, February 2026).",
+      "Student, TO CONFIRM (school, year). Looking for an internship in 2027 in game development or full stack web."
+    ]
+  },
+  "skills": [
+    {
+      "label": "Roblox",
+      "items": [
+        "Luau",
+        "Roblox Studio",
+        "TO CONFIRM (DataStore, client/server, UI, monetisation, anti-cheat)"
+      ]
+    },
+    {
+      "label": "Web",
+      "items": [
+        "TypeScript",
+        "JavaScript",
+        "HTML5 Canvas",
+        "Node.js",
+        "HTML / CSS",
+        "TO CONFIRM (React, databases)"
+      ]
+    },
+    {
+      "label": "Other",
+      "items": [
+        "Python",
+        "Git / GitHub",
+        "TO CONFIRM (Linux, Figma, Blender, other tools)"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "kind": "community",
+      "period": "TO CONFIRM",
+      "role": "Head Developer",
+      "org": "Vorld",
+      "org_note": "Roblox community, 4,306 members",
+      "link": "https://www.roblox.com/communities/35476292",
+      "bullets": [
+        "Holds the Head Developer role (rank 120) in the group; TO CONFIRM what was built, with whom, and the results"
+      ],
+      "tech": [
+        "Luau",
+        "Roblox Studio",
+        "TO CONFIRM"
+      ],
+      "_evidence": "groups.roblox.com roles for user 7893763634: group 35476292, role 'Head Developer', rank 120, owner PoppTwin"
+    },
+    {
+      "kind": "community",
+      "period": "TO CONFIRM",
+      "role": "Admin",
+      "org": "PDK Community",
+      "org_note": "Roblox community, 11,151 members",
+      "link": "https://www.roblox.com/communities/923178524",
+      "bullets": [
+        "Admin (rank 254) of an 11,151-member Roblox community; TO CONFIRM responsibilities (moderation, events, development)",
+        "TO CONFIRM any role on the group's game 'Kurdish Obbyy' (6,862 visits); not claimed until confirmed"
+      ],
+      "tech": [],
+      "_evidence": "group 923178524 'PDK • Community', role 'Admin', rank 254, owner Hexiiiy; group game universe 7198485416"
+    },
+    {
+      "kind": "community",
+      "period": "TO CONFIRM",
+      "role": "Owner",
+      "org": "Hyper | Games",
+      "org_note": "Roblox game group, 511 members",
+      "link": "https://www.roblox.com/communities/35726151",
+      "bullets": [
+        "Runs the group that published 5 public games with 17,000+ combined visits (first public release April 2025)",
+        "Also owns or co-owns 4 other publishing groups: AVortexGame (331 members), Lucky Block Factory Group (164), Chill Games fr (140), OG Game 2017 (80)",
+        "TO CONFIRM team size, who does what, and how releases are planned"
+      ],
+      "tech": [
+        "Luau",
+        "Roblox Studio",
+        "TO CONFIRM"
+      ],
+      "_evidence": "group 35726151 role 'Propriétaire' rank 255; group games: Escape Knockout for Speed 10,164, Room Rush 4,151, Run For Dinosaurs 2,621, Idle Second 52, Shoot First 23 visits"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Monster Mayhem",
+      "kind": "Roblox game",
+      "period": "Feb 2026 - Sep 2026",
+      "org": "OG Game 2017",
+      "link": "https://www.roblox.com/games/136890726201326",
+      "place_id": 136890726201326,
+      "visits": 16721,
+      "favorites": 267,
+      "up_votes": 219,
+      "down_votes": 8,
+      "liked_pct": 96,
+      "show_liked": true,
+      "pitch": "Destruction game where the player is a monster razing the city, an unofficial remake of the old Godzilla Simulator (beta).",
+      "role": "TO CONFIRM",
+      "tech": [
+        "Luau",
+        "Roblox Studio"
+      ],
+      "_evidence": "universe 9671942172, group 35631030 owned by Vbrut0x, created 2026-02-03, updated 2026-09-04, max 30 players"
+    },
+    {
+      "name": "Search For The Egg",
+      "kind": "Roblox game",
+      "period": "Sep 2026 - present",
+      "org": "Chill Games fr",
+      "link": "https://www.roblox.com/games/93487925421293",
+      "place_id": 93487925421293,
+      "visits": 9275,
+      "favorites": 169,
+      "up_votes": 49,
+      "down_votes": 16,
+      "liked_pct": 75,
+      "show_liked": false,
+      "pitch": "Chill co-op digging game: find the egg buried in a giant sand pile, sell sand, upgrade tools, hire a crab helper, hard mode, classes and a speedrun leaderboard.",
+      "role": "TO CONFIRM",
+      "tech": [
+        "Luau",
+        "Roblox Studio"
+      ],
+      "_evidence": "universe 10767332654, group 1095885752 owned by Vbrut0x, created 2026-09-20, updated 2026-10-05, max 10 players"
+    },
+    {
+      "name": "Escape Knockout for Speed",
+      "kind": "Roblox game",
+      "period": "Feb 2026",
+      "org": "Hyper | Games",
+      "link": "https://www.roblox.com/games/113866436980344",
+      "place_id": 113866436980344,
+      "visits": 10164,
+      "favorites": 25,
+      "up_votes": 33,
+      "down_votes": 18,
+      "liked_pct": 65,
+      "show_liked": false,
+      "pitch": "TO CONFIRM (no public description on Roblox).",
+      "role": "TO CONFIRM",
+      "tech": [
+        "Luau",
+        "Roblox Studio"
+      ],
+      "_evidence": "universe 9670382970, group 35726151, created 2026-02-03, updated 2026-02-24, max 10 players"
+    },
+    {
+      "name": "Don't Eat Poisoned Slime",
+      "kind": "Roblox game",
+      "period": "Mar 2026 - Sep 2026",
+      "org": "AVortexGame",
+      "link": "https://www.roblox.com/games/125815079895321",
+      "place_id": 125815079895321,
+      "visits": 7004,
+      "favorites": 18,
+      "up_votes": 13,
+      "down_votes": 3,
+      "liked_pct": 81,
+      "show_liked": false,
+      "pitch": "1v1 table game: spin for cash, eat slimes, avoid the one poisoned by your opponent; win streaks, collectible chairs, luck boosts and friend bonuses.",
+      "role": "TO CONFIRM",
+      "tech": [
+        "Luau",
+        "Roblox Studio"
+      ],
+      "_evidence": "universe 9856582217, group 292694018 (owner BlueShotss, Vbrut0x rank 254 'Owners'), created 2026-03-08, updated 2026-09-20, max 32 players"
+    },
+    {
+      "name": "alike.io",
+      "kind": "Web game",
+      "period": "2026",
+      "org": "Personal project",
+      "link": "https://github.com/SkYNENET/alike.io",
+      "pitch": "Diep.io-style top-down survival game in TypeScript on HTML5 Canvas: stat progression, melee combat, waves of hunter bots and a shrinking zone; code split into systems (AI, melee, zone manager) and a renderer. WASD/ZQSD, mouse, dash.",
+      "role": "TO CONFIRM",
+      "tech": [
+        "TypeScript",
+        "HTML5 Canvas",
+        "CSS",
+        "HTML"
+      ],
+      "_evidence": "GitHub repo SkYNENET/alike.io, TypeScript ~55 KB, last update 2026-06-17; folders src/systems (AISystem, MeleeSystem, ZoneManager), src/render/Renderer.ts, src/utils/constants.ts"
+    }
+  ],
+  "projects_more": {
+    "_note": "Verified but not rendered on the one-page CV. Swap any of them into 'projects' if Hector prefers (keep 5 max).",
+    "items": [
+      {
+        "name": "Salle Ancienne Rush",
+        "kind": "Roblox game",
+        "period": "Jan 2025 - Feb 2026",
+        "org": "Personal account (first game, 2 days after the account was created)",
+        "link": "https://www.roblox.com/games/123100983531502",
+        "place_id": 123100983531502,
+        "visits": 4468,
+        "favorites": 20,
+        "up_votes": 46,
+        "down_votes": 4,
+        "liked_pct": 92,
+        "pitch": "RNG door adventure: every door opens on a room of random rarity, with a leaderboard and game passes. Graphics credited to j_judes in the description.",
+        "role": "TO CONFIRM"
+      },
+      {
+        "name": "Room Rush",
+        "kind": "Roblox game",
+        "period": "Apr 2025 - Apr 2026",
+        "org": "Hyper | Games",
+        "link": "https://www.roblox.com/games/82734020430701",
+        "place_id": 82734020430701,
+        "visits": 4151,
+        "favorites": 17,
+        "up_votes": 25,
+        "down_votes": 4,
+        "liked_pct": 86,
+        "pitch": "Open doors to discover rooms of various rarities, sell them or display them at spawn.",
+        "role": "TO CONFIRM: the description credits @HyperDev7 (development), @mykinglisa (scripter), @BlueShotss (VFX); Vbrut0x is not named"
+      },
+      {
+        "name": "Run For Dinosaurs",
+        "kind": "Roblox game",
+        "period": "Mar 2026",
+        "org": "Hyper | Games",
+        "link": "https://www.roblox.com/games/75594318823554",
+        "place_id": 75594318823554,
+        "visits": 2621,
+        "favorites": 7,
+        "up_votes": 10,
+        "down_votes": 1,
+        "liked_pct": 91,
+        "pitch": "Runner: collect dinosaurs, buy speed, upgrade a base with offline income while the ground disappears.",
+        "role": "TO CONFIRM"
+      },
+      {
+        "name": "[UPD] Lucky Block Factory",
+        "kind": "Roblox game",
+        "period": "Apr 2026",
+        "org": "Lucky Block Factory Group",
+        "link": "https://www.roblox.com/games/88367844931035",
+        "place_id": 88367844931035,
+        "visits": 1664,
+        "favorites": 7,
+        "up_votes": 15,
+        "down_votes": 3,
+        "liked_pct": 83,
+        "pitch": "Factory tycoon: produce and sell Lucky Blocks, upgrade the factory, place workers.",
+        "role": "TO CONFIRM"
+      },
+      {
+        "name": "roblox-followers-api",
+        "kind": "Node.js tool",
+        "period": "Aug 2025",
+        "org": "Personal project",
+        "link": "https://github.com/SkYNENET/roblox-followers-api",
+        "pitch": "TO CONFIRM: small Node.js API around Roblox followers (index.js + package.json, no README).",
+        "role": "TO CONFIRM"
+      },
+      {
+        "name": "Portfolio (this site)",
+        "kind": "Web",
+        "period": "2026",
+        "org": "Personal project",
+        "link": "TO CONFIRM (domain)",
+        "pitch": "React 19 + TypeScript + Vite game-library portfolio on Vercel, with a serverless function aggregating live public Roblox stats.",
+        "role": "TO CONFIRM (how much of it Hector built himself before listing it)"
+      }
+    ]
+  },
+  "education": [
+    {
+      "period": "TO CONFIRM (years)",
+      "school": "TO CONFIRM (school)",
+      "program": "TO CONFIRM (program, current year)",
+      "details": [
+        "TO CONFIRM (relevant modules, grades if useful)"
+      ]
+    },
+    {
+      "period": "Feb 12 - Feb 21, 2026",
+      "school": "TO CONFIRM (school or organiser)",
+      "program": "Python bootcamp (10-day 'piscine')",
+      "details": [
+        "10 daily Python repositories published on GitHub (Day01Pool to PoolDay10)"
+      ]
+    }
+  ],
+  "other": {
+    "languages": [
+      "French (TO CONFIRM level)",
+      "English (TO CONFIRM level)",
+      "TO CONFIRM (other languages)"
+    ],
+    "interests": [
+      "TO CONFIRM (2 or 3 short, relevant interests)"
+    ],
+    "awards": [],
+    "roblox_account": {
+      "handle": "Vbrut0x",
+      "followers": 1035,
+      "friends": 46,
+      "badges": [
+        "Homestead",
+        "Bricksmith",
+        "Friendship"
+      ],
+      "created": "2025-01-20"
+    }
+  }
+}

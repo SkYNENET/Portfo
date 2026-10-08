@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hector <span class="todo">TO CONFIRM</span> - Roblox &amp; Full Stack Developer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* CV une page, A4, une colonne, sans tableau ni icone (ATS). Style banque/conseil. */
+  @page { size: A4; margin: 11mm 13mm 11mm 13mm; }
+  :root {
+    --navy: #1f3864;
+    --ink: #111111;
+    --muted: #555555;
+    --rule: #1f3864;
+    --todo: #c00000;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ffffff; }
+  body {
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.4pt;
+    line-height: 1.3;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* Apercu ecran : feuille A4 centree. A l'impression, la page fait la feuille. */
+  .sheet { width: 210mm; min-height: 297mm; margin: 0 auto; padding: 11mm 13mm 11mm 13mm; }
+  @media print { .sheet { width: auto; min-height: 0; margin: 0; padding: 0; } }
+  @media screen { body { background: #e9e9ee; } .sheet { background: #fff; box-shadow: 0 2px 14px rgba(0,0,0,.12); margin: 16px auto; } }
+
+  a { color: inherit; text-decoration: none; }
+  p, ul { margin: 0; }
+  ul { padding-left: 11pt; }
+  li { margin: 0 0 1pt 0; }
+
+  header { margin-bottom: 5pt; }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 21pt;
+    line-height: 1.1;
+    letter-spacing: .2pt;
+    color: var(--ink);
+    margin: 0 0 2pt 0;
+  }
+  .headline { font-size: 10pt; font-weight: 600; color: var(--navy); margin-bottom: 2pt; }
+  .contact { color: var(--ink); font-size: 8.4pt; }
+  .contact .sep { color: var(--muted); }
+  .contact .c:last-child .sep { display: none; }
+  .seeking { margin-top: 4pt; font-size: 8.6pt; }
+  .seeking strong { color: var(--navy); font-weight: 600; }
+
+  section { margin-top: 5.5pt; }
+  h2 {
+    font-size: 9.2pt;
+    font-weight: 700;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    color: var(--navy);
+    border-bottom: 0.6pt solid var(--rule);
+    padding-bottom: 1.5pt;
+    margin: 0 0 3pt 0;
+  }
+
+  /* lignes d'en-tete d'entree : titre a gauche, periode a droite, sans tableau */
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 8pt; }
+  .row .left { flex: 1 1 auto; }
+  .row .right { flex: 0 0 auto; color: var(--muted); font-size: 8.2pt; white-space: nowrap; }
+  .entry { margin-bottom: 3pt; break-inside: avoid; }
+  .entry:last-child { margin-bottom: 0; }
+  .title { font-weight: 700; color: var(--navy); }
+  .org { font-weight: 400; color: var(--ink); }
+  .org:not(:empty)::before { content: ", "; }
+  .note { color: var(--muted); }
+  .tech { color: var(--muted); font-size: 8.1pt; margin-top: .5pt; }
+  .tech b { font-weight: 600; color: var(--ink); }
+
+  .skills p { margin-bottom: 1.2pt; }
+  .skills b { color: var(--navy); font-weight: 600; display: inline-block; min-width: 42pt; }
+
+  .stats { color: var(--ink); font-size: 8.2pt; }
+  .stats b { font-weight: 600; }
+
+  /* champs a confirmer : rouges en brouillon ; build.py --final les retire */
+  .todo { color: var(--todo); font-weight: 600; }
+  .draftnote { margin-top: 7pt; font-size: 7.2pt; color: var(--todo); border-top: 0.4pt dashed var(--todo); padding-top: 2pt; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<header>
+  <h1>Hector <span class="todo">TO CONFIRM</span></h1>
+  <p class="headline">Roblox &amp; Full Stack Developer</p>
+  <p class="contact"><span class="c"><span class="todo">TO CONFIRM</span> (city, country)<span class="sep"> &middot; </span></span><span class="c"><span class="todo">TO CONFIRM</span> (email)<span class="sep"> &middot; </span></span><span class="c"><a href="https://github.com/SkYNENET">github.com/SkYNENET</a><span class="sep"> &middot; </span></span><span class="c"><a href="https://www.roblox.com/users/7893763634/profile">roblox.com/users/7893763634</a><span class="sep"> &middot; </span></span></p>
+  <p class="seeking"><strong>Seeking an internship in 2027</strong> &middot; <span class="todo">TO CONFIRM</span> (dates) &middot; <span class="todo">TO CONFIRM</span> (location) &middot; Roblox / game development, Full stack web development</p>
+</header>
+
+<section>
+  <h2>Profile</h2>
+  <p>Roblox developer since January 2025: 26 public experiences, 56,900+ combined visits and 530 favorites, published under 5 Roblox groups owned or co-owned (1,226 members combined), plus Head Developer and Admin roles in two external communities (4,306 and 11,151 members).</p><p>Also builds for the web: TypeScript, Node.js and HTML5 Canvas (alike.io, a diep.io-style survival game), Python (10-day bootcamp, February 2026).</p><p>Student, <span class="todo">TO CONFIRM</span> (school, year). Looking for an internship in 2027 in game development or full stack web.</p>
+</section>
+
+<section class="skills">
+  <h2>Technical skills</h2>
+  <p><b>Roblox</b> Luau, Roblox Studio, <span class="todo">TO CONFIRM</span> (DataStore, client/server, UI, monetisation, anti-cheat)</p><p><b>Web</b> TypeScript, JavaScript, HTML5 Canvas, Node.js, HTML / CSS, <span class="todo">TO CONFIRM</span> (React, databases)</p><p><b>Other</b> Python, Git / GitHub, <span class="todo">TO CONFIRM</span> (Linux, Figma, Blender, other tools)</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title">Head Developer</span><span class="org"><a href="https://www.roblox.com/communities/35476292">Vorld</a></span> <span class="note">(Roblox community, 4,306 members)</span></div>
+      <div class="right"><span class="todo">TO CONFIRM</span></div>
+    </div>
+    <ul><li>Holds the Head Developer role (rank 120) in the group; <span class="todo">TO CONFIRM</span> what was built, with whom, and the results</li></ul>
+    <p class="tech"><b>Tech:</b> Luau, Roblox Studio, <span class="todo">TO CONFIRM</span></p>
+  </div>
+  
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title">Admin</span><span class="org"><a href="https://www.roblox.com/communities/923178524">PDK Community</a></span> <span class="note">(Roblox community, 11,151 members)</span></div>
+      <div class="right"><span class="todo">TO CONFIRM</span></div>
+    </div>
+    <ul><li>Admin (rank 254) of an 11,151-member Roblox community; <span class="todo">TO CONFIRM</span> responsibilities (moderation, events, development)</li><li><span class="todo">TO CONFIRM</span> any role on the group&#x27;s game &#x27;Kurdish Obbyy&#x27; (6,862 visits); not claimed until confirmed</li></ul>
+    
+  </div>
+  
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title">Owner</span><span class="org"><a href="https://www.roblox.com/communities/35726151">Hyper | Games</a></span> <span class="note">(Roblox game group, 511 members)</span></div>
+      <div class="right"><span class="todo">TO CONFIRM</span></div>
+    </div>
+    <ul><li>Runs the group that published 5 public games with 17,000+ combined visits (first public release April 2025)</li><li>Also owns or co-owns 4 other publishing groups: AVortexGame (331 members), Lucky Block Factory Group (164), Chill Games fr (140), OG Game 2017 (80)</li><li><span class="todo">TO CONFIRM</span> team size, who does what, and how releases are planned</li></ul>
+    <p class="tech"><b>Tech:</b> Luau, Roblox Studio, <span class="todo">TO CONFIRM</span></p>
+  </div>
+  
+</section>
+
+<section>
+  <h2>Projects</h2>
+  
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title"><a href="https://www.roblox.com/games/136890726201326">Monster Mayhem</a></span><span class="org">Roblox game, OG Game 2017</span> <span class="stats">&middot; <b>16,721</b> visits, <b>267</b> favorites, <b>96%</b> liked</span></div>
+      <div class="right">Feb 2026 - Sep 2026</div>
+    </div>
+    <p>Destruction game where the player is a monster razing the city, an unofficial remake of the old Godzilla Simulator (beta). <span class="note">Role: <span class="todo">TO CONFIRM</span>.</span></p>
+    <p class="tech"><b>Tech:</b> Luau, Roblox Studio</p>
+  </div>
+  
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title"><a href="https://www.roblox.com/games/93487925421293">Search For The Egg</a></span><span class="org">Roblox game, Chill Games fr</span> <span class="stats">&middot; <b>9,275</b> visits, <b>169</b> favorites</span></div>
+      <div class="right">Sep 2026 - present</div>
+    </div>
+    <p>Chill co-op digging game: find the egg buried in a giant sand pile, sell sand, upgrade tools, hire a crab helper, hard mode, classes and a speedrun leaderboard. <span class="note">Role: <span class="todo">TO CONFIRM</span>.</span></p>
+    <p class="tech"><b>Tech:</b> Luau, Roblox Studio</p>
+  </div>
+  
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title"><a href="https://www.roblox.com/games/113866436980344">Escape Knockout for Speed</a></span><span class="org">Roblox game, Hyper | Games</span> <span class="stats">&middot; <b>10,164</b> visits, <b>25</b> favorites</span></div>
+      <div class="right">Feb 2026</div>
+    </div>
+    <p><span class="todo">TO CONFIRM</span> (no public description on Roblox). <span class="note">Role: <span class="todo">TO CONFIRM</span>.</span></p>
+    <p class="tech"><b>Tech:</b> Luau, Roblox Studio</p>
+  </div>
+  
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title"><a href="https://www.roblox.com/games/125815079895321">Don&#x27;t Eat Poisoned Slime</a></span><span class="org">Roblox game, AVortexGame</span> <span class="stats">&middot; <b>7,004</b> visits, <b>18</b> favorites</span></div>
+      <div class="right">Mar 2026 - Sep 2026</div>
+    </div>
+    <p>1v1 table game: spin for cash, eat slimes, avoid the one poisoned by your opponent; win streaks, collectible chairs, luck boosts and friend bonuses. <span class="note">Role: <span class="todo">TO CONFIRM</span>.</span></p>
+    <p class="tech"><b>Tech:</b> Luau, Roblox Studio</p>
+  </div>
+  
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title"><a href="https://github.com/SkYNENET/alike.io">alike.io</a></span><span class="org">Web game, Personal project</span></div>
+      <div class="right">2026</div>
+    </div>
+    <p>Diep.io-style top-down survival game in TypeScript on HTML5 Canvas: stat progression, melee combat, waves of hunter bots and a shrinking zone; code split into systems (AI, melee, zone manager) and a renderer. WASD/ZQSD, mouse, dash. <span class="note">Role: <span class="todo">TO CONFIRM</span>.</span></p>
+    <p class="tech"><b>Tech:</b> TypeScript, HTML5 Canvas, CSS, HTML</p>
+  </div>
+  
+</section>
+
+<section>
+  <h2>Education</h2>
+  
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title"><span class="todo">TO CONFIRM</span> (program, current year)</span><span class="org"><span class="todo">TO CONFIRM</span> (school)</span></div>
+      <div class="right"><span class="todo">TO CONFIRM</span> (years)</div>
+    </div>
+    <ul><li><span class="todo">TO CONFIRM</span> (relevant modules, grades if useful)</li></ul>
+  </div>
+  
+  <div class="entry">
+    <div class="row">
+      <div class="left"><span class="title">Python bootcamp (10-day &#x27;piscine&#x27;)</span><span class="org"><span class="todo">TO CONFIRM</span> (school or organiser)</span></div>
+      <div class="right">Feb 12 - Feb 21, 2026</div>
+    </div>
+    <ul><li>10 daily Python repositories published on GitHub (Day01Pool to PoolDay10)</li></ul>
+  </div>
+  
+</section>
+
+<section class="skills">
+  <h2>Languages &amp; interests</h2>
+  <p><b>Languages</b> French (<span class="todo">TO CONFIRM</span> level), English (<span class="todo">TO CONFIRM</span> level), <span class="todo">TO CONFIRM</span> (other languages)</p>
+  <p><b>Interests</b> <span class="todo">TO CONFIRM</span> (2 or 3 short, relevant interests)</p>
+  
+</section>
+
+
+<p class="draftnote">DRAFT 2026-10-08. Red = TO CONFIRM with Hector (see docs/resume/QUESTIONS.md). Build with --final to remove this note and every unconfirmed field.</p>
+
+
+</div>
+</body>
+</html>

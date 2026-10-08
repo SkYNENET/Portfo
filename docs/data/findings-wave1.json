@@ -1,0 +1,688 @@
+[
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 33,
+  "severity": "high",
+  "title": "profile.name = 'Your Name' : le site ne dit pas qui est Hector",
+  "detail": "La sidebar affiche 'Your Name' et l'avatar la lettre 'Y' (App.tsx l.52-55). Aucun pseudo Roblox, aucun lien vers le profil Roblox alors que c'est la premiere chose qu'un studio verifie. Donnees disponibles : prenom Hector (nom TO CONFIRM), @Vbrut0x, user id 7893763634, 1 035 abonnes, compte cree 2025-01-20, premier jeu publie 2 jours plus tard (Salle Ancienne Rush, 2025-01-22).",
+  "fix": "name: 'Hector' (nom de famille TO CONFIRM, ne pas inventer), handle: '@Vbrut0x', robloxUserId: 7893763634, robloxProfile: 'https://www.roblox.com/users/7893763634/profile'. Afficher le handle sous le nom dans la sidebar et le rendre cliquable. L'avatar peut rester une lettre ('H') tant que la headshot Roblox n'est pas servie (voir finding low)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 37,
+  "severity": "high",
+  "title": "Contact entierement faux : email example.com, GitHub your-username, CV qui 404",
+  "detail": "App.tsx l.199-206 rend sans condition <a href='mailto:you@example.com'>, <a href='https://github.com/your-username'> et <a href='/cv.pdf'>Resume (PDF)</a>. public/ ne contient que .gitkeep : le bouton Resume renvoie une 404. Un recruteur qui clique sur l'un des trois liens tombe dans le vide. Le GitHub reel est connu (SkYNENET, 11 repos publics), l'email et le LinkedIn ne le sont pas.",
+  "fix": "github: 'https://github.com/SkYNENET'. email: laisser 'TO CONFIRM' et ne PAS rendre le mailto tant que la valeur contient 'TO CONFIRM' (garde dans App.tsx). cv: ne rendre le lien que si un fichier existe (profile.cv optionnel, undefined aujourd'hui) ; la generation du CV depend de l'interview docs/RESUME_DATA.md. Ajouter le lien profil Roblox dans Contact (c'est la preuve n.1 pour un studio). LinkedIn : champ optionnel, vide tant que TO CONFIRM."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 53,
+  "severity": "high",
+  "title": "6 entrees inventees (Game Two, Map One, Web Project One...) pointant vers roblox.com / github.com racine",
+  "detail": "Sur 7 entrees, une seule est reelle. Les 6 autres ont des noms generiques, des taglines 'Short pitch of the game.' et des liens vers la racine de roblox.com ou github.com ; elles gonflent les compteurs de la nav (Games 3, Maps 2, Web 2). Un recruteur comprend en 5 secondes que c'est un template non rempli. Les donnees verifiees fournissent 8 vrais jeux a mettre a la place, dans cet ordre (visites) : Monster Mayhem 136890726201326 (16 721 v., 267 fav., 219/8 = 96 % liked, groupe OG Game 2017, fev.-sept. 2026, beta) ; Escape Knockout for Speed 113866436980344 (10 164 v., Hyper | Games, fev. 2026, PAS de description : tagline TO CONFIRM) ; Search For The Egg 93487925421293 (9 275 v., 169 fav., Chill Games fr, sept.-oct. 2026) ; Don't Eat Poisoned Slime 125815079895321 (7 004 v., AVortexGame, mars-sept. 2026) ; Salle Ancienne Rush 123100983531502 (4 468 v., 46/4 = 92 %, compte perso, jan. 2025 : son premier jeu) ; Room Rush 82734020430701 (4 151 v., Hyper | Games, avr. 2025) ; Run For Dinosaurs 75594318823554 (2 621 v., Hyper | Games, mars 2026) ; Lucky Block Factory 88367844931035 (1 664 v., Lucky Block Factory Group, avr. 2026 ; afficher sans le tag '[UPD]'). Les 18 autres experiences (ANGEL or DEMON, LFI ou RN = quiz politique a exclure absolument, testpoop, Untitled Game, TITLE UNAVAILABLE...) ne doivent jamais apparaitre.",
+  "fix": "Remplacer les 6 placeholders par les 8 jeux ci-dessus, kind 'game', link 'https://www.roblox.com/games/<placeId>', placeId renseigne (les stats live et les jaquettes s'allument automatiquement via /api/roblox). Taglines en anglais tirees des descriptions publiques, sans invention : Monster Mayhem 'Play as a monster and destroy everything. Unofficial remake of the old Godzilla Simulator (beta).' ; Search For The Egg 'A chill beach game: dig for the egg buried in a giant pile of sand, sell your sand, upgrade your tools, get a crab helper.' ; Don't Eat Poisoned Slime '1v1 at the table: eat the slimes, dodge the one your enemy poisoned, spin for cash and build win streaks.' ; Salle Ancienne Rush 'RNG door adventure: every door opens on a room of varying rarity. Track your progress on the leaderboard.' ; Room Rush 'Open doors to discover rooms of various rarities, sell them or display them at spawn.' ; Run For Dinosaurs 'Run fast, get stronger, don't fall: collect dinosaurs to earn money and buy speed while the ground disappears.' ; Lucky Block Factory 'Your factory prints Lucky Blocks and the money never stops flowing: grow it into a production empire.' ; Escape Knockout for Speed : tagline TO CONFIRM (aucune description publique), en attendant 'Published under Hyper | Games, February 2026.' Ajouter un commentaire en tete de content.ts listant les place ids exclus pour qu'un futur redacteur ne les reprenne pas."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 103,
+  "severity": "high",
+  "title": "3 communautes inventees ('Community One' 1.2k, 'Group Two' 800) et aucun role affiche",
+  "detail": "Les 3 communautes sont fausses, liens vers discord.com et roblox.com racine, chiffres de membres inventes (1.2k, 800). Le schema Community n'a pas de champ role, donc meme remplies on ne saurait pas qu'Hector est proprietaire. Les donnees donnent 5 groupes qu'il possede et 2 roles chez d'autres : Hyper | Games 35726151 (511 membres, Proprietaire, 5 jeux publics), AVortexGame 292694018 (331, Owners), Lucky Block Factory Group 272607461 (164, Owner), Chill Games fr 1095885752 (140, Owner), OG Game 2017 35631030 (80, Proprietaire) ; Vorld 35476292 (4 306, Head Developer), PDK Community 923178524 (11 151, Admin). Infinity Studios (1 926) : il n'est que 'Top supporter', a exclure. Les micro-groupes (Our Poopy Games 8, Hyper | UGC 7, Coins House 2...) nuisent plus qu'ils n'aident.",
+  "fix": "Remplacer par les 7 groupes ci-dessus avec groupId (icone + membres live), platform 'Roblox group', link 'https://www.roblox.com/communities/<groupId>', et le nouveau champ role: 'Owner' / 'Head Developer' / 'Admin' affiche dans le panel ('Owner · 511 members'). Separer visuellement 'My groups' (5) et 'Roles in other studios' (Vorld, PDK) : c'est la difference entre 'j'anime 1 200 membres' et 'on m'a confie l'admin de 11 000 personnes'. Discord : aucun lien connu, TO CONFIRM, ne pas ajouter d'entree Discord tant qu'Hector ne donne pas l'invitation."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 86,
+  "severity": "high",
+  "title": "Le seul h1 de la page est le nom d'un jeu : la personne n'a pas de hero",
+  "detail": "<h1>{featured.name}</h1> dans la banniere : le document s'intitule 'Search For The Egg', pas 'Hector'. Le bloc identite (sidebar .me, 0.95rem) est le plus petit texte de la page. Le gabarit slacklaboratory met en hero : etiquette de role, titre fort, bio 3 lignes, tag 'Open to...', 3 chiffres cles. Ici rien de tout cela n'existe au-dessus du pli ; le recruteur voit une jaquette de jeu et un bouton Play sans savoir a qui il a affaire.",
+  "fix": "Rendre Hector le h1 : soit une bande d'intro compacte au-dessus de la banniere (nom en h1, role, status, 3 facts en gros, lien Roblox + GitHub), soit enrichir le bloc sidebar (nom h1, handle, status, facts). Retrograder le titre de la banniere en h2 et prefixer le chip 'Featured game' plutot que 'Featured Game'. Cela garde le look launcher (ref. 3) tout en respectant l'ordre du gabarit."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 40,
+  "severity": "high",
+  "title": "Aucun chiffre cle statique : les preuves n'apparaissent que si /api/roblox repond, en petit, dans le rail",
+  "detail": "Le panel 'Live stats' (App.tsx l.137-165) est conditionne a hasStats : invisible en dev, invisible si Roblox est lent ou en panne, et de toute facon relegue dans la colonne droite en 1.5rem. Le gabarit met 3 CHIFFRES en gros dans le hero ; c'est ce qui accroche un recruteur. Il n'existe pas d'export facts dans content.ts. Donnees : 56 914 visites sur 26 experiences (56 068 sur les 8 affichees), 530 favoris (exactement egal a la somme des 8 affichees, les 18 autres ont 0), 1 035 abonnes, 7 groupes possedes, 96 % liked sur Monster Mayhem (219/8).",
+  "fix": "Ajouter export const facts = [ { value: '56k+', label: 'visits across my Roblox games', live: 'visits' }, { value: '530', label: 'favorites', live: 'favorites' }, { value: '1,035', label: 'Roblox followers' } ] (followers reste statique : pas de cle live prevue). Ecrire '56k+' et non '56.9k' pour que le remplacement live (56.1k sur les 8 placeIds) ne contredise pas la valeur statique. Alternative pour le 3e : { value: '96%', label: 'liked on Monster Mayhem' }. Les afficher en gros dans le hero, toujours visibles, et laisser le rail 'Live stats' pour 'playing now'."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 134,
+  "severity": "high",
+  "title": "Pas de section Experience / Education : zero contexte sur le parcours",
+  "detail": "Le gabarit a une timeline (travail + formation melanges : periode, role, organisation, 2 lignes, tech). Ici rien : un recruteur ne sait pas depuis quand il developpe, s'il a dirige une equipe, ni ce qu'il etudie. Les donnees permettent 4 entrees reelles sans rien inventer, et les trous sont connus.",
+  "fix": "Ajouter export const experience[] (schema id/kind/period/role/org/summary/tech/link) et une section apres la grille : (1) kind 'community', '2025 – present', 'Founder & Owner', 'Hyper | Games · Roblox group, 511 members', 'Five public games published under the group, including Escape Knockout for Speed (10.2k visits), Room Rush and Run For Dinosaurs.', ['Luau','Roblox Studio'], roblox.com/communities/35726151 (date de creation du groupe absente des donnees : commentaire TO CONFIRM, le premier jeu du groupe date d'avril 2025) ; (2) 'community', 'Head Developer', 'Vorld · 4,306 members', periode et missions TO CONFIRM ; (3) 'community', 'Admin', 'PDK Community · 11,151 members', periode TO CONFIRM ; (4) kind 'education', 'Feb 2026', '10-day Python pool (Day01 to Day10)', 'School TO CONFIRM', 'Ten daily exercise repos pushed from 12 to 21 Feb 2026.', ['Python'], github.com/SkYNENET. Ecole / annee / stages / jobs : inconnus, laisser en commentaires TO CONFIRM dans content.ts, ne rien rendre a l'ecran avec le mot TO CONFIRM. Aucune entree 'work' tant qu'Hector n'en donne pas."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/index.html",
+  "line": 6,
+  "severity": "high",
+  "title": "SEO inexistant : <title>Portfolio</title>, pas de description, OG, favicon",
+  "detail": "Un lien partage sur LinkedIn / Discord / Slack affiche 'Portfolio' sans image ni description ; Google indexera 'Portfolio'. Pas de favicon (onglet vide), pas de <meta name=description>, pas d'og:*, pas de twitter:card, pas de canonical. lang='en' et theme-color sont corrects.",
+  "fix": "<title>Hector · Roblox & Full Stack Developer</title> (ou 'Vbrut0x · Roblox developer') ; <meta name='description' content='Roblox developer since 2025: 26 public experiences, 56k+ visits, owner of Hyper | Games. Student, open to an internship.'> ; og:title, og:description, og:type website, og:image (creer public/og.png 1200x630, par ex. la jaquette Monster Mayhem + nom ; l'URL de l'icone Roblox est dans docs/data/roblox.json gameIcons mais mieux vaut un fichier local), twitter:card summary_large_image ; <link rel='icon' href='/favicon.svg'> + apple-touch-icon. Le canonical attendra le domaine (docs/DEPLOY.md)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 47,
+  "severity": "medium",
+  "title": "Tagline 'TODO: one sentence...' visible dans la banniere, et mauvais jeu en featured",
+  "detail": "La banniere (element le plus grand de la page) affiche litteralement 'TODO: one sentence on what players do and what you built.' Le featured est Search For The Egg (9 275 visites, 49/16 = 75 % liked) alors que Monster Mayhem fait 16 721 visites, 267 favoris et 96 % liked : c'est la meilleure preuve du compte.",
+  "fix": "featured: true sur Monster Mayhem (tagline ci-dessus, chip 'Featured game · 96% liked'), featured retire de Search For The Egg. Aucune tagline ne doit contenir TODO ; pour Escape Knockout (sans description) garder une phrase factuelle sur le groupe et la date, marquee TO CONFIRM en commentaire."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 11,
+  "severity": "medium",
+  "title": "Aucun role, tech, annee ni equipe par projet : on ne sait pas ce qu'Hector a fait sur chaque jeu",
+  "detail": "Entry n'a que name/kind/tagline/link/tone/meta/placeId. Le gabarit exige role + tech par projet. Pire : App.tsx l.121-128 n'affiche la tagline/meta QUE quand les stats live sont absentes ; des que /api/roblox repond, la tuile ne montre plus que 'x playing · y visits' et le pitch disparait. meta: 'Roblox' (l.50) n'apporte rien. Son role exact (solo ? scripteur ? builder ?) est inconnu pour tous les jeux ; ce qui est certain : le createur est son groupe ou son compte perso (Salle Ancienne Rush est le seul publie sous Vbrut0x).",
+  "fix": "Ajouter aux 8 entrees : year (depuis created : '2025' pour Salle Ancienne Rush et Room Rush, '2026' pour les autres), team: nom du groupe createur ('OG Game 2017', 'Hyper | Games', 'Chill Games fr', 'AVortexGame', 'Lucky Block Factory Group', 'Solo account' pour Salle Ancienne Rush), tech: ['Luau', 'Roblox Studio'] (DataStore, anti-cheat, monetisation : TO CONFIRM, ne pas ecrire), role: TO CONFIRM en commentaire, ne rien afficher tant qu'Hector n'a pas repondu ; highlights: les chiffres (ex. Monster Mayhem ['16.7k visits', '96% liked', '267 favorites']). Cote App.tsx, afficher la tagline sous la tuile MEME avec stats (stats sur une ligne, tagline sur la suivante) ou dans un panneau de detail au clic (idee HANDOFF section 7)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 34,
+  "severity": "medium",
+  "title": "Role, status et bio generiques, sans aucun fait",
+  "detail": "role 'Roblox & Full Stack Developer', status 'Open to internship · next year', bio 'I build Roblox games and web applications. This is my library...' : vrai pour n'importe qui. Le gabarit demande une bio de 3 lignes avec des faits et un tag precis 'Open to: 6-month internship, spring 2027'. Dates et duree du stage d'Hector : TO CONFIRM.",
+  "fix": "bio: 'Roblox developer since January 2025: 26 public experiences and 56k+ visits, owner of Hyper | Games (511 members) and four other groups, Head Developer at Vorld. I also build for the web in TypeScript (a diep.io-style survival game, this site and its live-stats API). Student, looking for an internship.' status: 'Open to internship · 2027' avec commentaire // duree et date exactes TO CONFIRM. Ecole et ville : ne pas mentionner tant que TO CONFIRM."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 199,
+  "severity": "medium",
+  "title": "Contact enterre en bas du rail, sans bouton Copy, sans lien Roblox, sans footer",
+  "detail": "Le gabarit : section Contact pleine largeur (titre, une phrase, email en clair + bouton Copy, liens GitHub/LinkedIn/Resume) puis footer (nom, ville, ecole, promo). Ici Contact est le 4e panel du rail ; sous 1100px le rail passe sous la grille, donc sur mobile le contact arrive apres ~9 tuiles. Pas de nav d'ancres (Work / Experience / Contact / Resume), pas de bouton Copy, pas de footer. Le lien profil Roblox manque alors que c'est le premier reflexe d'un studio.",
+  "fix": "Ajouter dans la sidebar (sticky) deux boutons toujours visibles : 'Contact' (ancre) et 'Resume (PDF)' (rendu seulement si le fichier existe). Section Contact pleine largeur en fin de main : titre, phrase ('Looking for an internship in 2027. Say hi.'), email + bouton Copy (navigator.clipboard, etat 'Copied'), liens Roblox profile (users/7893763634), GitHub SkYNENET, LinkedIn quand connu. Footer : 'Hector · Roblox: @Vbrut0x · GitHub: SkYNENET' ; ville / ecole / promo ajoutees quand confirmees."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 157,
+  "severity": "medium",
+  "title": "'Community members' additionne tous les groupId : avec Vorld et PDK, 16.6k membres qui ne sont pas les siens",
+  "detail": "sum(groups.map(g => g.members)) sur toutes les communautes ayant un groupId. Des que Vorld (4 306) et PDK (11 151) sont ajoutes avec groupId pour afficher leur icone et leur compteur, le chiffre agrege passe de ~1 226 (ses 5 groupes) a ~16 683 et laisse croire qu'il anime 16k membres. Meme risque pour facts live 'members'.",
+  "fix": "Agreger uniquement les communautes dont role est 'Owner' (ou un flag own: true) ; libeller 'Members across my groups'. Les roles externes gardent leur groupId pour l'icone et le compteur individuel, mais sont exclus de la somme."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 11,
+  "severity": "medium",
+  "title": "Filtre 'Maps' sans aucune map : etat vide 'Nothing here yet.' expose au recruteur",
+  "detail": "Aucune des 26 experiences n'est une map ; une fois les placeholders 'Map One / Map Two' retires, le filtre Maps affiche 'Nothing here yet.' et le badge '0'. Ne pas requalifier des jeux en maps pour remplir.",
+  "fix": "Construire NAV a partir des kinds reellement presents dans entries (garder le type Kind et 'map' dans le schema pour plus tard), ou retirer l'item Maps. Avec les donnees actuelles : Home (10-11), Games (8), Web (2-3)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 86,
+  "severity": "medium",
+  "title": "Le volet web / full stack n'a aucune preuve alors que GitHub en fournit",
+  "detail": "'Web Project One' (React · TypeScript · Supabase) et 'Web Project Two' (Next.js · PostgreSQL) sont inventes et attribuent des technos non prouvees. GitHub SkYNENET contient de vraies preuves : alike.io (TypeScript 55 ko + CSS + HTML, maj 2026-06-17, jeu HTML5 Canvas top-down inspire de diep.io, src/systems AISystem/MeleeSystem/ZoneManager, Renderer, WASD/ZQSD + souris + dash) ; roblox-followers-api (Node, aout 2025, sans README) ; et ce portfolio lui-meme (React 19 + TS + Vite + fonction serverless Vercel). Le repo 'Portfolio' branche main (vieux projet scolaire avec donnees perso) ne doit pas etre repris.",
+  "fix": "Remplacer les 2 web placeholders par : alike.io { kind 'web', tagline 'Diep.io-style survival game in the browser: stat progression, waves of hunter bots, melee combat and a shrinking zone.', link 'https://github.com/SkYNENET/alike.io', tech ['TypeScript','HTML5 Canvas'], year '2026' } ; This portfolio { kind 'web', tagline 'This site: React + TypeScript on Vercel, with a serverless function aggregating live public Roblox stats.', link vers le repo quand il sera publie sous SkYNENET, tech ['React','TypeScript','Vite','Vercel'] } ; roblox-followers-api : seulement si Hector confirme ce qu'elle fait (TO CONFIRM), sinon ne pas lister. Le bouton banniere affiche deja 'Open' pour kind web (App.tsx l.95)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 42,
+  "severity": "medium",
+  "title": "Ordre de la grille = ordre du fichier : aucun tri par preuve",
+  "detail": "HANDOFF section 7 liste 'sort by players or visits' en idee non faite. Sans tri, l'ordre dans content.ts fait foi ; il faut donc que le fichier soit range par visites pour que les 3 premieres jaquettes soient les plus fortes (Monster Mayhem, Escape Knockout, Search For The Egg).",
+  "fix": "Ecrire les 8 jeux dans l'ordre decroissant des visites (liste du finding sur les entrees) et placer les entrees web apres. Evolution future, pas prerequis : tri cote App.tsx sur roblox.games[placeId].visits quand les stats sont la."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 127,
+  "severity": "medium",
+  "title": "La description d'un jeu n'est visible que quand les stats live echouent",
+  "detail": "<span>{e.meta ?? e.tagline}</span> est la branche 'sans stats'. En production, avec /api/roblox fonctionnel, aucune tuile ne montre de texte autre que 'x playing · y visits'. Le travail de redaction des taglines serait invisible la ou ca compte (le site deploye).",
+  "fix": "Afficher toujours la tagline (ou le role + tech) sous la ligne de stats, ou ouvrir un panneau de detail au clic (nom, tagline, role, tech, team, year, highlights, bouton Play) et garder le lien direct Roblox comme action secondaire."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 34,
+  "severity": "low",
+  "title": "'Full Stack Developer' peu etaye par les preuves disponibles",
+  "detail": "Les preuves fortes sont Roblox (26 experiences, 7 groupes). Cote web : un jeu Canvas TypeScript front-only, une petite API Node sans README, ce portfolio. Aucune base de donnees ni backend significatif prouve. Un recruteur web risque de trouver l'etiquette surjouee ; un studio Roblox n'en a pas besoin.",
+  "fix": "Garder 'Roblox & Full Stack Developer' seulement si Hector confirme d'autres projets backend (TO CONFIRM via RESUME_DATA.md section 5) ; sinon 'Roblox developer · TypeScript on the web' est plus credible et aussi recrutable. Dans tous les cas, s'assurer que le filtre Web contient au moins alike.io et le portfolio."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 51,
+  "severity": "low",
+  "title": "Avatar = lettre alors que la headshot Roblox publique existe",
+  "detail": "L'avatar sidebar affiche profile.name.charAt(0). docs/data/roblox.json contient l'URL publique de la headshot (thumbnails.roblox.com avatar-headshot 420x420). api/roblox.ts ne sait pas resoudre un userId.",
+  "fix": "Evolution future : soit deposer public/avatar.png (telecharger la headshot une fois, c'est une image publique) et ajouter profile.avatar, soit etendre api/roblox.ts avec ?user=7893763634 -> headshot + followers (ce qui permettrait aussi un fact live 'followers')."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/HANDOFF.md",
+  "line": 170,
+  "severity": "low",
+  "title": "HANDOFF section 7 et RESUME_DATA 'Verified facts' perimes par rapport aux donnees collectees",
+  "detail": "HANDOFF dit encore 'Entry 1 is a real game... the other 6 entries and 3 communities are fake', 'Ask which games to show' ; RESUME_DATA.md ne liste qu'un jeu en faits verifies. Un prochain Claude repartirait de zero ou redemanderait a Hector ce qui est deja dans docs/data/roblox.json. HANDOFF section 2 pointe aussi vers la branche claude/confident-gauss-xseto1 du repo SkYNENET/Portfolio alors que ce depot est un import frais sur main.",
+  "fix": "Apres la vague de contenu : mettre a jour HANDOFF section 7 (donnees dans docs/data/roblox.json + fetch_roblox.py, liste des 8 jeux retenus et des exclusions, roles externes), section 2 (depot actuel), et enrichir RESUME_DATA 'Verified facts' avec les 8 jeux, les 7 groupes, les 1 035 abonnes et les repos GitHub. Laisser la liste TO CONFIRM (nom, ecole, ville, email, LinkedIn, role par jeu, Discord, dates de stage, langues) bien visible."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/docs/data/roblox.json",
+  "line": 1,
+  "severity": "low",
+  "title": "Dump brut de 89 Ko versionne : conforme (donnees publiques) mais a garder hors de public/",
+  "detail": "Le fichier ne contient que des donnees publiques Roblox (pas de telephone, email, adresse), il respecte la regle vie privee. Il contient en revanche le titre et la description du quiz 'LFI ou RN' et les 18 experiences test que le site ne doit pas montrer. Il est dans docs/, donc non servi par Vite : correct.",
+  "fix": "Ne jamais le deplacer dans public/ ni l'importer dans src/ (le bundle embarquerait les 26 experiences). Les 8 entrees du site restent copiees a la main dans content.ts avec un commentaire indiquant la source et la date (2026-10-08)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/api/roblox.ts",
+  "line": 117,
+  "severity": "high",
+  "title": "Proxy a IDs libres : cache contournable et jusqu'a ~64 appels Roblox par requete",
+  "detail": "GET accepte n'importe quels IDs numeriques (30 places + 30 groupes). Chaque query string distincte est une entree de cache edge separee, donc un tiers peut forcer un miss a chaque hit et declencher jusqu'a 30 resolutions place->universe + 3 appels stats + 30 appels groupes + 1 icones depuis les IP Vercel. Consequences : 429 Roblox pour le vrai site, consommation du quota d'invocations Hobby, et le site sert d'annuaire Roblox gratuit. Le commentaire ligne 4 (\"it is not an open proxy\") est donc trop optimiste : c'est un proxy restreint a des endpoints fixes, pas a des IDs fixes.",
+  "fix": "Allowlist cote serveur : importer `entries` et `communities` depuis `../src/content` (Vercel bundle le module) et ne garder que les IDs demandes qui figurent dans la config ; ou plus simple, ignorer la query et toujours servir le jeu d'IDs configure (une seule cle de cache, une seule URL `/api/roblox`). Garder MAX_IDS comme second filet. Documenter dans le commentaire d'en-tete que les IDs sont fixes par content.ts."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/api/roblox.ts",
+  "line": 50,
+  "severity": "medium",
+  "title": "N+1 place->universe : 8 jeux = 11 appels et deux paliers de timeout",
+  "detail": "Chaque place est resolue par un appel `apis.roblox.com/universes/v1/places/{id}/universe` (verifie : repond 200 `{universeId}`), puis seulement les 3 appels batch. Pour les 8 jeux a montrer : 8 + 3 = 11 requetes sortantes et une cascade de 2 x 8 s de timeout potentiel. ATTENTION : le batch `games.roblox.com/v1/games/multiget-place-details?placeIds=` propose dans le brief n'est PAS utilisable : teste sans cookie, il repond HTTP 401 `{\"code\":9002,\"message\":\"Authentication token is missing\"}`.",
+  "fix": "Ajouter `universeId?: number` a Entry dans src/content.ts et le renseigner depuis docs/data/roblox.json : 136890726201326->9671942172 (Monster Mayhem), 113866436980344->9670382970 (Escape Knockout for Speed), 93487925421293->10767332654 (Search For The Egg), 125815079895321->9856582217 (Don't Eat Poisoned Slime), 123100983531502->7127856984 (Salle Ancienne Rush), 82734020430701->7487992065 (Room Rush), 75594318823554->9834328401 (Run For Dinosaurs), 88367844931035->10016151371 (Lucky Block Factory). Le client envoie `universes=` (ou le serveur lit la map depuis content.ts), la fonction fait alors 3 appels paralleles au total et indexe la reponse par placeId pour ne rien changer dans App.tsx. Garder la resolution place->universe uniquement en fallback pour une entree sans universeId. Pour les groupes, les appels v1 unitaires restent necessaires : `groups.roblox.com/v2/groups?groupIds=` (teste) ne renvoie pas memberCount."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/api/roblox.ts",
+  "line": 40,
+  "severity": "medium",
+  "title": "Budget temps non borne (jusqu'a 16 s) et 429 Roblox transforme en no-store qui amplifie la charge",
+  "detail": "`AbortSignal.timeout(8000)` est par appel ; avec la cascade resolution puis stats, la reponse peut mettre 16 s avant que le client retombe sur le texte statique. Par ailleurs un 429 sur `games` donne `gotNothing` -> `no-store` -> chaque visiteur suivant re-declenche la rafale vers Roblox, exactement quand Roblox limite. Enfin si `votes` echoue, likes/dislikes valent 0 et sont mis en cache 5 min (+15 min SWR) comme si c'etait vrai (aujourd'hui masque car likedPercent renvoie null a 0, mais fragile des qu'on affichera les votes bruts).",
+  "fix": "Un deadline global : `const deadline = AbortSignal.timeout(6000)` passe a tous les fetch (ou `AbortSignal.any([deadline, AbortSignal.timeout(4000)])` par appel). Distinguer les cas : upstream injoignable -> `no-store` ; reponse partielle (certains blocs null) -> `s-maxage=60` court ; succes complet -> 300/900. Exposer `partial: true` dans le JSON et, cote client, ne pas afficher une stat issue d'un bloc null (garder `likes?: number` optionnel plutot que 0 par defaut). Logger les 429 (`console.warn(url, res.status)`) pour les voir dans les logs Vercel."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/tsconfig.json",
+  "line": 3,
+  "severity": "medium",
+  "title": "api/roblox.ts n'est couvert par aucun projet TypeScript : jamais type-checke par `tsc -b`",
+  "detail": "tsconfig.app.json inclut `src` seulement, tsconfig.node.json inclut `vite.config.ts` seulement. `npm run build` (tsc -b && vite build) ne lit donc jamais api/roblox.ts, et Vercel le compile avec esbuild sans verification de types : une erreur de type dans la fonction part en prod silencieusement. Verifie en standalone : le fichier passe aujourd'hui `tsc --strict` aussi bien avec lib DOM qu'avec @types/node seul, donc le correctif est gratuit.",
+  "fix": "Creer tsconfig.api.json : {\"compilerOptions\":{\"tsBuildInfoFile\":\"./node_modules/.tmp/tsconfig.api.tsbuildinfo\",\"target\":\"es2023\",\"lib\":[\"ES2023\"],\"types\":[\"node\"],\"module\":\"esnext\",\"moduleResolution\":\"bundler\",\"strict\":true,\"noEmit\":true,\"skipLibCheck\":true,\"verbatimModuleSyntax\":true,\"noUnusedLocals\":true,\"noUnusedParameters\":true},\"include\":[\"api\"]} et ajouter `{ \"path\": \"./tsconfig.api.json\" }` dans references. Si api importe ../src/content (finding allowlist), ajouter \"src/content.ts\" a include. Rien a installer : @types/node est deja present."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/tsconfig.app.json",
+  "line": 2,
+  "severity": "medium",
+  "title": "`strict` absent des tsconfig : strictNullChecks et noImplicitAny desactives",
+  "detail": "Le template Vite livre `\"strict\": true` ; ici ni tsconfig.app.json ni tsconfig.node.json ne l'ont. Le code actuel passe `npx tsc -p tsconfig.app.json --noEmit --strict` sans erreur (verifie), donc rien ne casse en l'activant, mais sans lui les futurs champs optionnels du schema (role?, tech?, highlights?, facts.live?) et les `Record<string, GameStats>` indexes par id ne seront plus proteges contre les undefined.",
+  "fix": "Ajouter `\"strict\": true` dans tsconfig.app.json, tsconfig.node.json et le futur tsconfig.api.json. Optionnel : `\"noUncheckedIndexedAccess\": true` pour forcer la garde sur `roblox.games[id]` et `groups[n]` (deja gardes aujourd'hui, le flag rend la garde obligatoire)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/index.html",
+  "line": 11,
+  "severity": "medium",
+  "title": "Google Fonts charge en fin de <body> apres #root : FOUT, preconnect incomplet, question RGPD",
+  "detail": "La feuille Inter est decouverte apres le script module, donc apres le premier rendu : texte en system-ui puis bascule (display=swap evite l'invisible mais pas le saut). Le preconnect vise fonts.googleapis.com seulement, alors que les woff2 viennent de fonts.gstatic.com (qui exige `crossorigin`). Chaque visite envoie l'IP du visiteur a Google (jugement Munich 2022 sur Google Fonts) : pour un portfolio d'etudiant francais, l'auto-hebergement est plus propre. Le dist/index.html reproduit le probleme (links restes dans body).",
+  "fix": "Auto-heberger : deposer Inter variable (woff2, latin) dans public/fonts/, declarer dans src/index.css `@font-face { font-family: Inter; src: url('/fonts/Inter-Variable.woff2') format('woff2'); font-weight: 400 600; font-display: swap; unicode-range: U+0000-00FF, U+2000-206F; }` et ajouter dans <head> `<link rel=\"preload\" href=\"/fonts/Inter-Variable.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>`. A minima : deplacer les deux <link> dans <head> avant le script et ajouter `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/index.html",
+  "line": 6,
+  "severity": "medium",
+  "title": "Aucun SEO/partage : title generique, pas de description, pas d'OpenGraph, pas de favicon",
+  "detail": "`<title>Portfolio</title>`, pas de `<meta name=description>`, pas de og:* ni twitter:*, pas de canonical, public/ est vide donc chaque visite fait un 404 sur /favicon.ico. Un recruteur qui recoit le lien sur LinkedIn ou Discord voit une carte vide : ces unfurlers n'executent pas le JS, les balises doivent etre statiques dans index.html (la page est 100 % client-side, le HTML servi ne contient que <div id=root>).",
+  "fix": "Dans <head> : `<title>Hector – Roblox & Full Stack Developer</title>` (nom de famille TO CONFIRM), `<meta name=\"description\" content=\"...\">` (<=155 caracteres, reprendre profile.bio), `og:type=website`, `og:title`, `og:description`, `og:image` (public/og.png 1200x630, par ex. la jaquette Monster Mayhem), `og:url` et `<link rel=\"canonical\">` une fois le domaine connu, `twitter:card=summary_large_image`. Favicon : `<link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\">` + `<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\">` dans public/. Ajouter `<noscript>` avec nom, role et email pour les crawlers sans JS. Pour rester fidele a la regle \"tout le texte dans content.ts\", un mini plugin Vite `transformIndexHtml` peut injecter ces valeurs depuis content.ts."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 137,
+  "severity": "medium",
+  "title": "Layout shift quand les stats live arrivent : le panneau \"Live stats\" apparait et pousse tout le rail",
+  "detail": "`{hasStats && <section className=\"panel\">...}` : le panneau n'existe pas au premier rendu puis surgit 1 a 3 s plus tard (telechargement JS -> rendu -> fetch -> cold start -> cascade Roblox), decalant Communities/About/Contact. Les tuiles passent aussi de `meta` a `X playing · Y visits` (changement de largeur/hauteur de ligne). Mauvais CLS et impression de page qui bouge, precisement sur la zone \"chiffres cles\" qui doit accrocher le recruteur.",
+  "fix": "Toujours rendre le panneau avec les valeurs statiques de `facts` (nouveau schema) et remplacer la valeur quand `facts[].live` correspond a un agregat disponible ; fixer `min-height` sur `.tile > span` / `.stats` et sur `.numbers b` pour que le remplacement soit un changement de texte, pas un reflow. Idem pour la banniere : reserver la ligne `.banner-stats` (visibility: hidden tant que pas de stats)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/package.json",
+  "line": 11,
+  "severity": "low",
+  "title": "framer-motion et lucide-react declares mais jamais importes : hors bundle, mais poids mort dans node_modules et le lockfile",
+  "detail": "Verifie dans dist/assets/index-UOzRpbLK.js : 0 occurrence de framer, motion-dom, lucide, createLucideIcon. Vite tree-shake tout : les 226 Ko (70 Ko gzip) sont React 19.3 + ReactDOM pour une page statique. Les deux dependances alourdissent seulement l'installation, package-lock.json (43 Ko) et la surface Dependabot.",
+  "fix": "Retirer les deux lignes de `dependencies` ; le proprietaire lance lui-meme `npm uninstall framer-motion lucide-react` (interdit aux agents). Si des animations deviennent necessaires, preferer des transitions CSS (deja presentes) ou importer framer-motion a la demande. Optionnel perf : alias `react`/`react-dom` vers `@preact/compat` dans vite.config.ts ramenerait le JS a ~15 Ko gzip, non prioritaire."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/package.json",
+  "line": 8,
+  "severity": "low",
+  "title": "Pas de .oxlintrc.json : `npm run lint` tourne en profil minimal, plugin react et jsx-a11y desactives",
+  "detail": "Sans config, oxlint 1.87 n'active que la categorie `correctness` avec les plugins typescript/unicorn/oxc : `rules-of-hooks`, `exhaustive-deps`, les regles jsx-a11y et `react-perf` ne sont jamais evaluees. Teste avec les plugins forces : 76 avertissements dont ~68 de `react-in-jsx-scope` (faux positifs, oxlint ignore que le runtime JSX est automatique) ; une fois ce bruit ecarte il reste 8 avertissements de style seulement (require-unicode-regexp sur api/roblox.ts:32, prefer-query-selector sur main.tsx:6, max-lines-per-function sur App). dist/ est bien ignore par defaut (verifie).",
+  "fix": "Creer .oxlintrc.json a la racine : {\"$schema\":\"./node_modules/oxlint/configuration_schema.json\",\"plugins\":[\"react\",\"react-perf\",\"jsx-a11y\",\"typescript\",\"unicorn\",\"oxc\"],\"categories\":{\"correctness\":\"error\",\"suspicious\":\"warn\",\"perf\":\"warn\"},\"rules\":{\"react/react-in-jsx-scope\":\"off\",\"react/jsx-no-useless-fragment\":\"off\"},\"settings\":{\"react\":{\"version\":\"detect\"}},\"ignorePatterns\":[\"dist\",\"docs\"]}. Au passage, ajouter le flag `u` au regex de parseIds (`/^\\d{1,19}$/u`)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/api/roblox.ts",
+  "line": 127,
+  "severity": "low",
+  "title": "Cache-Control sans max-age navigateur ni en-tete CDN explicite",
+  "detail": "`public, s-maxage=300, stale-while-revalidate=900` : correct pour le CDN Vercel, mais aucun `max-age` pour le navigateur, donc un rechargement d'onglet ou un retour arriere re-invoque la fonction (cache edge hit, mais invocation tout de meme). `no-store` quand tout echoue est le bon choix. Pas de `Vary` necessaire (pas de negociation).",
+  "fix": "`'Cache-Control': 'public, max-age=60, s-maxage=300, stale-while-revalidate=900'` et, pour etre explicite cote Vercel, dupliquer en `'CDN-Cache-Control': 'public, s-maxage=300, stale-while-revalidate=900'`. Ajouter `'X-Content-Type-Options': 'nosniff'`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/api/roblox.ts",
+  "line": 76,
+  "severity": "low",
+  "title": "Validation de forme incomplete : `games?.data.find` plante en 500 si Roblox renvoie 200 sans `data`",
+  "detail": "Le chainage optionnel s'arrete a `games` ; si l'API repond 200 avec un corps inattendu (page de maintenance JSON, `{errors:[...]}` en 200, changement de schema) `games.data` est undefined et `.find` leve une TypeError non interceptee : la fonction repond 500 sans Cache-Control, et le client retombe sur le statique sans trace. Meme motif lignes 78, 79, 108.",
+  "fix": "Garder `data` sous garde : `const rows = Array.isArray(games?.data) ? games.data : []` puis indexer une fois en Map (`new Map(rows.map(g => [String(g.id), g]))`) au lieu de `.find` dans la boucle. Envelopper le corps de GET dans try/catch qui renvoie `{games:{},groups:{}}` avec `no-store` et un `console.error` (visible dans les logs Vercel)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/roblox.ts",
+  "line": 35,
+  "severity": "low",
+  "title": "useRoblox : StrictMode et abort bien geres, mais aucun etat loading/error et erreurs toutes avalees",
+  "detail": "Verifie : en dev, StrictMode monte/demonte/remonte l'effet ; le premier fetch est annule par `controller.abort()` et l'AbortError part dans `.catch(() => {})` : un seul resultat applique, pas de bug. La cle `${placeIds}|${groupIds}` stabilise la dependance meme si l'appelant passe de nouveaux tableaux : bon pattern. En revanche : pas de `status` exposable (impossible d'afficher un squelette ou d'eviter un flash \"0 playing\"), `res.ok ? res.json() : EMPTY` ecrase un eventuel bon resultat anterieur, et toutes les erreurs (y compris une forme JSON inattendue) sont silencieuses, meme en dev. `/api` n'existe pas sous `vite dev` (404 -> EMPTY), ce qui est attendu mais invisible.",
+  "fix": "Retourner `{ data, status: 'idle' | 'loading' | 'ready' | 'error' }` ; en cas de `!res.ok` ou d'exception non-Abort, passer `status: 'error'` sans toucher `data` ; `if (import.meta.env.DEV) console.debug('[roblox]', err)` dans le catch en ignorant `err.name === 'AbortError'`. Les planificateurs peuvent brancher `facts[].live` dessus : statique tant que status !== 'ready'."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 115,
+  "severity": "low",
+  "title": "Cles React basees sur le nom (`key={e.name}`, `key={c.name}`) : collision possible",
+  "detail": "Les donnees brutes contiennent deja des doublons de nom (\"TITLE UNAVAILABLE\" x2, exclus pour l'instant) et un catalogue de jeux peut legitimement repeter un nom (versions, remakes). Deux entrees de meme nom provoqueraient un avertissement React et un rendu/recyclage incorrect des tuiles lors du filtrage.",
+  "fix": "`key={e.placeId ?? e.link}` pour les entrees et `key={c.groupId ?? c.link}` pour les communautes (les liens sont uniques par construction). Idem ligne 173."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 62,
+  "severity": "low",
+  "title": "Accessibilite : filtre actif et point \"live\" signales uniquement par la couleur",
+  "detail": "Les boutons de nav n'exposent pas leur etat (`.active` purement visuel), le point vert `<i />` du statut et `.live.on` n'ont pas d'equivalent textuel ; un lecteur d'ecran lit \"Games 8\" sans savoir que c'est le filtre courant, et \"3 playing · 16.7K visits\" sans l'information \"en ligne maintenant\". Les liens externes ont bien `rel=\"noreferrer\"` (securite OK), `aria-hidden` sur l'avatar est correct.",
+  "fix": "`aria-pressed={filter === n.id}` sur chaque bouton de nav ; `<span className=\"sr-only\">Live</span>` a cote du point quand `playing > 0` (ajouter une classe utilitaire .sr-only dans index.css) ; `aria-label` sur `.status` (\"Status: Open to internship\")."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/vercel.json",
+  "severity": "low",
+  "title": "Pas de vercel.json : aucun en-tete de securite (nosniff, Referrer-Policy, Permissions-Policy, CSP)",
+  "detail": "Le site n'envoie que les en-tetes par defaut de Vercel. Pour une page statique + une fonction, une CSP est facile : les seules origines externes sont tr.rbxcdn.com (icones Roblox) et, tant que Google Fonts reste, fonts.googleapis.com / fonts.gstatic.com. Attention : les `style={{ background: gradient(...) }}` en ligne exigent `style-src 'unsafe-inline'` (ou une migration vers des custom properties CSS, qui restent des styles inline du point de vue CSP : garder 'unsafe-inline' pour style-src est acceptable ici).",
+  "fix": "Creer vercel.json : {\"headers\":[{\"source\":\"/(.*)\",\"headers\":[{\"key\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"key\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"key\":\"Permissions-Policy\",\"value\":\"camera=(), microphone=(), geolocation=()\"},{\"key\":\"Content-Security-Policy\",\"value\":\"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://tr.rbxcdn.com data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'\"}]}]}. Ajuster font-src/style-src si Google Fonts est conserve."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 16,
+  "severity": "low",
+  "title": "Sidebar sticky en `calc(100vh - 40px)` : deborde sur tablettes a cause de la barre d'URL mobile",
+  "detail": "Entre 760 et 1100 px (tablette, la regle mobile `height: auto` ne s'applique pas), `100vh` inclut la zone de la barre d'adresse retractable : la sidebar depasse de la fenetre et son bas (le statut \"Open to internship\") est coupe tant que la barre est visible. Le reste du CSS est sain : `prefers-reduced-motion` respecte, transitions legeres, `backdrop-filter` limite a une pastille.",
+  "fix": "`height: calc(100dvh - 40px)` (avec `100vh` en fallback juste avant pour les anciens navigateurs). Meme remarque pour `.shell { min-height: 100vh }` -> `100dvh`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/docs/data/roblox.json",
+  "severity": "low",
+  "title": "Dump brut de 74 Ko non suivi par git, sans donnee personnelle, mais contient les 18 jeux a ne pas montrer",
+  "detail": "`git status` : `?? docs/data/` (fetch_roblox.py + roblox.json non commites). Scan vie privee : aucun email, numero de telephone ni invitation Discord ; `user.description` est une phrase anodine ; `externalAppDisplayName` null. Le fichier contient en revanche la liste complete des 26 experiences, dont le quiz politique a exclure absolument, `isBanned`, et des URLs d'icones avec version : si on le commite tel quel, un redacteur pourrait s'en servir par erreur comme source d'affichage.",
+  "fix": "Soit ne pas commiter le brut et conserver seulement un `docs/data/roblox-summary.json` trie (les 8 jeux avec placeId, universeId, visites, favoris, votes, createur, dates + les 7 groupes), soit le commiter avec un `docs/data/README.md` d'une ligne : \"donnees brutes du 2026-10-08, reference seulement, la selection affichee est dans src/content.ts\". Dans les deux cas, ajouter `docs` a ignorePatterns d'oxlint (deja prevu ci-dessus)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 39,
+  "severity": "low",
+  "title": "Liens de contact casses en l'etat : /cv.pdf absent de public/, email et GitHub placeholders",
+  "detail": "`profile.cv: '/cv.pdf'` pointe vers un fichier inexistant (public/ ne contient que .gitkeep) : le bouton \"Resume (PDF)\" renvoie la 404 Vercel ; `mailto:you@example.com` et `github.com/your-username` sont des placeholders. Deja liste dans HANDOFF.md section 7, rappele ici comme bloquant de mise en ligne, pas comme bug de code.",
+  "fix": "Masquer le lien CV tant que le fichier n'est pas la (`{profile.cv && <a ...>}` et `cv?: string` dans le type), remplacer github par https://github.com/SkYNENET (verifie public), laisser email a \"TO CONFIRM\" et ne rendre le `mailto:` que si l'email ne contient pas \"TO CONFIRM\"."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 73,
+  "severity": "high",
+  "title": "Banniere featured illisible sur une vraie image Roblox",
+  "detail": "Le voile `.banner::after` est `linear-gradient(to top, #0000006e, transparent 65%)` : 43 % de noir tout en bas, quasi rien a mi-hauteur, la ou se trouvent le h1 (41,6 px blanc), la tagline (`opacity:.92`) et la ligne de stats. Verifie en rendu avec l'icone de Search For The Egg : \"Search For The Egg\", \"0 playing now · 9.3K visits · 75% liked\" et le chip \"Featured Game\" (`#ffffff38` + blur) sont blancs sur du sable beige, illisibles a 1440 comme a 390 px. Sur les degrades bonbon des placeholders c'est tout juste lisible. Aucun `text-shadow`. Les references 3 (launcher) posent le texte sur une zone sombre dediee, pas sur le sujet de l'image.",
+  "fix": "Deux options, la seconde est la plus Apple. (A) Renforcer le voile en 3 arrets et proteger le texte : `.banner::after{background:linear-gradient(to top, rgba(0,0,0,.72) 0%, rgba(0,0,0,.38) 45%, rgba(0,0,0,0) 85%)}` `.banner-text{text-shadow:0 1px 2px rgba(0,0,0,.35)}` `.chip{background:rgba(0,0,0,.45);color:#fff;backdrop-filter:blur(12px) saturate(140%)}`. (B) Banniere scindee, texte noir sur blanc a gauche, image a droite fondue : `.banner{background:#fff;color:var(--text)}` `.banner img{left:40%;width:60%;-webkit-mask-image:linear-gradient(to right,transparent,#000 35%);mask-image:linear-gradient(to right,transparent,#000 35%)}` `.banner::after{display:none}` `.banner-text{max-width:46%;padding:32px}` `.chip{background:#f0f0f3;color:var(--muted)}`. Dans les deux cas `.banner p{opacity:1;color:inherit}`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 81,
+  "severity": "high",
+  "title": "Mauvais asset pour la banniere : icone carree 512x512 etiree sur 708x320",
+  "detail": "`featuredStats?.icon` vient de `thumbnails.roblox.com/v1/games/icons` (512x512, verifie : naturalWidth 512, rendu 708x320 avec `object-fit:cover`). L'image est agrandie 1,4x et recadree a une bande centrale : le sujet (l'oeuf) tombe pile sous le titre, et c'est flou. Roblox fournit des visuels 16:9 pour exactement cet usage.",
+  "fix": "Cote design : la banniere doit consommer un visuel paysage. Faire exposer par api/roblox.ts un champ `thumbnail` via `https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=...&size=768x432&format=Png&returnPolicy=PlaceHolder` (meme pattern que `icons`, 1 appel de plus dans le `Promise.all`), et dans App.tsx `src={featured.cover ?? featuredStats?.thumbnail ?? featuredStats?.icon}`. CSS : `.banner{aspect-ratio:16/7;min-height:0}` sur desktop, `aspect-ratio:16/9` sous 760 px, `.banner img{object-position:center}`. Garder `cover?` dans content.ts pour un visuel maison en priorite."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 109,
+  "severity": "high",
+  "title": "Jaquettes 3/4 : 25 % de l'icone Roblox carree sont coupes",
+  "detail": "`.cover{aspect-ratio:3/4}` alors que la seule source d'image reelle (icone Roblox) est 1:1 (verifie : 512x512 rendu en 228x305, bords gauche/droite perdus, l'oeuf et le bandeau de titre de l'icone sont tronques). La reference 2 montre des jaquettes portrait parce que ce sont des assets Steam ; Roblox n'a pas de format portrait. Le brief demande en plus un air de \"widget Roblox\", qui est carre.",
+  "fix": "`.cover{aspect-ratio:1/1;border-radius:var(--radius-md)}` (ou `4/5` si on tient au portrait : seulement 10 % de recadrage) et laisser le nom sous la jaquette. Passer la grille a `grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:20px 16px` : 4 colonnes de 163 px dans les 708 px du main (3 x 224 px aujourd'hui, trop gros pour une \"bibliotheque\", la reference 2 en met 7). Sous 760 px garder 2 colonnes. Le `.kind` badge et le point live restent lisibles sur 150 px."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 119,
+  "severity": "medium",
+  "title": "Nom affiche deux fois sur les tuiles sans image, en blanc gras sur degrade",
+  "detail": "App.tsx l.117 rend `<b>{e.name}</b>` dans la jaquette quand il n'y a pas d'image, puis l.120 `<strong>{e.name}</strong>` dessous : \"Game Two\" apparait en blanc 18,4 px dans la carte et en noir 14,7 px juste en dessous (visible sur les 6 tuiles placeholder). `.cover b` est a 700 synthetique (voir typo) avec `text-shadow:0 1px 8px #0003`.",
+  "fix": "Supprimer le `<b>` dans la jaquette (le `strong` dessous suffit, comme dans la reference 2). Pour les entrees sans image (projets web), un placeholder sobre plutot que le degrade bonbon : `.cover.placeholder{background:linear-gradient(145deg,#e8e8ed,#d2d2d7);display:grid;place-items:center}` avec un monogramme `.cover .mono{font-size:2rem;font-weight:600;color:#86868b;letter-spacing:-0.03em}` (2 lettres du nom), ou mieux une capture d'ecran dans /public/covers. Garder `tone` pour l'accent du detail (voir modale), pas pour la jaquette."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/index.html",
+  "line": 12,
+  "severity": "medium",
+  "title": "Hierarchie typographique : gras 700 synthetique, pas d'echelle, pas de tabular-nums",
+  "detail": "Google Fonts ne sert qu'Inter 400/500/600, mais h1, h2, `.tile strong`, `.cover b`, `.numbers b` sont rendus en `font-weight:700` (defaut navigateur des h1/strong/b, verifie en computed style) : le navigateur epaissit artificiellement la 600 (contours baveux, surtout sur le titre a 41,6 px). `letter-spacing:-0.02em` n'existe que sur `.banner h1` et `.numbers b` ; h2 est a -0.01em, `.tile strong` et `.grow strong` a 0 ; les labels uppercase `.panel h3` n'ont que `.08em`. Les chiffres (`.numbers b`, `.banner-stats`, `.tile .stats`) n'ont pas `font-variant-numeric:tabular-nums`, donc \"9.3K\" et \"169\" ne s'alignent pas et sautent au refresh. Le `<link>` Google Fonts est place apres `#root` dans le body (l.11-12) : la page se peint en system-ui puis bascule sur Inter (FOUT visible).",
+  "fix": "Dans index.css : `:root{--fs-display:clamp(1.75rem,1rem + 2.4vw,2.5rem);--fs-h2:1.375rem;--fs-body:.9375rem;--fs-small:.8125rem;--fs-micro:.6875rem;font-synthesis-weight:none}` ; `h1,h2,h3,strong,b{font-weight:600}` ; `.banner h1{font-size:var(--fs-display);letter-spacing:-0.025em;line-height:1.08}` ; `.bar h2{font-size:var(--fs-h2);letter-spacing:-0.02em}` ; `.tile strong,.grow strong{font-weight:500;letter-spacing:-0.005em}` ; `.panel h3{letter-spacing:.06em;font-size:var(--fs-micro)}` ; `.numbers b,.banner-stats,.tile .stats,.nav-item em{font-variant-numeric:tabular-nums}`. Dans index.html, remonter les deux `<link>` dans `<head>` avec `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>`. Alternative plus Apple et sans FOUT : pile systeme en premier `font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Inter',system-ui,sans-serif` et ne charger Inter qu'en secours."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 137,
+  "severity": "high",
+  "title": "Aucun etat de chargement : le rail droit saute de 204 px quand les stats arrivent",
+  "detail": "`{hasStats && <section className=\"panel\">Live stats...}` : le panneau n'existe pas avant la reponse de /api/roblox, puis s'insere en tete du rail. Mesure en rendu : le panneau Communities passe de y=20 a y=224 (CLS visible, et sur mobile le panneau arrive tout en bas apres 7 tuiles). Meme chose pour `.tile .stats` (App.tsx l.121-128) qui remplace le `meta` par \"0 playing · 9.3K visits\" avec un point vert, sans hauteur reservee. Pas de skeleton, pas de traitement d'erreur visible (le hook avale tout silencieusement, roblox.ts l.38), et l'etat vide de recherche est un `<p class=\"empty\">Nothing here yet.</p>` gris de 16 px sans action.",
+  "fix": "Toujours rendre le panneau avec les valeurs statiques de `facts` (content.ts, schema fige) comme fallback, et remplacer la valeur par la stat live quand elle arrive : zero saut, zero cas d'erreur a dessiner. Pendant le fetch, `.skeleton{display:inline-block;height:1em;width:4ch;border-radius:6px;background:linear-gradient(90deg,#ececf0 25%,#f5f5f7 50%,#ececf0 75%);background-size:200% 100%;animation:shimmer 1.2s linear infinite}` `@keyframes shimmer{to{background-position:-200% 0}}` et dans la media query reduced-motion ajouter `animation:none!important`. Tuiles : `.tile > span{min-height:1.25em}`. Etat vide : `.empty{grid-column:1/-1;padding:48px 16px;text-align:center;border:1px dashed var(--line);border-radius:var(--radius-xl);color:var(--muted);font-size:var(--fs-small)}` avec un bouton \"Clear search\" style `.join`. Un `title` sur le point live (\"Live from Roblox, refreshed every 5 min\")."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 173,
+  "severity": "medium",
+  "title": "Chiffres cles trop petits, en 2 colonnes avec orphelin, et \"0 playing\" mis en avant",
+  "detail": "`.numbers{grid-template-columns:1fr 1fr}` avec 3 (ou 4) valeurs : \"169 Favorites\" se retrouve seul sur une 2e ligne (verifie a 1440 et 390 px). `.numbers b` fait 1.5rem (24 px) : pour le gabarit slacklaboratory ce sont LES chiffres qui accrochent, ils sont ici le plus petit element du rail. Et le premier chiffre affiche est \"0 Playing now\" (un etudiant avec 0 joueur en ligne a 14 h, ca se lit comme un echec), alors que 56,9 k visites, 1 035 abonnes, 8 jeux publies, 96 % liked sont les vrais arguments.",
+  "fix": "Sortir les 3 chiffres cles du rail et les poser dans le main sous la banniere, en bandeau : `.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}` `.fact{background:var(--card);border-radius:var(--radius-xl);padding:20px 22px;box-shadow:var(--shadow-sm)}` `.fact b{display:block;font-size:clamp(1.75rem,1.2rem + 1.6vw,2.25rem);font-weight:600;letter-spacing:-0.03em;line-height:1;font-variant-numeric:tabular-nums}` `.fact span{display:block;margin-top:6px;font-size:var(--fs-small);color:var(--muted)}`, sous 760 px `grid-template-columns:repeat(3,1fr);gap:8px` avec `padding:14px`. C'est la lecture bento de la reference 1 (grande carte + petites cartes). Dans le rail, garder un seul panneau \"Right now\" avec `grid-template-columns:repeat(auto-fit,minmax(110px,1fr))` et n'afficher \"playing now\" que si > 0 (sinon \"Visits\" / \"Favorites\" / \"Liked %\")."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 16,
+  "severity": "medium",
+  "title": "Sidebar : carte blanche pleine hauteur aux deux tiers vide, avatar lettre, statut cache sur mobile",
+  "detail": "`.sidebar{height:calc(100vh - 40px)}` donne une dalle blanche de 860 px pour ~250 px de contenu (avatar, 4 filtres, statut colle en bas par `margin:auto`). Sur fond #f5f5f7 avec une ombre a 3 % elle lit comme un vide, pas comme une colonne de launcher (reference 3 : colonne integree a l'interface, pas une carte). `.avatar` (l.28) est une lettre \"Y\" blanche sur noir alors que le headshot Roblox public existe (roblox.json > avatar.data[0].imageUrl, 420x420). `.nav-item.active` (l.48) en aplat noir `var(--text)` est lourd pour Apple. `.status` (l.157) est `display:none` sous 760 px : l'info \"Open to internship\" disparait sur mobile, la ou un recruteur ouvre souvent le lien.",
+  "fix": "`.sidebar{height:auto;min-height:0}` et au choix la version chromeless `background:transparent;box-shadow:none;padding:8px 2px` (la grille garde ses 232 px), ou garder la carte mais aligner son bas sur le contenu. Selection Apple : `.nav-item{border-radius:var(--radius-md);font-weight:500}` `.nav-item.active{background:rgba(0,0,0,.06);color:var(--text);font-weight:600}` `.nav-item.active em{color:var(--muted)}`. Avatar : exposer `avatar` dans api/roblox.ts (`thumbnails.roblox.com/v1/users/avatar-headshot?userIds=&size=150x150&format=Png`) ou une image statique /public/avatar.png, `.avatar{box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}` `.avatar img{width:100%;height:100%;object-fit:cover}`. Statut : en pill sous le nom, visible partout : `.status{margin:0;padding:4px 10px 4px 8px;border-radius:999px;background:#e8f8ee;color:#1d7a3f;font-weight:500;font-size:var(--fs-micro)}` et retirer le `display:none` mobile."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 117,
+  "severity": "medium",
+  "title": "Hovers translateY + scale sans pendant clavier, et aucune courbe commune",
+  "detail": "`.tile:hover .cover{transform:translateY(-4px) scale(1.02)}` : le scale re-echantillonne l'image (flou d'une frame sur les PNG Roblox) et fait visiblement bouger le rayon de 14 px ; `.banner:hover{translateY(-2px)}` deplace un bloc de 708 px, ce qui n'est pas un comportement Apple. Les regles `:focus-visible` (index.css l.14) ne declenchent pas la montee de la carte : au clavier on voit un cadre noir de 2 px autour de toute la tuile (image + texte), sans transition. `.bar input:focus` (l.97) utilise `:focus` et non `:focus-visible` : clic souris = cadre noir epais. Les durees/courbes sont eparpillees (`.15s`, `.25s ease`).",
+  "fix": "Tokens : `:root{--dur:.2s;--ease:cubic-bezier(.2,.7,.2,1);--accent:#0071e3}`. `.cover{transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}` `.tile:hover .cover,.tile:focus-visible .cover{transform:translateY(-3px);box-shadow:var(--shadow-md)}` (pas de scale). `.tile:focus-visible{outline:none}` `.tile:focus-visible .cover{outline:3px solid var(--accent);outline-offset:2px}` ; meme paire pour `.banner`. `.banner:hover{transform:none}` et a la place `.banner:hover img{transform:scale(1.02)}` avec `transition:transform .6s var(--ease)`. Input : `.bar input:focus{outline:none}` `.bar input:focus-visible{border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,113,227,.2)}`. Global : `a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/index.css",
+  "line": 9,
+  "severity": "low",
+  "title": "Ombres quasi invisibles et rayons codes en dur",
+  "detail": "`--shadow:0 1px 2px #0000000a,0 4px 14px #00000008` : 4 % et 3 % d'alpha sur #f5f5f7, les cartes blanches n'ont pratiquement pas de bord (visible en capture : les panneaux du rail se confondent avec le fond). Le hover de tuile (l.117) invente une 2e ombre `0 14px 30px #00000026` hors token. Rayons : `--radius:20px` (sidebar, banniere, panneaux), 14 px (`.cover`), 10 px (`.nav-item`), 999 (pills), tous en dur sauf le premier.",
+  "fix": "`:root{--shadow-sm:0 0 0 1px rgba(0,0,0,.04),0 2px 8px rgba(0,0,0,.05);--shadow-md:0 2px 6px rgba(0,0,0,.06),0 12px 32px rgba(0,0,0,.10);--radius-xl:20px;--radius-lg:16px;--radius-md:12px;--radius-sm:8px;--line:#d2d2d7}`. Cartes : `box-shadow:var(--shadow-sm)` ; hover : `var(--shadow-md)` ; `.cover{border-radius:var(--radius-md)}` ; `.nav-item,.bar input{border-radius:var(--radius-md)}` (ou 999 pour l'input si on garde la pilule). Le `0 0 0 1px` a 4 % fait office de hairline Apple sans ajouter de `border`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 120,
+  "severity": "low",
+  "title": "Badge \"kind\" redondant et sous-dimensionne",
+  "detail": "`.kind` : pilule blanche 10,9 px en haut a gauche de chaque jaquette, sur tous les onglets. Dans l'onglet Games chaque carte dit \"Game\" : information nulle. Sur une icone Roblox chargee elle masque le coin de l'illustration. Le tag ne porte pas ce qui interesse (visites, role).",
+  "fix": "N'afficher `.kind` que dans la vue Home/all (`filter === 'all'`) et le styler `.kind{font-size:var(--fs-micro);letter-spacing:.02em;padding:3px 8px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);color:#1d1d1f;box-shadow:0 1px 2px rgba(0,0,0,.08)}`. Dans les autres vues, utiliser l'emplacement pour un badge de preuve en bas a droite : `.proof{position:absolute;right:10px;bottom:10px;padding:3px 8px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff;font-size:var(--fs-micro);font-weight:500;backdrop-filter:blur(8px)}` avec \"16.7K visits\" ou \"96 % liked\"."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 115,
+  "severity": "high",
+  "title": "Aucun detail par jeu : chaque tuile envoie directement sur roblox.com",
+  "detail": "`<a className=\"tile\" href={e.link} target=\"_blank\">` : un recruteur qui clique quitte le site sans jamais savoir ce qu'Hector a fait sur le jeu (role, tech, equipe, annee, chiffres). C'est la preuve de travail demandee par le gabarit (Work cliquable \"avec preuve\"), et le schema fige prevoit deja `role, tech, year, team, highlights`. Rien dans le CSS n'est prevu pour un overlay.",
+  "fix": "Un `<dialog>` natif, leger et sans framework. CSS : `dialog.detail{width:min(600px,calc(100vw - 32px));padding:0;border:0;border-radius:var(--radius-xl);background:var(--card);box-shadow:var(--shadow-md);overflow:hidden}` `dialog.detail::backdrop{background:rgba(0,0,0,.35);backdrop-filter:blur(6px)}` `.detail-hero{aspect-ratio:16/9;object-fit:cover;width:100%;background:#e8e8ed}` `.detail-body{padding:24px 28px 28px;display:grid;gap:14px}` `.detail h2{font-size:var(--fs-h2);letter-spacing:-0.02em;margin:0}` `.tags{display:flex;flex-wrap:wrap;gap:6px}` `.tag{padding:3px 9px;border-radius:999px;background:#f0f0f3;font-size:var(--fs-micro);font-weight:500;color:#424245}` `.detail .facts{grid-template-columns:repeat(3,1fr)}` `.highlights{margin:0;padding-left:18px;font-size:var(--fs-body);color:#424245}` `.actions{display:flex;gap:10px;justify-content:flex-end}` `.btn{padding:9px 18px;border-radius:999px;font-weight:600;font-size:var(--fs-small)}` `.btn.primary{background:var(--accent);color:#fff}` `.btn.ghost{background:#f0f0f3;color:var(--text)}`. Comportement : clic tuile = `dialog.showModal()`, Echap ferme, le lien externe est le bouton \"Play on Roblox\" dans la modale (`role`, `tech`, `year`, `team`, `highlights` viennent de content.ts ; ce qui manque reste \"TO CONFIRM\"). Optionnel : `location.hash = '#game-' + slug` pour un lien partageable."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 85,
+  "severity": "medium",
+  "title": "Le bouton Play est un <span> decoratif dans un lien, sans style d'action",
+  "detail": "App.tsx l.95 `<span className=\"play\">Play</span>` dans `<a className=\"banner\">` : toute la banniere est le lien, la \"pilule\" n'est pas focusable ni annoncee comme bouton, et visuellement c'est un blanc sur blanc une fois l'option B (banniere claire) adoptee. Aucune couleur d'action n'existe dans la palette (tout est noir/gris), ce qui aplatit la hierarchie : Play, Join, Resume (PDF), Copy ont le meme poids que le texte.",
+  "fix": "Introduire un seul accent Apple : `--accent:#0071e3;--accent-hover:#0077ed`. Rendre `.play` comme un vrai bouton/lien : `.play{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;font-size:var(--fs-small);transition:background var(--dur)}` `.play:hover{background:var(--accent-hover)}`. Structure : la banniere devient une `<section>` avec le titre et l'image, et `<a class=\"play\" href=link>` est le seul lien externe (plus de lien imbrique). Si la banniere reste un `<a>` unique, garder le span mais lui donner `aria-hidden` et un `aria-label=\"Play Search For The Egg on Roblox\"` au lien."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 90,
+  "severity": "medium",
+  "title": "Pas de tri : la bibliotheque n'ordonne rien et la barre n'a qu'une recherche",
+  "detail": "`.bar` = h2 \"Library\" + input search. Avec 8 jeux aux visites de 1,6 k a 16,7 k, l'ordre affiche est l'ordre du tableau `entries`. La reference 2 montre un selecteur de tri a cote de la recherche (\"by date added\", etc.). Sans tri, Monster Mayhem (16,7 k, 96 % liked) peut se retrouver derriere un test.",
+  "fix": "Un segmented control Apple, CSS pur, dans `.bar` entre le h2 et l'input : `.seg{display:inline-flex;padding:2px;border-radius:999px;background:#e8e8ed;gap:2px}` `.seg button{border:0;background:transparent;padding:6px 12px;border-radius:999px;font:inherit;font-size:var(--fs-small);font-weight:500;color:var(--muted);cursor:pointer;transition:background var(--dur),color var(--dur)}` `.seg button[aria-pressed=true]{background:#fff;color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.12)}`. Options : \"Most visited\" (defaut, tri sur stats live ou `meta`), \"Playing now\", \"Newest\" (`year`). Sous 760 px : `.bar{flex-wrap:wrap}` et `.seg{order:3;width:100%;justify-content:space-between}`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 128,
+  "severity": "medium",
+  "title": "Rail droit : 3-4 panneaux empiles identiques, sans role sur les communautes, contact sans Copy ni LinkedIn",
+  "detail": "`.panel` x4 avec le meme rayon 20, le meme padding 20, la meme ombre : rien ne hierarchise Live stats / Communities / About / Contact. Les lignes communaute (l.133-136) montrent nom + \"Discord · 1.2k members\" + Join, mais pas le role, alors que \"Owner (511 members)\", \"Head Developer, Vorld (4 306)\", \"Admin, PDK Community (11 151)\" sont les preuves de responsabilite les plus fortes du dossier et que le schema fige a `role?`. Contact (App.tsx l.201-205) : l'email est un `mailto` souligne gris `#bbb`, pas de bouton Copy, pas de LinkedIn (TO CONFIRM), \"Resume (PDF)\" a le meme poids que \"GitHub\".",
+  "fix": "Garder 3 panneaux (Communities, About, Contact) et deplacer les chiffres dans le main. Communaute : `.grow span.role{display:inline-block;margin-top:2px;padding:1px 7px;border-radius:999px;background:#f0f0f3;font-size:var(--fs-micro);font-weight:500;color:#424245}` avant \"· 511 members\" ; `.join{font-weight:600}` et pour les groupes Roblox libeller \"Open\" plutot que \"Join\" quand le role est Owner. Contact : `.email{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:var(--radius-md);background:#f5f5f7;font-size:var(--fs-small)}` `.email code{font-family:inherit;overflow:hidden;text-overflow:ellipsis}` `.copy{margin-left:auto;padding:4px 10px;border-radius:999px;border:0;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.08);font:inherit;font-size:var(--fs-micro);font-weight:600;cursor:pointer}` (etat \"Copied\" 1,5 s). \"Resume (PDF)\" en `.btn.primary` pleine largeur, GitHub et LinkedIn en liens secondaires `color:var(--accent);text-decoration:none`. Email reste \"TO CONFIRM\"."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/index.html",
+  "line": 6,
+  "severity": "medium",
+  "title": "Pas de SEO, pas d'OG image, pas de favicon : le lien partage a un recruteur est vide",
+  "detail": "`<title>Portfolio</title>`, aucune `meta name=description`, aucune balise `og:*`/`twitter:*`, aucun `link rel=icon` (verifie : onglet avec le globe par defaut). Partage sur LinkedIn/Slack = carte grise sans titre ni image. `lang=\"en\"` est bon. `theme-color #f5f5f7` est bon.",
+  "fix": "Head : `<title>Hector — Roblox & Full Stack Developer</title>` (nom de famille TO CONFIRM), `<meta name=\"description\" content=\"Roblox developer: 8 public experiences, 56K+ visits, group owner. Full stack student open to a 6-month internship.\">` (chiffres a tenir a jour depuis content.ts), `og:title`, `og:description`, `og:type=website`, `og:image` = /public/og.png 1200x630 statique dessinee comme la page (fond #f5f5f7, carte blanche, nom, role, 3 chiffres a 72 px/600, jaquettes miniatures a droite), `twitter:card=summary_large_image`. Favicon : /public/favicon.svg monogramme \"H\" 600 sur carre #1d1d1f arrondi 22 % (`<link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\">`) + `/apple-touch-icon.png` 180 px. `og:url` seulement quand le domaine est choisi."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 207,
+  "severity": "low",
+  "title": "Pas de footer : la page se termine sur le panneau Contact",
+  "detail": "Apres le rail, rien : pas de nom, ville, ecole, promo, ni mention \"stats from Roblox public APIs\". Le gabarit demande explicitement Footer (nom, ville, ecole, promo). Le `.shell` fait `min-height:100vh` sans zone de fin.",
+  "fix": "`<footer class=\"foot\">` en dernier enfant de `.shell` : `.foot{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;padding:28px 6px 12px;font-size:var(--fs-small);color:var(--muted);border-top:1px solid var(--line)}` `.foot a{color:inherit;text-decoration:none}` `.foot a:hover{color:var(--text)}`. Contenu : \"Hector · City TO CONFIRM · School TO CONFIRM, class of TO CONFIRM\" a gauche, \"Live numbers from Roblox public APIs, refreshed every 5 min\" a droite."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/content.ts",
+  "line": 49,
+  "severity": "low",
+  "title": "Palette de degrades bonbon contraire au brief Apple sobre",
+  "detail": "`tone` : peche/rose, bleu/violet, menthe, lilas, jaune/orange, bleu canard : 7 paires saturees qui, sans image, font un mur de couleurs (verifie en rendu : 6 tuiles sur 7). Le brief dit \"tres classique, un peu Apple, cartes blanches, texte noir\". Les communautes reprennent la meme logique en avatar lettre colore.",
+  "fix": "Les 8 jeux reels ont tous une icone Roblox : les degrades ne resteront que sur les projets web et les communautes Discord. Les neutraliser : placeholder `linear-gradient(145deg,#e8e8ed,#d2d2d7)` + monogramme gris (voir finding jaquettes), avatars communaute `background:#f0f0f3;color:#424245` tant que l'icone de groupe n'est pas chargee. Si on veut garder une touche de couleur, la limiter a un seul usage : le `.tag` principal de la modale ou un liseret de 3 px `border-left` sur la timeline Experience, avec des teintes desaturees (`#5e9bd6`, `#6fb58a`, `#c58f5c`)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 171,
+  "severity": "low",
+  "title": "Ligne de stats de banniere et de tuile : marges negatives et point live gris",
+  "detail": "`.banner .banner-stats{margin:-6px 0 18px}` compense le `margin:0 0 18px` du `p` precedent au lieu de regler l'espacement du bloc. `.tile .stats` affiche \"0 playing · 9.3K visits\" avec un point gris `#c7c7cc` : l'oeil lit \"0\" puis un point eteint, deux signaux negatifs sur une carte qui a 9 k visites.",
+  "fix": "`.banner-text{display:grid;gap:8px}` et supprimer les marges manuelles sur `h1`, `p`, `.banner-stats` (`margin:0`), avec `.play{margin-top:8px}`. Tuile : afficher les visites en premier et le \"playing\" seulement si > 0 : `.tile .stats{display:flex;align-items:center;gap:6px;font-variant-numeric:tabular-nums}` ; `.live` n'apparait que dans l'etat `on` (`.live:not(.on){display:none}`), evitant le point gris. Sur la banniere, remplacer \"0 playing now\" par \"76 % liked · 169 favorites\" quand `playing === 0`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 1,
+  "severity": "low",
+  "title": "L'ordre d'information ne suit pas le gabarit : le jeu avant la personne",
+  "detail": "A l'ouverture, le plus gros element est \"Search For The Egg\" (h1 41 px) ; le nom (0.95rem) et le role (0.75rem) sont dans le coin de la sidebar. Pas d'etiquette de role, pas de bio visible sans scroller jusqu'au rail, pas de tag \"Open to: 6-month internship\" en evidence, pas de section Experience. Le gabarit slacklaboratory met Nav > Hero (role, titre, bio 3 lignes, tag stage, 3 chiffres) > Work > Experience > Contact.",
+  "fix": "Sans casser le launcher : un bandeau d'identite compact en tete du main, avant la banniere : `.hero{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:4px 6px 0}` `.hero .eyebrow{font-size:var(--fs-micro);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}` `.hero h1{font-size:var(--fs-display);font-weight:600;letter-spacing:-0.025em;margin:4px 0 6px}` `.hero p{max-width:52ch;margin:0;color:#424245}` `.hero .open{...meme pill verte que .status}` ; puis la banniere featured (en h2), les 3 `.fact`, la grille, et une section Experience en timeline `.timeline{display:grid;gap:0}` `.step{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line)}` `.step time{font-size:var(--fs-small);color:var(--muted);font-variant-numeric:tabular-nums}` `.step .tech{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}` (reutilise `.tag`). Tout le contenu Experience reste \"TO CONFIRM\" jusqu'a l'entretien."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 152,
+  "severity": "low",
+  "title": "Mobile 390 px : correct mais la banniere y est la plus illisible et les chiffres arrivent en dernier",
+  "detail": "Verifie a 390x844 : 2 colonnes de 177 px, pas de scroll horizontal, filtres en ligne, bon. Mais le h1 28,8 px blanc chevauche l'oeuf de l'icone, le chip et les stats sont illisibles, et le panneau Live stats n'apparait qu'apres les 7 tuiles (1 500 px plus bas). `.sidebar` mobile cache le statut.",
+  "fix": "Les correctifs banniere (voile 3 arrets ou option B) et facts-sous-la-banniere reglent l'essentiel. Mobile specifique : `.banner{aspect-ratio:4/3;min-height:0}` sous 760 px, `.banner-text{padding:18px}`, `.facts{gap:8px}` `.fact{padding:14px 12px}` `.fact b{font-size:1.5rem}`, `.status{display:flex}` (retirer le `display:none`), et `.grid{gap:16px 12px}`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 119,
+  "severity": "high",
+  "title": "Nom blanc sur jaquette degradee : contraste 1.8:1 a 3.3:1 sur 6 tons sur 7",
+  "detail": "`.cover b` affiche e.name en blanc 1.15rem (18.4 px, bold) avec un simple text-shadow 0 1px 8px #0003 directement sur le degrade `linear-gradient(145deg, tone[0], tone[1])`. Le texte est en bas a gauche (flex-end + padding 14px), soit au point t=0.64 du degrade sur une tuile 168x224. Ratios calcules (WCAG, blanc sur la couleur a cet endroit) : Search For The Egg #ff857f 2.36:1, Game Two #7297ff 2.77:1, Game Three #56c59e 2.13:1, Map One #9777ff 3.28:1, Map Two #ffaf58 1.82:1, Web One #6c778a 4.52:1, Web Two #59a2bf 2.86:1. 18.4 px bold est sous le seuil 'large text' (18.66 px bold / 24 px), donc le minimum AA est 4.5:1 : une seule tuile passe. Avec les vraies donnees, les 8 jeux Roblox auront une icone, mais ce fallback restera visible pour tous les projets web/GitHub (alike.io, roblox-followers-api, piscine Python) qui n'ont pas de placeId. Le badge `.kind` (#111 sur #ffffffd9) est a 17:1, lui va bien.",
+  "fix": "Option A (recommandee, corrige aussi le nom lu deux fois, voir finding App.tsx:117) : retirer `<b>{e.name}</b>` du cover, le nom est deja dans `<strong>` sous la jaquette ; afficher a la place un monogramme `<b aria-hidden=\"true\">{e.name.charAt(0)}</b>` en grand (3rem, opacity .9). Option B : garder le nom et ajouter un voile : `.cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, #000000a6, transparent 60%); pointer-events: none; }` et `.cover b, .cover .kind { position: relative; z-index: 1; }` ; verifier ensuite >= 4.5:1 sur le ton le plus clair (#ffd36b/#ff9a4d) : avec 65 % de noir en bas, #ffaf58 devient ~#59 3d 1f, soit ~9:1."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/roblox.ts",
+  "line": 27,
+  "severity": "high",
+  "title": "Stats live : aucun etat de chargement ni d'erreur, le rail saute et les chiffres cles peuvent disparaitre sans message",
+  "detail": "`useRoblox` renvoie EMPTY au premier rendu ET en cas d'echec (res.ok false, catch, timeout 8 s cote Vercel) : le composant ne peut pas distinguer 'en cours' de 'indisponible'. Consequences dans App.tsx : (1) `hasStats` (ligne 36) est false au chargement donc le panneau 'Live stats' (ligne 137) n'existe pas, puis apparait 1 a 8 s plus tard (cold start Vercel + 3 appels Roblox) en tete du rail et pousse Communities/About/Contact vers le bas : layout shift sur la zone que le recruteur est en train de lire ; (2) chaque tuile passe de `e.meta` ('Roblox') a '0 playing · 9.3K visits' (lignes 121-128) ; (3) la banniere insere `<p className=\"banner-stats\">` (ligne 88, margin -6px 0 18px) et decale le bouton Play ; (4) les images d'icone arrivent apres le degrade. Rien n'indique qu'un chargement est en cours (pas de skeleton, pas d'aria-busy). Si Roblox ou la fonction tombent, le site n'affiche AUCUN chiffre : or le gabarit d'ordre (slacklaboratory) repose sur 3 chiffres cles en gros. `fetchedAt` renvoye par l'API (api/roblox.ts:123) est ignore par le type RobloxData, donc impossible d'afficher 'updated 2 min ago'.",
+  "fix": "1) Dans roblox.ts, retourner `{ data, status: 'loading' | 'ready' | 'error', fetchedAt?: string }` : `useState<'loading'|'ready'|'error'>('loading')`, `.then(json => { setData(json); setStatus('ready') })`, `.catch(e => { if (e.name !== 'AbortError') setStatus('error') })`, et traiter `!res.ok` comme une erreur au lieu de EMPTY. 2) Dans App.tsx, toujours rendre le panneau stats en s'appuyant sur le nouvel export `facts` de content.ts (valeur statique + cle `live`) : `const value = status === 'ready' && f.live ? liveValue(f.live) : f.value`. 3) Skeleton : `<section className=\"panel\" aria-busy={status === 'loading'}>` et `.numbers b { min-height: 1.65rem }` + `.numbers [aria-busy] b { background: var(--hover); border-radius: 6px; color: transparent }`. 4) Reserver la hauteur dans la banniere : `.banner-stats { min-height: 1.3em }` rendu meme vide, et `.tile > span { min-height: 1.2em }`. 5) Legende sous les chiffres : `status === 'ready' ? 'Live from Roblox · updated ${relative(fetchedAt)}' : status === 'error' ? 'Roblox stats unavailable right now, showing last known figures' : 'Loading live stats…'` en 0.72rem muted. Pas d'aria-live sur les chiffres (bruit), le texte de legende suffit."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 62,
+  "severity": "high",
+  "title": "Filtres Home/Games/Maps/Web : etat actif en couleur seule, non expose aux lecteurs d'ecran (WCAG 4.1.2 niveau A)",
+  "detail": "Les 4 `<button className={filter === n.id ? 'nav-item active' : 'nav-item'}>` n'ont ni `aria-pressed` ni `aria-current` : VoiceOver/NVDA annoncent 'Home 7, button' sans savoir lequel est selectionne. Visuellement l'etat n'est porte que par le fond noir (App.css:48), donc il disparait en mode Forced Colors / High Contrast Windows (les backgrounds sont supprimes) et il n'y a ni bordure ni soulignement de secours. Le compteur est dans un `<em>` (ligne 68), element d'emphase que certains lecteurs annoncent avec intonation, et il est lu colle au label : 'Home 7'. Enfin `<nav aria-label=\"Library\">` (ligne 60) enveloppe des boutons de filtre, pas des liens de navigation : le rotor annonce une 'Library navigation' qui ne mene nulle part, ce qui va entrer en conflit avec la vraie nav (Work / Experience / Contact / Resume) prevue par le gabarit.",
+  "fix": "Remplacer le bloc par : `<div role=\"group\" aria-label=\"Filter the library\">{NAV.map(n => { const count = ...; return (<button key={n.id} type=\"button\" className={...} aria-pressed={filter === n.id} onClick={...}>{n.label}<span className=\"count\" aria-hidden=\"true\">{count}</span><span className=\"sr-only\">, {count} items</span></button>) })}</div>` ; renommer `.nav-item em` en `.nav-item .count` dans App.css:46/49. Ajouter dans index.css un utilitaire `.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }` et `@media (forced-colors: active) { .nav-item[aria-pressed=\"true\"] { outline: 2px solid; outline-offset: -2px } }`. Reserver `<nav aria-label=\"Site\">` aux futurs liens d'ancre (#work, #experience, #contact, Resume)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 75,
+  "severity": "high",
+  "title": "Hero : chip a 2.35:1, tagline a 4.15:1, et texte sur une image recadree imprevisible des que l'icone Roblox charge",
+  "detail": "Le voile `.banner::after` est `linear-gradient(to top, #0000006e, transparent 65%)`, soit 43 % de noir au ras du bas et 0 a 65 % de hauteur. Or `.banner-text` est en flex-end avec padding 32px et empile chip + h1 + p + stats + Play : sur un banner 748x320 (desktop 1440), le chip tombe a ~37 % du bas (voile 19 %), le h1 a ~30 % (voile 23 %), la tagline a ~20 % (voile 30 %). Ratios calcules sur le ton par defaut #ffb36b/#ff6b8b a ces positions : chip blanc 11.5 px sur pastille #ffffff38 (qui ECLAIRCIT le fond) : 2.35:1 (minimum 4.5) ; h1 41.6 px : 3.48:1 (passe 3:1 de justesse) ; tagline 16 px avec en plus `opacity: .92` (ligne 79) : 4.15:1 (echec 4.5) ; stats 13.6 px : 4.70:1 (passe de peu). Des que `featuredStats.icon` arrive (App.tsx:81-82), l'icone 512x512 est etiree en object-fit: cover dans un cadre 2.3:1 : seule la bande centrale de 43 % est visible et le texte se pose sur un visuel arbitraire (fond clair = illisible) avec un voile qui ne couvre que le tiers bas. Sur mobile (390 px, min-height 260) les proportions sont similaires.",
+  "fix": "App.css:73-76 : `.banner::after { content:''; position:absolute; inset:0; background: linear-gradient(to top, #000000b8 0%, #00000080 45%, #00000000 85%), linear-gradient(to right, #00000073, transparent 60%); }` (double voile bas + gauche, la zone texte est en bas a gauche). App.css:82 : chip sur fond sombre `background: #00000059; backdrop-filter: blur(8px);` (texte blanc > 7:1). App.css:79 : supprimer `opacity: .92` sur `.banner p`. Ajouter `text-shadow: 0 1px 2px #0006` sur `.banner h1, .banner p`. Pour l'image, voir le finding App.css:72 (utiliser la miniature 16:9 du jeu plutot que l'icone carree). Re-tester avec l'icone reelle de Search For The Egg (plage de sable clair) : viser >= 4.5:1 sur la tagline."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 79,
+  "severity": "medium",
+  "title": "Banniere : un seul lien dont le nom accessible fait 25 mots (dont le TODO), nouvel onglet non annonce, 'Play' est un span",
+  "detail": "Tout le hero est un `<a className=\"banner\" target=\"_blank\">` qui contient le chip, le h1, la tagline, les stats et le span `.play`. Le nom accessible d'un lien = son contenu texte, donc la liste de liens du lecteur d'ecran affiche : 'Featured Game Search For The Egg TODO: one sentence on what players do and what you built. 0 playing now 9.3K visits 75% liked Play'. Le `<span className=\"play\">` (ligne 95) ressemble a un bouton mais n'est ni un bouton ni un lien distinct, donc il n'est pas annonce comme action. Et rien ne signale que le lien ouvre un nouvel onglet (WCAG G201 / 3.2.5), ce qui est le cas pour les 11 liens externes de la page (79, 115 x7, 185 x3, 203).",
+  "fix": "Pattern 'stretched link' : sortir le texte du lien et ne garder qu'un petit lien etendu par pseudo-element. `<section className=\"banner\" style={...} aria-labelledby=\"featured-title\"> {img} <div className=\"banner-text\"> <span className=\"chip\">Featured {kind}</span> <h2 id=\"featured-title\">{featured.name}</h2> <p>{tagline}</p> ... <a className=\"play\" href={featured.link} target=\"_blank\" rel=\"noreferrer\">{featured.kind === 'web' ? 'Open' : 'Play'}<span className=\"sr-only\"> {featured.name} on Roblox (opens in new tab)</span></a> </div></section>` et en CSS `.banner { position: relative } .play::after { content: ''; position: absolute; inset: 0; }` (toute la banniere reste cliquable, le focus clavier se pose sur le bouton Play avec son outline, le nom du lien est court). Variante minimale si on garde `<a className=\"banner\">` : `aria-label={`Play ${featured.name} on Roblox (opens in new tab)`}`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 117,
+  "severity": "medium",
+  "title": "Tuiles sans image : nom lu deux fois et badge 'Game' en premier ('Game Two Game Game Two Short pitch')",
+  "detail": "Dans `<a className=\"tile\">`, le cover rend `image ? <img alt=\"\"/> : <b>{e.name}</b>` puis `<span className=\"kind\">{KIND_LABEL}</span>` (ligne 118), puis `<strong>{e.name}</strong>` (ligne 120) et le sous-texte. Pour une entree sans placeId ni cover (tous les projets web/GitHub a venir), le nom accessible du lien devient 'Game Two Game Game Two Short pitch of the game.' : le nom est lu deux fois, et la categorie est lue avant le nom. Pour les tuiles avec image c'est 'Game Search For The Egg 0 playing · 9.3K visits', acceptable mais la categorie reste en tete. Comme pour la banniere, `target=\"_blank\"` n'est pas annonce. Le `key={e.name}` (ligne 115) cassera aussi si deux entrees partagent un nom (il y a deux 'TITLE UNAVAILABLE' dans roblox.json) : utiliser `key={e.placeId ?? e.link}`.",
+  "fix": "Marquer le decoratif : `<b aria-hidden=\"true\">{e.name}</b>` (ou le monogramme du finding App.css:119) et `<span className=\"kind\" aria-hidden=\"true\">{KIND_LABEL[e.kind]}</span>` ; ajouter apres `<strong>{e.name}</strong>` un `<span className=\"sr-only\">, {KIND_LABEL[e.kind]}, opens in new tab</span>`. Le nom accessible devient 'Search For The Egg, Game, opens in new tab 9.3K visits · 169 favorites'. Appliquer le meme `<span className=\"sr-only\"> (opens in new tab)</span>` sur le lien GitHub (ligne 203) et les Join (185), ou centraliser dans un petit composant `<Ext href>` qui ajoute target, rel et le texte cache."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 90,
+  "severity": "medium",
+  "title": "'0 playing now' en gros sur le hero et '0 playing' sur chaque tuile : signal negatif pour un recruteur",
+  "detail": "La banniere affiche `{fmt(featuredStats.playing)} playing now` en premier (ligne 90) et chaque tuile `{fmt(s.playing)} playing · {fmt(s.visits)} visits` (ligne 124). Les donnees verifiees le 2026-10-08 donnent 0 joueur en ligne sur Search For The Egg, et des jeux a 1.6K-16.7K visites ont tres souvent 0 joueur a l'instant t : la page affichera donc '0 playing now' en tete du hero et '0 playing' huit fois dans la grille, alors que les chiffres forts et stables sont visites, favoris et % liked (16.7K visits, 96 % liked, 267 favorites). Le point `.live` gris (#c7c7cc, 1.68:1 sur blanc) ajoute un indicateur 'eteint' sur toute la grille. Le panneau rail 'Playing now' (ligne 144-145) affichera aussi 0 en premier chiffre cle.",
+  "fix": "Rendre 'playing' conditionnel et mettre les chiffres stables en premier. Banniere : `<p className=\"banner-stats\">{featuredStats.playing > 0 && <span><i className=\"live on\" aria-hidden=\"true\"/> {fmt(playing)} playing now</span>}<span>{fmt(visits)} visits</span>{liked !== null && <span>{liked}% liked</span>}<span>{fmt(favorites)} favorites</span></p>`. Tuile : `{s.playing > 0 ? `${fmt(s.playing)} playing · ` : ''}{fmt(s.visits)} visits · {fmt(s.favorites)} favorites` et ne rendre `<i className=\"live on\">` que si playing > 0. Rail : ordonner Total visits, Favorites, Community members, puis 'Playing now' seulement si la somme > 0 (ou le remplacer par 'Games shipped' = nombre d'entrees avec placeId, cle `live: 'games'` du schema facts)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 132,
+  "severity": "medium",
+  "title": "Recherche sans resultat : 'Nothing here yet.' ambigu, pas de bouton Clear, resultats non annonces",
+  "detail": "Le meme message `Nothing here yet.` sert pour une recherche sans correspondance et pour un filtre vide : avec 'Maps' + une faute de frappe, il laisse croire que la bibliotheque est vide. Il n'y a aucun moyen de reinitialiser la requete autre que vider le champ a la main (Firefox n'affiche pas la croix native de `type=search`), et la combinaison filtre + requete n'est pas visible (filtre 'Games' + 'map' = 0 resultat sans explication). Rien n'est annonce aux lecteurs d'ecran quand la grille change (ni le nombre de resultats, ni l'etat vide), alors que la grille est mise a jour a chaque frappe (ligne 38-45).",
+  "fix": "Remplacer la ligne 132 par : `{visible.length === 0 && (<p className=\"empty\" role=\"status\">{query ? <>No results for “{query}”{filter !== 'all' && ` in ${NAV.find(n => n.id === filter)!.label}`}. <button type=\"button\" className=\"link-btn\" onClick={() => { setQuery(''); setFilter('all') }}>Clear search</button></> : filter === 'all' ? 'Nothing here yet.' : `No ${NAV.find(n => n.id === filter)!.label.toLowerCase()} yet.`}</p>)}` et ajouter, juste apres le `<div className=\"bar\">`, `<p className=\"sr-only\" aria-live=\"polite\">{visible.length} {visible.length === 1 ? 'item' : 'items'}</p>` (annonce du compte a chaque filtrage). Style `.link-btn { background:none; border:0; padding:0; font:inherit; color:var(--text); text-decoration:underline; cursor:pointer }`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/index.html",
+  "line": 6,
+  "severity": "medium",
+  "title": "<title>Portfolio</title> generique : echec WCAG 2.4.2 (niveau A), pas de description ni favicon",
+  "detail": "Le titre de la page est le premier texte annonce par un lecteur d'ecran et le libelle de l'onglet / de l'historique / du partage : 'Portfolio' ne dit ni qui ni quoi. Il n'y a pas de `<meta name=\"description\">`, pas de favicon (le navigateur fait un GET /favicon.ico qui renvoie 404 sur Vercel et l'onglet montre l'icone par defaut), pas de balises OpenGraph : un lien partage sur LinkedIn/Discord s'affiche sans titre ni image. Le `theme-color` #f5f5f7 est bien present.",
+  "fix": "`<title>Hector · Roblox & Full Stack Developer</title>` (nom de famille TO CONFIRM, a mettre a jour quand connu), `<meta name=\"description\" content=\"Roblox developer and full stack student. 8 public Roblox games, 56K+ visits. Open to a 6-month internship.\" />` (chiffres a aligner sur content.ts), `<link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\" />` avec un SVG monogramme dans public/, et `<meta property=\"og:title\">`, `og:description`, `og:image` (1200x630 dans public/og.png), `og:type=website`. Facultatif : `document.title` dynamique inutile, une seule page."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 86,
+  "severity": "medium",
+  "title": "Hierarchie des titres : le h1 est le jeu mis en avant, le proprietaire est un <strong>, les panneaux sont des h3 sous h2 'Library'",
+  "detail": "Plan de titres actuel : h1 'Search For The Egg' (ligne 86) > h2 'Library' (ligne 100) > h3 'Live stats', 'Communities', 'About', 'Contact' (lignes 139, 168, 195, 200). Pour un lecteur d'ecran qui navigue par titres (le mode le plus utilise), la page parle du jeu, pas d'Hector, et About/Contact apparaissent comme des sous-parties de Library. Le nom du proprietaire (ligne 55) est un `<strong>` dans la sidebar, donc introuvable via la navigation par titres. Le gabarit d'ordre (hero avec nom + role + 3 chiffres) demande au contraire que le h1 soit la personne.",
+  "fix": "Sidebar : `<h1 className=\"me-name\">{profile.name}</h1><p className=\"me-role\">{profile.role}</p>` avec `.me-name { font-size: 0.95rem; margin: 0; font-weight: 600 }` (meme rendu que le strong actuel). Banniere : h1 -> `<h2>` (garder la classe/le style `.banner h1` renomme `.banner h2`). Panneaux du rail : h3 -> `<h2 className=\"panel-title\">` et renommer `.panel h3` en `.panel-title` dans App.css:130. Resultat : h1 Nom > h2 Featured game, Library, Live stats, Communities, About, Contact. Quand la section Experience arrive, elle sera un h2 aussi."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 157,
+  "severity": "medium",
+  "title": "Mobile : l'etiquette 'Open to internship' (le hook recruteur) est masquee sous 760 px",
+  "detail": "`@media (max-width: 760px) { .status { display: none; } }` supprime `<p className=\"status\"><i/> {profile.status}</p>` sur telephone. C'est la seule mention de la disponibilite pour un stage, et le gabarit d'ordre en fait un element central du hero ('Open to: 6-month internship, spring 2027'). Un recruteur qui ouvre le lien depuis LinkedIn mobile ne la voit jamais. La sidebar en mode ligne (ligne 154-156) a pourtant la place : `.me` occupe seule la premiere ligne.",
+  "fix": "Supprimer `.status { display: none; }` et le placer a droite du profil : `@media (max-width: 760px) { .status { margin: 0 0 0 auto; order: 2; } }` (la nav garde `order: 3; width: 100%`). Si la ligne est trop longue a 320 px, raccourcir le texte dans content.ts (`status: 'Open to internship · 2027'`) plutot que de le cacher, ou l'afficher sous le role dans `.me span`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 150,
+  "severity": "medium",
+  "title": "Mobile et tablette : About et Contact sont relegues 1 800 a 2 500 px sous le pli, sans aucune ancre pour y aller",
+  "detail": "Sous 1100 px, `.rail { grid-column: 1 / -1; position: static; }` fait passer tout le rail (stats, communautes, about, contact) APRES la grille. A 390 px : sidebar ~110 px + banniere 260 px + barre 50 px + grille 2 colonnes de 7 tuiles (bientot 8 a 12) a ~300 px de haut par rangee = 4 a 6 rangees, soit 1 200 a 1 800 px avant le premier panneau ; Contact est le 4e panneau, donc vers 2 200 a 2 500 px. La nav de la sidebar ne contient que des filtres, aucun lien 'Contact' ni 'About', et aucune section n'a d'`id`. Les 3 infos qu'un recruteur cherche (qui, disponibilite, email) sont donc les plus difficiles a atteindre sur telephone.",
+  "fix": "1) Donner des ids aux sections : `<section id=\"about\" className=\"panel\">`, `<section id=\"contact\" className=\"panel\">` avec `scroll-margin-top: 16px`. 2) Dans la sidebar, a cote des filtres, ajouter deux liens d'ancre `<a className=\"nav-item\" href=\"#about\">About</a> <a className=\"nav-item\" href=\"#contact\">Contact</a>` (ils deviendront la vraie `<nav>` Work / Experience / Contact du gabarit). 3) Sur mobile, remonter les chiffres cles et le contact avant la grille : dans `.main`, rendre un `<div className=\"mobile-summary\">` (3 facts + email + bouton Copy) visible seulement `@media (max-width: 760px)`, ou passer `.shell` en `display: flex; flex-direction: column` sous 760 px avec `.rail { order: 2 } .main { order: 3 }` si on accepte le rail complet avant la grille (un seul panneau Contact compact est preferable)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 95,
+  "severity": "medium",
+  "title": "iOS Safari : le champ de recherche a 14.4 px declenche l'auto-zoom au focus et laisse la page zoomee",
+  "detail": "`.bar input { font-size: 0.9rem }` = 14.4 px. iOS Safari zoome automatiquement la page quand un champ de saisie focalise a une font-size inferieure a 16 px, et ne dezoome pas a la perte de focus : apres une recherche, la grille 2 colonnes deborde a droite et l'utilisateur doit pincer pour revenir. C'est le seul champ de la page mais c'est celui qu'on touche sur mobile. Aucune autre regle mobile ne corrige cette taille.",
+  "fix": "`.bar input { font-size: max(16px, 0.9rem); }` (16 px sur mobile et desktop, le pill reste visuellement proche : passer `padding: 8px 14px`), ou cibler mobile : `@media (max-width: 760px) { .bar input { font-size: 1rem; } }`. Ne PAS resoudre avec `maximum-scale=1` dans le viewport (bloque le zoom utilisateur, echec WCAG 1.4.4)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 128,
+  "severity": "medium",
+  "title": "Desktop : rail sticky sans max-height, le panneau Contact reste sous le pli sur un viewport court",
+  "detail": "`.rail { position: sticky; top: 20px; }` sans `max-height` ni `overflow`. Hauteur actuelle du rail : Live stats ~170 px + Communities ~210 px (3 entrees) + About ~130 px + Contact ~145 px + 3 gaps de 16 px + top 20 px = ~720 px. Un MacBook Air 13' (1440x900) avec barre d'onglets et URL laisse ~780 px de viewport : ca passe de 60 px. Avec les donnees reelles (7 groupes dont il est owner + Vorld + PDK, bio de 3 lignes, 3 facts) le rail depasse 900 px : une fois colle en haut, sa partie basse (Contact, email, Resume) ne remonte dans le viewport qu'a la toute fin du scroll de `.shell`, car le sticky ne glisse pas vers le haut. Sur un 1366x768 ou une fenetre non plein ecran, Contact est inaccessible sans scroller jusqu'au bout de la grille.",
+  "fix": "`.rail { position: sticky; top: 20px; max-height: calc(100vh - 40px); overflow-y: auto; scrollbar-width: thin; padding-right: 2px; }` (le rail devient scrollable independamment). Alternative plus propre : ne coller que le premier panneau et laisser le reste defiler : retirer sticky de `.rail` et mettre `.rail .panel:first-child { position: sticky; top: 20px }` n'est pas possible dans une colonne flex, donc preferer la variante max-height, ou desactiver le sticky sous une hauteur de fenetre : `@media (max-height: 860px) { .rail { position: static; } }`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/index.css",
+  "line": 15,
+  "severity": "medium",
+  "title": "prefers-reduced-motion : les transitions sont coupees mais les transforms de hover sautent toujours (et sans easing)",
+  "detail": "`@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }` neutralise les 4 transitions (nav background .15s, banner transform .25s, cover transform/box-shadow .25s, join background/color .15s). Mais le mouvement lui-meme vient des regles `.banner:hover { transform: translateY(-2px) }` (App.css:71) et `.tile:hover .cover { transform: translateY(-4px) scale(1.02) }` (App.css:117) : avec transition: none, la jaquette saute instantanement de 4 px et grossit de 2 % au survol, ce qui est toujours un deplacement (WCAG 2.3.3 vise le mouvement, pas la duree) et plus sec qu'avant. A l'inverse, la regle supprime les fondus de couleur du nav et des Join, qui ne sont pas du mouvement et pouvaient rester. `*` ne matche pas `::before/::after`, et `animation` / `scroll-behavior` ne sont pas couverts (rien ne les utilise aujourd'hui, mais framer-motion est installe et ignore de toute facon le CSS).",
+  "fix": "Remplacer par : `@media (prefers-reduced-motion: reduce) { *, ::before, ::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } .banner:hover, .banner:focus-visible, .tile:hover .cover, .tile:focus-visible .cover { transform: none; } }`. Garder les fondus de couleur si souhaite en excluant `.nav-item, .join` de la premiere regle. Si framer-motion est utilise plus tard, envelopper l'app dans `<MotionConfig reducedMotion=\"user\">`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 185,
+  "severity": "medium",
+  "title": "Trois liens 'Join' au nom identique dans la liste des communautes",
+  "detail": "`<a className=\"join\" href={c.link} target=\"_blank\" rel=\"noreferrer\">Join</a>` est rendu pour chaque communaute : la liste de liens du lecteur d'ecran affiche 'Join, Join, Join' (bientot 9 fois avec les vrais groupes), sans savoir quel groupe est concerne ni que ca ouvre roblox.com ou discord.com dans un nouvel onglet. Le nom du groupe est dans un `<strong>` voisin non relie au lien (WCAG 2.4.4 passe grace au contexte de l'item, 2.4.9 echoue). Le libelle 'Join' est aussi trompeur pour les groupes ou Hector est simple membre/Head Developer (Vorld, PDK Community) : on ne 'rejoint' pas sa communaute depuis un portfolio, on la visite.",
+  "fix": "`<a className=\"join\" href={c.link} target=\"_blank\" rel=\"noreferrer\" aria-label={`${c.role ? 'Open' : 'Join'} ${c.name} on ${c.platform} (opens in new tab)`}>{c.role ? 'Open' : 'Join'}</a>`. Avec le nouveau champ `role` du schema Community, afficher le role sous le nom (`Owner · 511 members`) pour distinguer ses groupes de ceux ou il est Head Developer / Admin."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 49,
+  "severity": "low",
+  "title": "Landmarks : deux <aside> sans nom, pas de header/footer, aucune section adressable par id",
+  "detail": "`<aside className=\"sidebar\">` (ligne 49) et `<aside className=\"rail\">` (ligne 136) produisent deux regions 'complementary' indistinguables dans le rotor VoiceOver / la liste des regions NVDA. Le profil + filtres en tete de page ne sont pas dans un `<header>`, il n'y a pas de `<footer>` (le gabarit en demande un avec nom, ville, ecole, promo), et les `<section className=\"panel\">` (lignes 138, 167, 194, 199) n'ont ni `id` ni `aria-labelledby`, donc elles ne sont pas des regions nommees et ne peuvent pas etre ciblees par une ancre.",
+  "fix": "`<aside className=\"sidebar\" aria-label=\"Profile and library filters\">` (ou `<header className=\"sidebar\">`), `<aside className=\"rail\" aria-label=\"Stats, communities and contact\">`, et pour chaque panneau `<section id=\"contact\" className=\"panel\" aria-labelledby=\"contact-title\"><h2 id=\"contact-title\" className=\"panel-title\">Contact</h2>` (idem live-stats, communities, about). Ajouter `<footer className=\"foot\">{profile.name} · {profile.location ?? 'TO CONFIRM'} · school TO CONFIRM</footer>` en bas de `.shell` (grid-column: 1 / -1)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 16,
+  "severity": "low",
+  "title": "Sidebar desktop en height: calc(100vh - 40px) fixe : debordement hors carte si le contenu grandit, 100vh faux sur iPad Safari",
+  "detail": "`.sidebar { position: sticky; height: calc(100vh - 40px); }` sans `overflow`. Aujourd'hui le contenu fait ~330 px, ca tient. Mais avec les liens d'ancre Work / Experience / About / Contact prevus, un zoom navigateur 150 a 175 % (viewport CSS 820 a 960 px de large, donc toujours en layout desktop) ou une fenetre basse, le contenu depasse la carte blanche et le `.status` (margin: auto) se retrouve hors du fond. Entre 761 et 1100 px sur iPad Safari, `100vh` inclut la zone des barres d'outils : le bas de la sidebar (statut 'Open to internship') est coupe de ~60 px tant que les barres sont visibles.",
+  "fix": "`.sidebar { position: sticky; top: 20px; align-self: start; height: auto; max-height: calc(100dvh - 40px); overflow-y: auto; }` (dvh suit la hauteur reelle sur iOS 15.4+/Safari 15.4+, fallback 100vh acceptable via une double declaration `max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px);`). Le `.status { margin: auto 6px 0 }` continue a se coller en bas tant que le contenu est plus court que le viewport grace a `min-height: calc(100dvh - 40px)` si on veut garder ce rendu."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 117,
+  "severity": "low",
+  "title": "Effets de survol (lift, ombre, inversion) sans equivalent :focus-visible pour le clavier",
+  "detail": "`.banner:hover { transform }` (ligne 71), `.tile:hover .cover { transform; box-shadow }` (ligne 117), `.join:hover { background; color }` (ligne 142), `.nav-item:hover` (ligne 47) et `.panel a:not(.join):hover` (ligne 145) n'ont pas de pendant `:focus-visible`. L'utilisateur clavier a bien l'outline global (index.css:14, correct et visible partout), mais pas le retour visuel 'cette carte est active' que la souris obtient, et la cible des tuiles au focus reste le `<a>` entier alors que l'oeil est attire par la jaquette.",
+  "fix": "Doubler les selecteurs : `.banner:hover, .banner:focus-visible { transform: translateY(-2px) }`, `.tile:hover .cover, .tile:focus-visible .cover { transform: translateY(-4px) scale(1.02); box-shadow: 0 14px 30px #00000026 }`, `.join:hover, .join:focus-visible { background: var(--text); color: #fff }`, `.nav-item:hover, .nav-item:focus-visible { background: var(--hover) }`. Garder l'outline global en plus."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 137,
+  "severity": "low",
+  "title": "Cibles tactiles et tailles de texte sous les recommandations mobiles (Join 31 px, liens contact 22 px, textes 10.9 a 11.8 px)",
+  "detail": "`.join { padding: 6px 14px; font-size: 0.78rem }` = ~31 px de haut (WCAG 2.5.8 AA exige 24 px : passe ; Apple HIG 44 pt et Material 48 dp : echec). `.links a` (ligne 143-144) : lignes de 21.6 px espacees de 6 px, soit un pas de 27.6 px, les 3 liens Contact sont donc faciles a confondre au pouce. Tailles de texte : `.kind` 0.68rem = 10.9 px, `.panel h3` et `.chip` 0.72rem = 11.5 px, `.grow span` / `.numbers span` 0.74rem = 11.8 px, `.me span` / `.nav-item em` 12 px, `.status` / `.tile > span` 12.5 px. Le contraste du gris passe (5.07:1) mais a 11 px sur un ecran 390 px ces libelles (membres, 'Total visits', categorie) sont les premiers sacrifies.",
+  "fix": "`.join { padding: 9px 16px; min-height: 36px; display: inline-flex; align-items: center; }` ; `.links a { display: inline-block; padding: 6px 0; }` (pas de 33 px entre liens) ; remonter les plus petits : `.kind { font-size: 0.72rem }`, `.panel h3 / .panel-title { font-size: 0.75rem }`, `.grow span, .numbers span, .me span, .nav-item .count { font-size: 0.78rem }`, `.tile > span { font-size: 0.8rem }`. Sur mobile, `@media (max-width: 760px) { .nav-item { min-height: 40px } }` est deja atteint (9+9+22 px)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 123,
+  "severity": "low",
+  "title": "Points decoratifs en <i> sans aria-hidden (statut vert, indicateur live)",
+  "detail": "`<i />` (ligne 74, point vert du statut) et `<i className={s.playing > 0 ? 'live on' : 'live'} />` (ligne 123) sont des elements d'italique vides utilises comme pastilles. Vides, ils ne sont pas lus, mais `<i>` est semantiquement de l'emphase et certains lecteurs changent d'intonation sur la zone ; surtout, l'information 'live' n'est portee que par la couleur (#30c76b 2.21:1 vs #c7c7cc 1.68:1 sur blanc, indistinguables pour un daltonien ou en Forced Colors ou les fonds disparaissent). Le texte 'N playing' porte deja l'info, donc ce n'est pas bloquant, mais la pastille doit etre explicitement decorative.",
+  "fix": "Remplacer par `<span className=\"live on\" aria-hidden=\"true\" />` et `<span className=\"dot\" aria-hidden=\"true\" />` (renommer `.status i` en `.status .dot` dans App.css:56). Ajouter `@media (forced-colors: active) { .live, .status .dot { border: 1px solid; } }` pour qu'une pastille reste visible en contraste eleve. Ne rendre la pastille `.live` que si `playing > 0` (voir finding App.tsx:90)."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.tsx",
+  "line": 204,
+  "severity": "low",
+  "title": "'Resume (PDF)' pointe vers /cv.pdf qui n'existe pas (404), et l'email n'a qu'un mailto sans bouton Copy",
+  "detail": "`<a href={profile.cv}>Resume (PDF)</a>` avec `cv: '/cv.pdf'` (content.ts:39) alors que `public/` ne contient que `.gitkeep` : sur la preview Vercel le lien renvoie la page 404 et quitte le site (pas de target). Quand le fichier existera, il s'ouvrira dans le meme onglet en remplacant le portfolio, sans indication de format/poids. L'email (ligne 202) est un simple `mailto:` : sur un Mac sans client mail configure ou un Windows d'entreprise, le clic ne fait rien de visible, et le gabarit d'ordre demande explicitement l'email en clair + bouton Copy.",
+  "fix": "1) Garder le lien conditionnel tant que le fichier manque : `{profile.cv && <a href={profile.cv} target=\"_blank\" rel=\"noreferrer\" type=\"application/pdf\">Resume (PDF)<span className=\"sr-only\"> (opens in new tab)</span></a>}` et mettre `cv: ''` dans content.ts jusqu'a ce que public/cv.pdf soit depose. 2) Email : `<span className=\"email\">{profile.email}</span> <button type=\"button\" className=\"copy\" onClick={async () => { await navigator.clipboard.writeText(profile.email); setCopied(true); setTimeout(() => setCopied(false), 2000) }}>{copied ? 'Copied' : 'Copy'}</button> <span className=\"sr-only\" role=\"status\">{copied ? 'Email copied to clipboard' : ''}</span>` + un lien `<a href={`mailto:${profile.email}`}>Email me</a>` secondaire. L'email reste 'TO CONFIRM' dans content.ts."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 72,
+  "severity": "low",
+  "title": "Icones Roblox carrees recadrees a 57 % dans la banniere 2.3:1 et a 25 % dans les jaquettes 3:4",
+  "detail": "L'API (api/roblox.ts:70) ne renvoie que l'icone 512x512 du jeu, utilisee a la fois dans `.banner img { object-fit: cover }` (banniere ~748x320 a 1440 px : seule la bande centrale de 43 % de l'icone est visible, logos et personnages coupes en haut et en bas) et dans `.cover img` (ligne 118, cadre 3:4 : 12.5 % rognes de chaque cote). Les icones Roblox sont composees pour un carre (titre centre, mascotte pleine hauteur) : le hero montre donc un fragment peu lisible, et c'est le premier visuel de la page. Le champ `cover` existe deja pour une jaquette portrait sur mesure mais rien n'est prevu pour un visuel paysage de banniere.",
+  "fix": "Cote API : ajouter un appel `https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=${list}&size=768x432&format=Png&countPerUniverse=1` et renvoyer `thumbnail?: string` (16:9) dans GameStats ; cote App.tsx:82 utiliser `featured.banner ?? featuredStats?.thumbnail ?? featuredStats?.icon` avec un nouveau champ optionnel `banner?: string` dans Entry. Pour les tuiles, soit passer `.cover { aspect-ratio: 1 }` quand l'image est une icone (classe `.cover.square`), soit garder le 3:4 avec `object-position: center top` pour preserver le titre souvent place en haut des icones."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/index.html",
+  "line": 11,
+  "severity": "low",
+  "title": "Google Fonts charge depuis le body sans preconnect vers fonts.gstatic.com : flash de police, et IP des visiteurs envoyees a Google",
+  "detail": "Le `<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">` et la feuille Inter sont places dans `<body>` apres `#root`. Le preconnect ne couvre que la CSS : les fichiers .woff2 viennent de fonts.gstatic.com, qui n'a ni preconnect ni `crossorigin`, donc une 2e negociation TLS avant l'affichage de la police ; avec `display=swap` le texte s'affiche d'abord en system-ui puis bascule vers Inter (reflow visible du h1 et des chiffres). Par ailleurs charger Google Fonts a la volee transmet l'IP de chaque visiteur a Google sans consentement, ce qui pose probleme RGPD pour un site francais (jurisprudence LG Munchen 2022) et declenche parfois des bloqueurs qui laissent la page en fallback.",
+  "fix": "Auto-heberger Inter : deposer `public/fonts/inter-latin-400.woff2`, `-500.woff2`, `-600.woff2` (variable font `InterVariable.woff2` suffit, ~100 Ko) et dans index.css `@font-face { font-family: 'Inter'; src: url('/fonts/InterVariable.woff2') format('woff2'); font-weight: 400 700; font-display: swap; }` + `<link rel=\"preload\" href=\"/fonts/InterVariable.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>` dans `<head>` ; supprimer les deux `<link>` Google. A defaut, deplacer les links dans `<head>` et ajouter `<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>`."
+ },
+ {
+  "file": "/Users/slack/code/portfolio-hector/src/App.css",
+  "line": 153,
+  "severity": "low",
+  "title": "Gouttiere mobile a 12 px (brief : 16 px) et grille desktop limitee a 3 colonnes de 224 px a 1440 px",
+  "detail": "A 390 px : `.shell { padding: 12px; gap: 14px }` donne 366 px utiles, la grille 2 colonnes `repeat(2, minmax(0, 1fr))` avec gap 12 px fait des tuiles de 177x236 px, le banner 260 px, la barre h2 + input a 183 px max : tout tient, pas de scroll horizontal (verifie aussi a 320 px : tuiles 142 px, nav sur 2 lignes). Mais le brief demande une gouttiere de 16 px, et 12 px colle les cartes blanches aux bords sur iPhone (les coins arrondis de 20 px touchent presque l'ecran). A 1440 px : `.shell max-width: 1320px` moins 40 px padding, 232 px sidebar, 300 px rail et 2 gaps de 20 px laisse 708 px au `.main` ; `repeat(auto-fill, minmax(168px, 1fr))` avec gap 18 px donne 3 colonnes de 224 px (4 colonnes auraient besoin de 726 px). Pour 8 jeux + 1 a 3 projets web, c'est 3 a 4 rangees de grandes jaquettes, loin de la densite 'bibliotheque' des references 2 et 3 (5 a 6 colonnes).",
+  "fix": "Mobile : `@media (max-width: 760px) { .shell { padding: 16px; gap: 16px } .grid { gap: 16px 12px } }`. Desktop : `.grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }` donne 4 colonnes de 162 px a 1440 px (et 2 colonnes restent forcees sous 760 px), ou elargir `.shell { max-width: 1400px }` pour 4 colonnes de 182 px. Verifier que `.cover b` / le monogramme restent lisibles a 150 px."
+ }
+]
