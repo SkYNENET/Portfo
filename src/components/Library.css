@@ -8,7 +8,7 @@
 }
 
 .bar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-.bar h2 { margin-right: auto; }
+.bar h2 { margin: 0 auto 0 0; }
 
 .seg {
   display: inline-flex;
@@ -29,6 +29,7 @@
   cursor: pointer;
   transition: background var(--dur), color var(--dur);
 }
+.seg button:hover { color: var(--text); }
 .seg button[aria-pressed="true"] {
   background: #fff;
   color: var(--text);
@@ -106,7 +107,14 @@
 }
 .on-cover { position: absolute; top: 14px; right: 14px; }
 
-.tile strong { margin-top: 10px; font-size: var(--fs-body); font-weight: 500; letter-spacing: -0.005em; }
+/* overflow-wrap : « roblox-followers-api » ne doit pas deborder d'une colonne de 150 px. */
+.tile strong {
+  margin-top: 10px;
+  font-size: var(--fs-body);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  overflow-wrap: anywhere;
+}
 /* min-height : la ligne garde sa place quand le live remplace la meta. */
 .stats {
   display: flex;
@@ -138,8 +146,14 @@
 
 @media (max-width: 760px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
+  /* Le segmented passe sur sa propre ligne, ses trois boutons se partagent la largeur. */
   .seg { order: 3; width: 100%; justify-content: space-between; }
+  .seg button { flex: 1; }
   .bar input { flex: 1; max-width: none; }
+}
+/* Tactile : pas de survol colle apres un tap, la jaquette reste a plat. */
+@media (hover: none) {
+  .tile:hover .cover { transform: none; box-shadow: var(--shadow-sm); }
 }
 @media (prefers-reduced-motion: reduce) {
   .tile:hover .cover, .tile:focus-visible .cover { transform: none; }

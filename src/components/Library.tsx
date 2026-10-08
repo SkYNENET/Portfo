@@ -11,7 +11,7 @@
 import { useMemo, useState } from 'react'
 import { entries, type Entry } from '../content'
 import { fmt, type RobloxState } from '../roblox'
-import { KIND_LABEL, NAV_LABEL, initials, splitMeta, type Filter } from '../ui'
+import { KIND_LABEL, NAV_LABEL, initials, parseCount, splitMeta, type Filter } from '../ui'
 import './Library.css'
 
 export interface LibraryProps {
@@ -32,6 +32,12 @@ const SORTS: { id: Sort; label: string }[] = [
 const haystack = (e: Entry) =>
   [e.name, e.tagline, e.meta, e.team, e.year, ...(e.tech ?? [])].filter(Boolean).join(' ').toLowerCase()
 
+/** Fragment « 16.7K visits » de la meta statique : badge de preuve quand le live manque, absent pour le web. */
+const staticProof = (e: Entry): string | undefined => splitMeta(e.meta).find((x) => x.endsWith('visits'))
+
+/** Visites statiques en nombre (16.7K -> 16700), 0 pour le web : repli de tri quand un jeu n'a pas de live. */
+const staticVisits = (e: Entry): number => parseCount(staticProof(e))
+
 export default function Library({ filter, onFilter, query, onQuery, roblox }: LibraryProps) {
   const [sort, setSort] = useState<Sort>('visits')
   const { data, status } = roblox
@@ -44,11 +50,10 @@ export default function Library({ filter, onFilter, query, onQuery, roblox }: Li
       .filter(({ e }) => (filter === 'all' || e.kind === filter) && (!q || haystack(e).includes(q)))
     // L'ordre de content.ts (visites decroissantes du 2026-10-08) sert de depart et de departage.
     if (sort === 'visits' && ready) {
-      list.sort((a, b) => {
-        const va = a.e.placeId ? (data.games[a.e.placeId]?.visits ?? -1) : -1
-        const vb = b.e.placeId ? (data.games[b.e.placeId]?.visits ?? -1) : -1
-        return vb - va || a.i - b.i
-      })
+      // Un jeu absent de la reponse (partial, 429 Roblox) garde sa place grace a sa meta statique
+      // au lieu de tomber derriere ceux qui ont repondu ; le web, sans visites, reste en queue.
+      const visits = (e: Entry) => (e.placeId ? data.games[e.placeId]?.visits : undefined) ?? staticVisits(e)
+      list.sort((a, b) => visits(b.e) - visits(a.e) || a.i - b.i)
     } else if (sort === 'newest') {
       list.sort((a, b) => (b.e.year ?? '').localeCompare(a.e.year ?? '') || a.i - b.i)
     } else if (sort === 'name') {
@@ -90,7 +95,7 @@ export default function Library({ filter, onFilter, query, onQuery, roblox }: Li
           const s = e.placeId ? data.games[e.placeId] : undefined
           const live = ready && s !== undefined
           const image = e.cover ?? s?.icon
-          const proof = live && s ? `${fmt(s.visits)} visits` : splitMeta(e.meta).find((x) => x.endsWith('visits'))
+          const proof = live && s ? `${fmt(s.visits)} visits` : staticProof(e)
           return (
             <a key={e.placeId ?? e.link} className="tile" href={e.link} target="_blank" rel="noreferrer">
               <div className={image ? 'cover' : 'cover placeholder'}>
