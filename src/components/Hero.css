@@ -56,9 +56,11 @@
   font-size: var(--fs-small);
   color: var(--muted);
 }
+/* La legende change de texte (statique -> live) sans aria-live : une ligne reservee pour que la
+   banniere en dessous ne bouge pas quand le fetch aboutit. */
 .facts-note {
   margin: 0;
-  min-height: 1.3em;
+  min-height: 1.5em;
   font-size: var(--fs-micro);
   color: var(--muted);
 }
@@ -67,4 +69,15 @@
   .facts { gap: 8px; }
   .fact { padding: 14px 12px; }
   .fact b { font-size: 1.5rem; }
+}
+
+/* Telephone : les legendes « refreshing… » et « unavailable » tiennent sur deux lignes, la version
+   live sur une. On reserve les deux lignes des le premier paint, sinon la banniere remonte au fetch. */
+@media (max-width: 540px) {
+  .facts-note { min-height: 3em; }
+}
+
+/* Tres petits ecrans (320-360 px) : trois cartes de ~70 px, « 56.1K+ » a 1.5rem deborderait. */
+@media (max-width: 360px) {
+  .fact b { font-size: 1.25rem; }
 }
