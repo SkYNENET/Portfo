@@ -81,3 +81,9 @@
 @media (max-width: 360px) {
   .fact b { font-size: 1.25rem; }
 }
+
+/* Sur telephone la sidebar passe en tete et montre deja la pill de statut quelques
+   centaines de px plus haut : la deuxieme, ici, faisait doublon dans le premier ecran. */
+@media (max-width: 760px) {
+  .hero .pill { display: none; }
+}
