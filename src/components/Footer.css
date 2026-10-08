@@ -1,0 +1,15 @@
+/* Footer : derniere ligne de la grille .shell, pleine largeur. Classes : voir Footer.tsx. */
+
+.foot {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 28px 6px 12px;
+  font-size: var(--fs-small);
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+.foot a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.foot a:hover { color: var(--text); }

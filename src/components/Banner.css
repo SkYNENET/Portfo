@@ -1,0 +1,87 @@
+/* Banniere featured : carte blanche scindee 46 / 54. Classes : voir Banner.tsx. */
+
+.banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 46%) minmax(0, 54%);
+  min-height: 300px;
+  background: var(--card);
+  color: var(--text);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--dur) var(--ease);
+}
+.banner:hover, .banner:focus-within { box-shadow: var(--shadow-md); }
+
+.banner-text {
+  display: grid;
+  gap: 8px;
+  align-content: center;
+  justify-items: start;
+  padding: 32px;
+}
+.banner-media { position: relative; min-height: 220px; }
+.banner-media img, .banner-ph {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 30%);
+  mask-image: linear-gradient(to right, transparent, #000 30%);
+  transition: transform 0.6s var(--ease);
+}
+.banner:hover img { transform: scale(1.02); }
+
+.chip {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--hover);
+  color: var(--muted);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+}
+.banner h2 {
+  margin: 0;
+  font-size: var(--fs-display);
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+.banner-tagline {
+  margin: 0;
+  max-width: 48ch;
+  color: var(--text-2);
+  font-size: var(--fs-body);
+}
+/* min-height : la ligne de stats garde sa place quand le live remplace la meta statique. */
+.banner-stats {
+  margin: 0;
+  min-height: 1.3em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--muted);
+}
+.banner-stats span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Le bouton Play est le seul lien : son ::after couvre toute la carte. */
+.play { margin-top: 8px; position: static; }
+.play::after { content: ''; position: absolute; inset: 0; }
+.play:focus-visible { outline: none; }
+.banner:has(.play:focus-visible) { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 760px) {
+  .banner { grid-template-columns: 1fr; min-height: 0; }
+  .banner-media { order: -1; aspect-ratio: 16 / 9; min-height: 0; }
+  .banner-media img, .banner-ph { -webkit-mask-image: none; mask-image: none; }
+  .banner-text { padding: 18px; gap: 6px; }
+  .play { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .banner img { transform: none !important; }
+}

@@ -1,0 +1,74 @@
+/* Rail droit : sticky avec scroll interne, sous le main en dessous de 1100 px. Classes : voir Rail.tsx. */
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: start;
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  max-height: calc(100dvh - 40px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  padding-right: 2px;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 16px 12px;
+}
+/* min-height : le squelette puis la valeur live occupent la meme ligne. */
+.numbers b {
+  display: block;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  min-height: 1.65rem;
+}
+.numbers span { font-size: var(--fs-small); color: var(--muted); }
+.panel-note { margin: 12px 0 0; font-size: var(--fs-micro); color: var(--muted); }
+
+.sub {
+  margin: 14px 0 8px;
+  font-size: var(--fs-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+.sub:first-of-type { margin-top: 0; }
+
+.panel ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.panel li { display: flex; align-items: center; gap: 12px; min-height: 44px; }
+.rail .avatar.sm { background: var(--hover); color: var(--text-2); }
+.grow { flex: 1; min-width: 0; }
+.grow strong { display: block; font-size: var(--fs-small); font-weight: 500; }
+.grow span { display: block; font-size: var(--fs-micro); color: var(--muted); margin-top: 2px; }
+.tag.role { display: inline; padding: 1px 7px; }
+
+.join {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--hover);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  transition: background var(--dur), color var(--dur);
+}
+.join:hover, .join:focus-visible { background: var(--text); color: #fff; }
+
+@media (max-width: 1100px) {
+  .rail {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}

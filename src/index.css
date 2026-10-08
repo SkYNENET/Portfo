@@ -1,15 +1,204 @@
+/* Tokens et styles partages. FICHIER GELE apres la vague A : les composants ont chacun leur CSS
+   (src/components/X.css) et n'ajoutent rien ici. Style Apple clair, sans dark mode. */
+
 :root {
   --bg: #f5f5f7;
   --card: #fff;
-  --text: #111;
+  --text: #1d1d1f;
+  --text-2: #424245;
   --muted: #6e6e73;
-  --line: #e5e5ea;
+  --line: #d2d2d7;
   --hover: #f0f0f3;
-  --radius: 20px;
-  --shadow: 0 1px 2px #0000000a, 0 4px 14px #00000008;
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --accent: #0071e3;
+  --accent-hover: #0077ed;
+  --ok: #1d7a3f;
+  --ok-bg: #e8f8ee;
+  --live: #30c76b;
+
+  --radius-xl: 20px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --radius: var(--radius-xl);
+
+  --shadow-sm: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.06), 0 12px 32px rgba(0, 0, 0, 0.1);
+  --shadow: var(--shadow-sm);
+
+  --dur: 0.2s;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  --fs-display: clamp(1.75rem, 1rem + 2.4vw, 2.5rem);
+  --fs-h2: 1.375rem;
+  --fs-body: 0.9375rem;
+  --fs-small: 0.8125rem;
+  --fs-micro: 0.75rem;
+
+  /* Police systeme : le <link> Google Fonts d'index.html est retire par T12. */
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, 'Segoe UI', sans-serif;
+  font-synthesis-weight: none;
 }
+
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.5; -webkit-font-smoothing: antialiased; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+html { scroll-padding-top: 16px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, strong, b { font-weight: 600; }
+img { display: block; max-width: 100%; }
+
+/* ---------- utilitaires ---------- */
+.num { font-variant-numeric: tabular-nums; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.section-title { margin: 0; font-size: var(--fs-h2); letter-spacing: -0.02em; }
+.link-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- primitives ---------- */
+.panel {
+  background: var(--card);
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.panel-title {
+  margin: 0 0 14px;
+  font-size: var(--fs-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 8px;
+  border-radius: 999px;
+  font-size: var(--fs-micro);
+  font-weight: 500;
+}
+.pill.ok { background: var(--ok-bg); color: var(--ok); }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--live);
+  box-shadow: 0 0 0 3px #30c76b30;
+}
+/* Pastille « en ligne » : uniquement quand playing > 0, il n'existe pas de variante grise. */
+.live {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--live);
+  box-shadow: 0 0 0 3px #30c76b30;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 0;
+  font: inherit;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--dur);
+}
+.btn.primary { background: var(--accent); color: #fff; }
+.btn.primary:hover, .btn.primary:focus-visible { background: var(--accent-hover); }
+.btn.ghost { background: var(--hover); color: var(--text); }
+
+.tag {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--hover);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.avatar {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--text);
+  color: #fff;
+  font-weight: 600;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+.avatar.sm { width: 38px; height: 38px; font-size: 0.9rem; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Squelette : le texte reste dans le DOM (largeur reservee), seule sa couleur disparait. */
+.skeleton {
+  color: transparent !important;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ececf0 25%, #f5f5f7 50%, #ececf0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+  user-select: none;
+}
+.skeleton * { visibility: hidden; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+
+/* ---------- preferences utilisateur ---------- */
+@media (hover: none) {
+  .btn:hover { background: revert-layer; }
+}
+@media (max-width: 760px) {
+  .btn { min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .skeleton { animation: none; background: #ececf0; }
+}
+@media (forced-colors: active) {
+  [aria-pressed="true"] { outline: 2px solid; outline-offset: -2px; }
+  .dot, .live { border: 1px solid; }
+}

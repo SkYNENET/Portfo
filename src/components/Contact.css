@@ -1,0 +1,46 @@
+/* Contact : carte blanche pleine largeur du main. Classes : voir Contact.tsx. */
+
+.contact {
+  background: var(--card);
+  border-radius: var(--radius-xl);
+  padding: 24px 28px;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: 12px;
+  scroll-margin-top: 16px;
+}
+.contact-lead { margin: 0; color: var(--text-2); }
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  font-size: var(--fs-small);
+  max-width: 420px;
+}
+.email code { font-family: inherit; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.copy {
+  margin-left: auto;
+  padding: 4px 10px;
+  min-height: 28px;
+  border-radius: 999px;
+  border: 0;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  font: inherit;
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  cursor: pointer;
+}
+.email-soon { margin: 0; font-size: var(--fs-small); color: var(--muted); }
+
+.contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
+.contact-links a:not(.btn) { color: var(--accent); text-decoration: none; padding: 6px 0; display: inline-block; }
+.contact-links a:not(.btn):hover { text-decoration: underline; }
+
+@media (max-width: 760px) {
+  .contact { padding: 18px; }
+}

@@ -1,0 +1,70 @@
+/* Hero : sans carte, 3 cartes blanches pour les chiffres cles. Classes : voir Hero.tsx. */
+
+.hero {
+  display: grid;
+  gap: 10px;
+  padding: 4px 6px 0;
+  justify-items: start;
+}
+.eyebrow {
+  margin: 0;
+  font-size: var(--fs-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+.hero h1 {
+  margin: 0;
+  font-size: var(--fs-display);
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+.hero-bio {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--text-2);
+  font-size: var(--fs-body);
+}
+
+.facts {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.fact {
+  background: var(--card);
+  border-radius: var(--radius-xl);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
+}
+/* min-height : la valeur live remplace la statique sans bouger la ligne. */
+.fact b {
+  display: block;
+  font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.25rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  min-height: 1em;
+}
+.fact span {
+  display: block;
+  margin-top: 6px;
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+.facts-note {
+  margin: 0;
+  min-height: 1.3em;
+  font-size: var(--fs-micro);
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .facts { gap: 8px; }
+  .fact { padding: 14px 12px; }
+  .fact b { font-size: 1.5rem; }
+}

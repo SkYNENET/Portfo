@@ -1,0 +1,146 @@
+/* Library : barre + grille de jaquettes carrees (icones Roblox 1:1). Classes : voir Library.tsx. */
+
+.library {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  scroll-margin-top: 16px;
+}
+
+.bar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.bar h2 { margin-right: auto; }
+
+.seg {
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 999px;
+  background: #e8e8ed;
+  gap: 2px;
+}
+.seg button {
+  border: 0;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background var(--dur), color var(--dur);
+}
+.seg button[aria-pressed="true"] {
+  background: #fff;
+  color: var(--text);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* 16 px minimum : evite l'auto-zoom iOS au focus. */
+.bar input {
+  width: 200px;
+  max-width: 50%;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  font: inherit;
+  font-size: max(16px, 0.9rem);
+  color: var(--text);
+}
+.bar input:focus { outline: none; }
+.bar input:focus-visible { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.2); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px 16px;
+}
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: inherit;
+  text-decoration: none;
+}
+.cover {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #e8e8ed, #d2d2d7);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mono { font-size: 2rem; font-weight: 600; color: #86868b; letter-spacing: -0.03em; }
+.tile:hover .cover, .tile:focus-visible .cover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.tile:focus-visible { outline: none; }
+.tile:focus-visible .cover { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.kind {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  color: var(--text);
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+.proof {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+.on-cover { position: absolute; top: 14px; right: 14px; }
+
+.tile strong { margin-top: 10px; font-size: var(--fs-body); font-weight: 500; letter-spacing: -0.005em; }
+/* min-height : la ligne garde sa place quand le live remplace la meta. */
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 1.25em;
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+.tile-tagline {
+  font-size: var(--fs-small);
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 48px 16px;
+  text-align: center;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-xl);
+  color: var(--muted);
+  font-size: var(--fs-small);
+}
+
+@media (max-width: 760px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
+  .seg { order: 3; width: 100%; justify-content: space-between; }
+  .bar input { flex: 1; max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tile:hover .cover, .tile:focus-visible .cover { transform: none; }
+}
