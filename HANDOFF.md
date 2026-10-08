@@ -237,3 +237,23 @@ For the resume, a separate session:
 > Read `HANDOFF.md`, `docs/RESUME_DATA.md` and `docs/resume/README.md`. Interview me one section at a time
 > (in French) with `docs/resume/QUESTIONS.md`, put my answers in `docs/resume/resume.data.json`, never invent
 > facts, then run `python3 docs/resume/build.py --final` and let me proofread the PDF.
+
+## 11. État au 8 octobre 2026 (soir)
+
+Travail fait sur la machine de Simon, branche `feat/vague-1-contenu-et-cv`, 21 commits depuis l'import du zip.
+Rien n'a été poussé : le dépôt GitHub `SkYNENET/Portfolio` n'a pas bougé.
+
+Fait : contenu réel (8 jeux, groupes et rôles, 3 chiffres clés live), nouveau site en 8 composants
+(sidebar, hero, bannière, library avec tri et recherche, experience, contact, rail, footer), états
+loading / ready / error / partial sans saut de mise en page, SEO et OG, favicon, API Roblox durcie,
+`/api/roblox` servi en dev par Vite avec `?mock=ready|slow|error|partial`, tsconfig strict sur app,
+node et api, oxlint sans warning, build de prod vert, QA à 390, 1024 et 1440 px. Kit CV dans
+`docs/resume/` (brouillon une page, trous en rouge, questionnaire).
+
+Reste à faire par Hector : tout ce qui est listé dans `docs/resume/QUESTIONS.md` (nom, école, ville,
+email, rôle exact sur chaque jeu, Discord des communautés), puis `profile.email`, `profile.cv`
+(copier le CV final dans `public/cv.pdf`) et l'entrée « This portfolio » vers le dépôt publié.
+
+Avant de publier : le `main` actuel de `SkYNENET/Portfolio` contient un vieux projet avec un numéro
+de téléphone, et l'historique le garde. Le plus simple est un dépôt neuf, ou un `main` réécrit depuis
+ce bundle (voir `REPRISE.md` livré avec le zip).
