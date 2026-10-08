@@ -1,11 +1,14 @@
 /* Experience : timeline dans une carte blanche. Classes : voir Experience.tsx. */
 
+/* scroll-margin-top : l'ancre #experience de la sidebar arrive 16 px sous le bord. */
 .experience {
   display: flex;
   flex-direction: column;
   gap: 14px;
   scroll-margin-top: 16px;
 }
+.experience h2 { margin: 0; font-size: var(--fs-h2); letter-spacing: -0.02em; }
+
 .timeline {
   list-style: none;
   margin: 0;
@@ -14,6 +17,8 @@
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-sm);
 }
+
+/* Colonne periode fixe : les dates s'alignent d'une entree a l'autre, meme quand l'une est vide. */
 .step {
   display: grid;
   grid-template-columns: 120px 1fr;
@@ -23,12 +28,15 @@
 }
 .step:first-child { border-top: 0; }
 .step-period { font-size: var(--fs-small); color: var(--muted); padding-top: 2px; }
+
 .step-body { display: grid; gap: 6px; min-width: 0; }
 .step-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .step-head strong { font-size: var(--fs-body); }
+/* Variante contour du .tag d'index.css : le type (Work / Education) ne rivalise pas avec les techs. */
 .kind-tag { background: transparent; box-shadow: inset 0 0 0 1px var(--line); color: var(--muted); }
 .step-org { font-size: var(--fs-small); color: var(--muted); }
 .step-body p { margin: 0; font-size: var(--fs-body); color: var(--text-2); }
+
 .tech {
   list-style: none;
   margin: 2px 0 0;
@@ -37,6 +45,7 @@
   flex-wrap: wrap;
   gap: 6px;
 }
+
 .step-link {
   font-size: var(--fs-small);
   color: var(--accent);
@@ -45,7 +54,9 @@
 }
 .step-link:hover { text-decoration: underline; }
 
+/* Mobile : une colonne, la periode passe au-dessus ; vide, elle disparait (pas de trou avant le role). */
 @media (max-width: 760px) {
   .step { grid-template-columns: 1fr; gap: 4px; }
+  .step-period:empty { display: none; }
   .timeline { padding: 4px 16px; }
 }
