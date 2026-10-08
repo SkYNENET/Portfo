@@ -14,6 +14,7 @@
   padding-right: 2px;
 }
 
+/* ---------- Right now ---------- */
 .numbers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
@@ -27,9 +28,15 @@
   line-height: 1.1;
   min-height: 1.65rem;
 }
-.numbers span { font-size: var(--fs-small); color: var(--muted); }
+/* Enfant direct seulement : le span.skeleton place dans le <b> garde la taille du chiffre,
+   donc la largeur reservee est celle de la vraie valeur. */
+.numbers > div > span { font-size: var(--fs-small); color: var(--muted); }
 .panel-note { margin: 12px 0 0; font-size: var(--fs-micro); color: var(--muted); }
+/* La legende tient sur 2 lignes en chargement (« … refreshing live numbers… ») et 1 en live :
+   hauteur reservee pour que le panneau Communities ne bouge pas quand le live arrive. */
+.numbers + .panel-note { min-height: 3em; min-height: 2lh; }
 
+/* ---------- Communities ---------- */
 .sub {
   margin: 14px 0 8px;
   font-size: var(--fs-micro);
@@ -40,15 +47,18 @@
 }
 .sub:first-of-type { margin-top: 0; }
 
-.panel ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
-.panel li { display: flex; align-items: center; gap: 12px; min-height: 44px; }
+/* Scope .rail : .panel est une primitive partagee (index.css), ses listes ailleurs ne doivent pas heriter. */
+.rail .panel ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.rail .panel li { display: flex; align-items: center; gap: 12px; min-height: 44px; }
 .rail .avatar.sm { background: var(--hover); color: var(--text-2); }
 .grow { flex: 1; min-width: 0; }
 .grow strong { display: block; font-size: var(--fs-small); font-weight: 500; }
-.grow span { display: block; font-size: var(--fs-micro); color: var(--muted); margin-top: 2px; }
-.tag.role { display: inline; padding: 1px 7px; }
+/* Enfant direct : la chip .tag.role imbriquee garde la couleur et l'affichage de .tag. */
+.grow > span { display: block; font-size: var(--fs-micro); color: var(--muted); margin-top: 2px; }
+.tag.role { padding: 1px 7px; }
 
 .join {
+  flex: none;
   display: inline-flex;
   align-items: center;
   min-height: 36px;
@@ -61,7 +71,11 @@
   text-decoration: none;
   transition: background var(--dur), color var(--dur);
 }
-.join:hover, .join:focus-visible { background: var(--text); color: #fff; }
+.join:focus-visible { background: var(--text); color: #fff; }
+/* Pas de survol colle apres un tap sur mobile : le hover n'existe qu'avec un pointeur. */
+@media (hover: hover) {
+  .join:hover { background: var(--text); color: #fff; }
+}
 
 @media (max-width: 1100px) {
   .rail {
