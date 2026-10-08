@@ -62,10 +62,13 @@
   color: var(--text-2);
   font-size: var(--fs-body);
 }
-/* min-height : la ligne de stats garde sa place quand le live remplace la meta statique. */
+/* min-height : la ligne de stats garde sa place quand le live remplace la meta statique.
+   QA : deux lignes reservees (2 lh + le row-gap), car « N playing now » ajoute un quatrieme segment
+   qui passe a la ligne a 1440 (262 px de texte) comme a 390 et poussait toute la page de 26 px. */
 .banner-stats {
   margin: 0;
-  min-height: 1.3em;
+  min-height: calc(2.6em + 6px);
+  min-height: calc(2lh + 6px);
   display: flex;
   flex-wrap: wrap;
   gap: 6px 14px;

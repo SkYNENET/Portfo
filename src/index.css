@@ -1,5 +1,6 @@
 /* Tokens et styles partages. FICHIER GELE apres la vague A : les composants ont chacun leur CSS
-   (src/components/X.css) et n'ajoutent rien ici. Style Apple clair, sans dark mode. */
+   (src/components/X.css) et n'ajoutent rien ici. Style Apple clair, sans dark mode.
+   Passe QA (T14) : tokens et primitives inutilises retires, survol des boutons garde par (hover: hover). */
 
 :root {
   --bg: #f5f5f7;
@@ -16,14 +17,10 @@
   --live: #30c76b;
 
   --radius-xl: 20px;
-  --radius-lg: 16px;
   --radius-md: 12px;
-  --radius-sm: 8px;
-  --radius: var(--radius-xl);
 
   --shadow-sm: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.06), 0 12px 32px rgba(0, 0, 0, 0.1);
-  --shadow: var(--shadow-sm);
 
   --dur: 0.2s;
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -40,7 +37,8 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-padding-top: 16px; }
+/* QA : pas de scroll-padding-top ici, chaque section ancree porte deja scroll-margin-top: 16px
+   (Library, Experience, Contact) ; les deux s'additionnaient en 32 px. */
 body {
   margin: 0;
   background: var(--bg);
@@ -107,18 +105,12 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .pill.ok { background: var(--ok-bg); color: var(--ok); }
 
-.dot {
+/* Pastille verte : .dot dans la pill de statut, .live a cote d'un « N playing » (uniquement quand
+   playing > 0, il n'existe pas de variante grise). QA : une seule regle, meme taille partout. */
+.dot, .live {
+  flex: none;
   width: 8px;
   height: 8px;
-  border-radius: 50%;
-  background: var(--live);
-  box-shadow: 0 0 0 3px #30c76b30;
-}
-/* Pastille « en ligne » : uniquement quand playing > 0, il n'existe pas de variante grise. */
-.live {
-  flex: none;
-  width: 7px;
-  height: 7px;
   border-radius: 50%;
   background: var(--live);
   box-shadow: 0 0 0 3px #30c76b30;
@@ -141,8 +133,11 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   transition: background var(--dur);
 }
 .btn.primary { background: var(--accent); color: #fff; }
-.btn.primary:hover, .btn.primary:focus-visible { background: var(--accent-hover); }
-.btn.ghost { background: var(--hover); color: var(--text); }
+.btn.primary:focus-visible { background: var(--accent-hover); }
+/* Survol seulement avec un pointeur : apres un tap, :hover reste colle sur tactile. */
+@media (hover: hover) {
+  .btn.primary:hover { background: var(--accent-hover); }
+}
 
 .tag {
   display: inline-block;
@@ -183,9 +178,6 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 @keyframes shimmer { to { background-position: -200% 0; } }
 
 /* ---------- preferences utilisateur ---------- */
-@media (hover: none) {
-  .btn:hover { background: revert-layer; }
-}
 @media (max-width: 760px) {
   .btn { min-height: 44px; }
 }

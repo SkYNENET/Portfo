@@ -19,12 +19,20 @@
   min-width: 0;
 }
 
-/* Tablette : le rail passe sous le main, en pleine largeur. */
+/* Tablette : deux colonnes, le rail passe sous le main. */
 @media (max-width: 1100px) {
   .shell { grid-template-columns: 200px minmax(0, 1fr); }
-  .rail { grid-column: 2 / -1; }
+}
+/* QA : plage bornee a 761 px. Sur la grille a UNE colonne du mobile, « 2 / -1 » vaut « 2 / 3 » et
+   creait une colonne implicite : la colonne explicite tombait a 0 px et la sidebar etait ecrasee
+   a 28 px de large (mesure a 390). */
+@media (min-width: 761px) and (max-width: 1100px) {
   /* colonne 2 et pas 1 / -1 : la sidebar reste sticky dans la colonne 1 sur cette
      plage, un rail pleine largeur passait dessous (200 px masques mesures a 1024). */
+  .rail { grid-column: 2 / -1; }
+  /* QA : la sidebar couvre aussi la ligne du rail, sinon son sticky s'arrete au bas du main et
+     la colonne 1 reste vide a cote des panneaux. */
+  .sidebar { grid-row: 1 / span 2; }
 }
 
 /* Mobile : une colonne, ordre DOM = sidebar, main, rail, footer. */

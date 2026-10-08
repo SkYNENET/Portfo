@@ -115,12 +115,13 @@
   letter-spacing: -0.005em;
   overflow-wrap: anywhere;
 }
-/* min-height : la ligne garde sa place quand le live remplace la meta. */
+/* min-height : la ligne garde sa place quand le live remplace la meta. QA : deux lignes reservees,
+   car « N playing · » en plus ou « % liked » en moins (partial) faisait passer la ligne de une a
+   deux lignes dans une colonne de 150-180 px et deplacait toute la grille. */
 .stats {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 1.25em;
+  display: block;
+  min-height: 2.5em;
+  min-height: 2lh;
   font-size: var(--fs-small);
   color: var(--muted);
 }

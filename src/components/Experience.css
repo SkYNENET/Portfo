@@ -7,7 +7,7 @@
   gap: 14px;
   scroll-margin-top: 16px;
 }
-.experience h2 { margin: 0; font-size: var(--fs-h2); letter-spacing: -0.02em; }
+/* QA : le h2 porte .section-title (index.css), la copie locale de la regle a ete retiree. */
 
 .timeline {
   list-style: none;

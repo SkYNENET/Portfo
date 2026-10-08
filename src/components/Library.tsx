@@ -10,7 +10,7 @@
 
 import { useMemo, useState } from 'react'
 import { entries, type Entry } from '../content'
-import { fmt, type RobloxState } from '../roblox'
+import { fmt, likedPercent, type RobloxState } from '../roblox'
 import { KIND_LABEL, NAV_LABEL, initials, parseCount, splitMeta, type Filter } from '../ui'
 import './Library.css'
 
@@ -114,7 +114,11 @@ export default function Library({ filter, onFilter, query, onQuery, roblox }: Li
                 {live && s ? (
                   <>
                     {s.playing > 0 && <>{fmt(s.playing)} playing · </>}
-                    {fmt(s.visits)} visits · {fmt(s.favorites)} favorites
+                    {fmt(s.visits)} visits ·{' '}
+                    {/* QA : meme forme que la meta statique (« 96% liked » au milieu), sinon la ligne
+                        perdait un segment au passage en live et la grille changeait de hauteur. */}
+                    {likedPercent(s) !== null && <>{likedPercent(s)}% liked · </>}
+                    {fmt(s.favorites)} favorites
                   </>
                 ) : (
                   (e.meta ?? e.year ?? '')

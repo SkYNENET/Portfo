@@ -69,6 +69,9 @@
   .facts { gap: 8px; }
   .fact { padding: 14px 12px; }
   .fact b { font-size: 1.5rem; }
+  /* Sur telephone la sidebar passe en tete et montre deja la pill de statut quelques
+     centaines de px plus haut : la deuxieme, ici, faisait doublon dans le premier ecran. */
+  .hero .pill { display: none; }
 }
 
 /* Telephone : les legendes « refreshing… » et « unavailable » tiennent sur deux lignes, la version
@@ -80,10 +83,4 @@
 /* Tres petits ecrans (320-360 px) : trois cartes de ~70 px, « 56.1K+ » a 1.5rem deborderait. */
 @media (max-width: 360px) {
   .fact b { font-size: 1.25rem; }
-}
-
-/* Sur telephone la sidebar passe en tete et montre deja la pill de statut quelques
-   centaines de px plus haut : la deuxieme, ici, faisait doublon dans le premier ecran. */
-@media (max-width: 760px) {
-  .hero .pill { display: none; }
 }

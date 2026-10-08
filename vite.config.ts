@@ -14,7 +14,9 @@ function seoHtml(): Plugin {
   return {
     name: 'seo-html',
     transformIndexHtml(html) {
-      const origin = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL ?? 'localhost:5173'}`
+      // Hors Vercel le serveur de dev est en http : une og:url « https://localhost » serait fausse.
+      const host = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL
+      const origin = host ? `https://${host}` : 'http://localhost:5173'
       return html.replaceAll('%SITE_URL%', origin + '/').replaceAll('%OG_IMAGE%', origin + '/og.png')
     },
   }

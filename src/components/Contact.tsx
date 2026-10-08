@@ -41,7 +41,7 @@ export default function Contact() {
 
   return (
     <section className="contact" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
+      <h2 id="contact-title" className="section-title">Contact</h2>
       <p className="contact-lead">Looking for an internship in 2027. Say hi.</p>
       {hasEmail ? (
         <div className="email">
